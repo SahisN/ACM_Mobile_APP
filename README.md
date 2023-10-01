@@ -2,6 +2,10 @@
 
 A new Flutter project.
 
+devs:
+ * Howard N.
+ * Sahis
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
