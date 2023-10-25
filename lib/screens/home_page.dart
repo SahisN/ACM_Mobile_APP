@@ -1,23 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:acm_app/widgets/bottom_g_nav.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color.fromARGB(255, 4, 112, 244),
-                Color.fromARGB(255, 0, 38, 255)
-              ],
-              begin: Alignment.topRight,
-              end: Alignment.bottomRight,
-            ),
-          ),
+        bottomNavigationBar: BottomGNav(
+          selectedIndex: 0,
         ),
       ),
     );
