@@ -1,7 +1,8 @@
 // ignore_for_file: slash_for_doc_comments
 
+import 'package:acm_app/screens/home_page.dart';
 import 'package:flutter/material.dart';
-import 'package:acm_app/screens/splash_screen.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 /** 
@@ -25,10 +26,12 @@ final theme = ThemeData(
 );
 
 void main() {
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   runApp(
     MaterialApp(
       theme: theme,
-      home: const SplashScreen(),
+      home: const HomePage(),
     ),
   );
 }
