@@ -1,15 +1,89 @@
 import 'package:flutter/material.dart';
+import 'package:table_calendar/table_calendar.dart';
 
-class CalenderPage extends StatelessWidget {
-  const CalenderPage({super.key});
+bool isExpanded = false;
+List<String> eventList = ['A', 'B', 'C'];
+
+class CalendarPage extends StatefulWidget {
+  @override
+  State<CalendarPage> createState() => _CalendarPageState(); 
+}
+
+class _CalendarPageState extends State<CalendarPage> {
+  DateTime now = DateTime.now();
+  final firstDate =
+      DateTime.utc(2023, 7, 31); //DateTime(now.year - 1, now.month);
+  final lastDay =
+      DateTime.utc(2025, 7, 31); //DateTime(now.year + 5, now.month);
+
+  void _onDaySelected(DateTime day, DateTime focusedDay) {
+    setState(() {
+      now = day;
+    });
+    //fetch events
+    _fetchEvents();
+  }
+
+  void _onExpand() {
+    setState(() {
+      isExpanded = !isExpanded;
+    });
+  }
+
+  void _fetchEvents() {
+    //calls firebase class to return a list of events
+  }
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Column(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Calendar'),
+        actions: [
+          IconButton(
+            onPressed: _onExpand, 
+            icon: Icon(isExpanded ? Icons.arrow_drop_up : Icons.arrow_drop_down )
+          )
+        ],
+      ),
+      body: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text('This is the calendar page'),
+          TableCalendar(
+            locale: "en_US",
+            headerStyle: const HeaderStyle(
+              formatButtonVisible: false,
+              titleCentered: true,
+            ),
+            availableGestures: AvailableGestures.all,
+            selectedDayPredicate: (day) => isSameDay(day, now),
+            focusedDay: now,
+            firstDay: firstDate,
+            lastDay: lastDay,
+            onDaySelected: _onDaySelected,
+            calendarFormat: isExpanded ? CalendarFormat.month : CalendarFormat.twoWeeks,
+          ),
+          const SizedBox(height: 15),
+          const Text(
+            'Events',
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 15),
+
+          //Display Event list if not emtpy, otherwise display "No event" text
+          eventList.isEmpty ?
+          const Text(
+            "No Events for today",
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+          ) :
+          Expanded(
+            child: ListView.builder(
+              itemCount: eventList.length,
+              shrinkWrap: true,
+              itemBuilder: (_, i) => Text(eventList[i]),
+            ),
+          )
         ],
       ),
     );
