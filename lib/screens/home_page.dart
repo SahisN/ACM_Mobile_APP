@@ -15,8 +15,8 @@ class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
   // _screens stores all the list of screens
-  static List<Widget> _screens = <Widget>[
-    CalendarPage(),
+  static const List<Widget> _screens = <Widget>[
+    CalenderPage(),
     ContactPage(),
     Text('Settings')
   ];
