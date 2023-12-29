@@ -6,7 +6,6 @@ devs:
  * Howard N.
  * Sahis
  * Eric M
- * Angel Gutierrez Sanjuan
 
 ## Getting Started
 

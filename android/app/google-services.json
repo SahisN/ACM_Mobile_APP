@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "974574041538",
+    "firebase_url": "https://acm-mobile-app-9c4b7-default-rtdb.firebaseio.com",
+    "project_id": "acm-mobile-app-9c4b7",
+    "storage_bucket": "acm-mobile-app-9c4b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974574041538:android:372f2766f3b2ff254d7e5b",
+        "android_client_info": {
+          "package_name": "com.example.acm_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXIkCHC-B2F_lynd5uz9Ro81H_YZ49V7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
