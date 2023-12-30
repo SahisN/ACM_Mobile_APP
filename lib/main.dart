@@ -20,7 +20,7 @@ var kDarkColorScheme = ColorScheme.fromSeed(
 final theme = ThemeData(
   useMaterial3: true,
   colorScheme: ColorScheme.fromSeed(
-    brightness: Brightness.dark,
+    brightness: Brightness.light,
     seedColor: const Color.fromARGB(255, 6, 72, 171),
   ),
   textTheme: GoogleFonts.latoTextTheme(),
