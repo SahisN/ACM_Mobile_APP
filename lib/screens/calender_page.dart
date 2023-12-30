@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:acm_app/models/firebase.dart';
 
 bool isExpanded = false;
 List<String> eventList = ['A', 'B', 'C'];
@@ -32,6 +33,9 @@ class _CalendarPageState extends State<CalendarPage> {
 
   void _fetchEvents() {
     //calls firebase class to return a list of events
+    Database.fetchByMonth( 'jan', (eventList) { 
+      eventList.forEach((element) { print(element.toString()); });
+    });
   }
 
   @override
