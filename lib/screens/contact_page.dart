@@ -1,16 +1,30 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: deprecated_member_use
 
+import 'package:flutter/material.dart';
+import 'package:acm_app/data/social_media.dart';
+import 'package:acm_app/widget/catagory_grid_item.dart';
 class ContactPage extends StatelessWidget {
-  const ContactPage({super.key});
+  const ContactPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text('contact Page'),
-        ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Contact'),
+      ),
+      body: GridView(
+        padding: const EdgeInsets.all(12),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          childAspectRatio: 3 / 2,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 20,
+        ),
+        children: socialMediaTypes.map((social) => CategoryGridItem(
+          bgColor: social.bgColor,
+          imageLogo: social.imageLogo,
+          url: social.url,
+        )).toList(),
       ),
     );
   }

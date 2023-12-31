@@ -40,19 +40,11 @@ class _CalendarPageState extends State<CalendarPage> {
     //calls firebase class to return a list of events
   }
 
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Calendar'),
-        actions: [
-          IconButton(
-            onPressed: _onExpand, 
-            icon: Icon(isExpanded ? Icons.arrow_drop_up : Icons.arrow_drop_down )
-          )
-        ],
-      ),
-      body: Column(
+    return const Center(
+      child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           TableCalendar(
