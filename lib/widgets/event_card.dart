@@ -1,13 +1,12 @@
+import "package:acm_app/models/event_item.dart";
 import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
+import "package:acm_app/models/event_item.dart";
 
-class EventInfo extends StatelessWidget{
-  final String name;
-  final String description;
-  final DateTime dateTime;
-  final String location;
+class EventCard extends StatelessWidget{
+  EventItem event;
 
-  EventInfo(this.name, this.description, this.dateTime, this.location);
+  EventCard(this.event);
 
   @override
   Widget build(BuildContext context) {
@@ -45,8 +44,8 @@ class EventInfo extends StatelessWidget{
                 ),
               ),
 //This is where the parameters for CircleAvatar end
-              title: Text(name),
-              subtitle:Text(location),
+              title: Text(event.name),
+              subtitle:Text(event.location),
 
               backgroundColor: Colors.grey,
               trailing: SizedBox(),
@@ -60,7 +59,7 @@ class EventInfo extends StatelessWidget{
                   child: Row(
                   children: <Widget>[
                   Spacer(),
-                  Text(description),
+                  Text(event.description),
 
 
                 ],

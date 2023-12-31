@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:acm_app/models/event_item.dart';
+import 'package:acm_app/widgets/event_card.dart';
 
 bool isExpanded = false;
-List<String> eventList = ['A', 'B', 'C'];
+List<EventItem> eventList = [
+  EventItem('A', 'djfnef', DateTime(1,1,1), "somewhere", ""),
+  EventItem('B', 'djfnef', DateTime(1,1,1), "somewhere", ""),
+  EventItem('C', 'djfnef', DateTime(1,1,1), "somewhere", ""),
+];
 
 class CalendarPage extends StatefulWidget {
   @override
@@ -81,7 +87,7 @@ class _CalendarPageState extends State<CalendarPage> {
             child: ListView.builder(
               itemCount: eventList.length,
               shrinkWrap: true,
-              itemBuilder: (_, i) => Text(eventList[i]),
+              itemBuilder: (_, i) => EventCard(eventList[i]),
             ),
           )
         ],
