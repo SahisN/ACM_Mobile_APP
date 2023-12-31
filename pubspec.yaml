@@ -30,11 +30,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  url_launcher: ^6.0.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  google_fonts: ^4.0.3
+  google_fonts: ^6.1.0
   transparent_image: ^2.0.1
   table_calendar: ^3.0.9
   google_nav_bar: ^5.0.6
@@ -214,7 +215,11 @@ flutter:
     - assets/images/acm.png
     - assets/images/discord.png
     - assets/images/linkedin.png
+    - assets/images/acm_logo_2.png
+    - assets/images/acm_3d_resize.png
+    - assets/images/acm_blob.png
     - assets/images/3d_acm_logo.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
