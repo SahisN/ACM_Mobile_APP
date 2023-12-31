@@ -4,7 +4,7 @@ import "package:flutter/material.dart";
 import "package:acm_app/models/event_item.dart";
 
 class EventCard extends StatelessWidget{
-  EventItem event;
+  final EventItem event;
 
   EventCard(this.event);
 
