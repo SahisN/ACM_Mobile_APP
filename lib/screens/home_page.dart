@@ -1,4 +1,4 @@
-import 'package:acm_app/screens/calender_page.dart';
+import 'package:acm_app/screens/calendar_page.dart';
 import 'package:acm_app/screens/contact_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
 
   // _screens stores all the list of screens
   static const List<Widget> _screens = <Widget>[
-    CalenderPage(),
+    CalendarPage(),
     ContactPage(),
     Text('Settings')
   ];

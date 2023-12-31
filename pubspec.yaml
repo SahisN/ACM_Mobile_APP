@@ -209,17 +209,12 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/flyers.png
     - assets/images/facebook.png
     - assets/images/instagram.png
-    - assets/images/acm.png
     - assets/images/discord.png
     - assets/images/linkedin.png
-    - assets/images/acm_logo_2.png
-    - assets/images/acm_3d_resize.png
     - assets/images/acm_blob.png
     - assets/images/3d_acm_logo.png
-
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
