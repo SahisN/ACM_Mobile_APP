@@ -21,28 +21,27 @@ class EventCard extends StatelessWidget {
             ),
             //elevates the card and gives a shadow to it.
             elevation: 15,
-            shadowColor: Colors.black,
+            shadowColor: Theme.of(context).shadowColor,
             //ListTile is a fixed height row
 
             child: ExpansionTile(
               //this is where the expansion part begins
-              leading: const CircleAvatar(
+              leading: CircleAvatar(
+                backgroundColor: Theme.of(context).primaryColor,
                 //this gives the avatar that holds a "!" a char
-                backgroundColor: Colors.grey,
-                child: Text(
+                child: const Text(
                   "!",
                   style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                  ),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      color: Colors.white),
                 ),
               ),
               //This is where the parameters for CircleAvatar end
               title: Text(event.name),
               subtitle: Text(event.location),
 
-              backgroundColor: Colors.grey,
+              //Theme.of(context).primaryColor,
               trailing: const SizedBox(),
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10)),
