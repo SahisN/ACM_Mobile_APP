@@ -47,6 +47,7 @@ class _CalendarPageState extends State<CalendarPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        //backgroundColor: Theme.of(context).colorScheme.background,
         title: const Text('Calendar'),
         actions: [
           IconButton(
@@ -61,9 +62,33 @@ class _CalendarPageState extends State<CalendarPage> {
           children: [
             TableCalendar(
               locale: "en_US",
-              headerStyle: const HeaderStyle(
+              headerStyle: HeaderStyle(
                 formatButtonVisible: false,
                 titleCentered: true,
+                titleTextStyle: TextStyle(
+                  color: Theme.of(context).focusColor,
+                  fontSize: 22,
+                ),
+              ),
+              // affects numbers in calendar ex 1 2 3 4
+              calendarStyle: CalendarStyle(
+                defaultTextStyle: TextStyle(
+                  color: Theme.of(context).focusColor,
+                  fontSize: 17,
+                ),
+                // affects days of week in calendar ex mon, tuesday, wed
+                weekendTextStyle: TextStyle(
+                  color: Theme.of(context).focusColor,
+                ),
+              ),
+              // affect weekend of week in calendar ex sat, sun
+              daysOfWeekStyle: DaysOfWeekStyle(
+                weekdayStyle: TextStyle(
+                  color: Theme.of(context).focusColor,
+                ),
+                weekendStyle: TextStyle(
+                  color: Theme.of(context).focusColor,
+                ),
               ),
               availableGestures: AvailableGestures.all,
               selectedDayPredicate: (day) => isSameDay(day, now),
@@ -75,9 +100,13 @@ class _CalendarPageState extends State<CalendarPage> {
                   isExpanded ? CalendarFormat.month : CalendarFormat.twoWeeks,
             ),
             const SizedBox(height: 15),
-            const Text(
+            Text(
               'Events',
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+                color: Theme.of(context).colorScheme.inversePrimary,
+              ),
             ),
             const SizedBox(height: 15),
 
@@ -98,6 +127,7 @@ class _CalendarPageState extends State<CalendarPage> {
           ],
         ),
       ),
+      backgroundColor: Theme.of(context).colorScheme.background,
     );
   }
 }

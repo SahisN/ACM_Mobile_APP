@@ -43,8 +43,13 @@ class _HomePageState extends State<HomePage> {
 
         // highlights the selected tab and unselected tabs
         selectedIndex: _selectedIndex,
-        color: Colors.black,
-        activeColor: Colors.blueAccent,
+
+        // inactive tab icon color
+        color: Theme.of(context).secondaryHeaderColor,
+        // active tab icon color
+        activeColor: Theme.of(context).focusColor,
+        // tab color
+        backgroundColor: Theme.of(context).colorScheme.primary,
 
         // this function is invoked whenever user clicks a tab
         // recieves the tab index and updates _selectedIndex

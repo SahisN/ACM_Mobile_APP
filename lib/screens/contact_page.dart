@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:acm_app/data/social_media.dart';
 import 'package:acm_app/widget/catagory_grid_item.dart';
+
 class ContactPage extends StatelessWidget {
   const ContactPage({Key? key}) : super(key: key);
 
@@ -11,6 +12,7 @@ class ContactPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Contact'),
+        //iconTheme: Theme.of(context).iconTheme,
       ),
       body: GridView(
         padding: const EdgeInsets.all(12),
@@ -20,11 +22,13 @@ class ContactPage extends StatelessWidget {
           crossAxisSpacing: 20,
           mainAxisSpacing: 20,
         ),
-        children: socialMediaTypes.map((social) => CategoryGridItem(
-          bgColor: social.bgColor,
-          imageLogo: social.imageLogo,
-          url: social.url,
-        )).toList(),
+        children: socialMediaTypes
+            .map((social) => CategoryGridItem(
+                  bgColor: social.bgColor,
+                  imageLogo: social.imageLogo,
+                  url: social.url,
+                ))
+            .toList(),
       ),
     );
   }
