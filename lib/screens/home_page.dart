@@ -1,13 +1,26 @@
 import 'package:acm_app/screens/calendar_page.dart';
 import 'package:acm_app/screens/contact_page.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
+}
+
+void _getMessage() async {
+  // getting data from firestore
+  final userData = await FirebaseFirestore.instance
+      .collection('semesterEvents')
+      .doc('W9jFmK5aakGLKv1t7jhq')
+      .get();
+
+  // printing in
+  print(userData['altText']);
 }
 
 class _HomePageState extends State<HomePage> {
@@ -18,7 +31,7 @@ class _HomePageState extends State<HomePage> {
   static const List<Widget> _screens = <Widget>[
     CalendarPage(),
     ContactPage(),
-    Text('Settings')
+    Center(child: Text('Settings')),
   ];
 
   @override
@@ -54,6 +67,7 @@ class _HomePageState extends State<HomePage> {
         // this function is invoked whenever user clicks a tab
         // recieves the tab index and updates _selectedIndex
         onTabChange: (index) {
+          _getMessage();
           // used to update _selectedIndex and restart Widget Build()
           if (index != _selectedIndex) {
             setState(() {
