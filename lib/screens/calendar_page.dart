@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:acm_app/model/event_item.dart';
 import 'package:acm_app/widget/event_card.dart';
+import 'package:acm_app/model/firebase.dart';
 
 bool isExpanded = false;
 List<EventItem> eventList = [
-  EventItem('A', 'djfnef', DateTime(1, 1, 1), "somewhere", ""),
-  EventItem('B', 'djfnef', DateTime(1, 1, 1), "somewhere", ""),
-  EventItem('C', 'djfnef', DateTime(1, 1, 1), "somewhere", ""),
+  EventItem('A', 'djfnef'),
+  EventItem('B', 'djfnef'),
+  EventItem('C', 'djfnef'),
 ];
 
 class CalendarPage extends StatefulWidget {
@@ -28,7 +29,6 @@ class _CalendarPageState extends State<CalendarPage> {
     setState(() {
       now = day;
     });
-    //fetch events
     _fetchEvents();
   }
 
@@ -39,8 +39,12 @@ class _CalendarPageState extends State<CalendarPage> {
     });
   }
 
-  void _fetchEvents() {
+  void _fetchEvents() async {
     //calls firebase class to return a list of events
+    final newList = await Database.testFetch();
+    setState(() {
+      eventList = newList;
+    });
   }
 
   @override

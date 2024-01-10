@@ -39,7 +39,7 @@ class EventCard extends StatelessWidget {
               ),
               //This is where the parameters for CircleAvatar end
               title: Text(event.name),
-              subtitle: Text(event.location),
+              //subtitle: Text(event.location),
 
               //Theme.of(context).primaryColor,
               trailing: const SizedBox(),
@@ -52,7 +52,7 @@ class EventCard extends StatelessWidget {
                   child: Row(
                     children: <Widget>[
                       const Spacer(),
-                      Text(event.description),
+                      Text(event.imageURL),
                     ],
                   ),
                 ),
