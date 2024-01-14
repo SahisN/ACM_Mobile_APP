@@ -25,6 +25,12 @@ class _CalendarPageState extends State<CalendarPage> {
   final lastDay =
       DateTime.utc(2025, 7, 31); //DateTime(now.year + 5, now.month);
 
+  void _onRangeSelected(DateTime? start, DateTime? end, DateTime? focus) {
+    setState(() async {
+      eventList = await Database.fetchByRange(start, end);
+    });
+  }
+
   void _onDaySelected(DateTime day, DateTime focusedDay) {
     setState(() {
       now = day;
@@ -100,6 +106,7 @@ class _CalendarPageState extends State<CalendarPage> {
               firstDay: firstDate,
               lastDay: lastDay,
               onDaySelected: _onDaySelected,
+              onRangeSelected: _onRangeSelected,
               calendarFormat:
                   isExpanded ? CalendarFormat.month : CalendarFormat.twoWeeks,
             ),

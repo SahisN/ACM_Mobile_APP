@@ -1,6 +1,6 @@
-import 'dart:convert';
+//import 'dart:convert';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:http/http.dart' as http;
+//import 'package:http/http.dart' as http;
 import 'package:acm_app/model/event_item.dart';
 
 ///===== FireStore Docs ==============================
@@ -12,9 +12,29 @@ import 'package:acm_app/model/event_item.dart';
 ///
 ///===================================================
 
+//TODO: local firebase caching, fetch by range
+
 class Database {
 
-  static fetchByRange(DateTime minDate, DateTime maxDate) {}
+  static Future<List<EventItem>> fetchByRange(DateTime? minDate, DateTime? maxDate) async {
+    final db = FirebaseFirestore.instance;
+    final res = await db.collection("semesterEvent").where(
+      "datetime", 
+      isGreaterThanOrEqualTo: Timestamp.fromDate(minDate as DateTime),
+      isLessThanOrEqualTo: Timestamp.fromDate(maxDate as DateTime)
+    ).get();
+
+    return _fetch(res);
+  }
+
+  static List<EventItem> _fetch(QuerySnapshot<Map<String, dynamic>> res) {
+    List<EventItem> eventList = [];
+    for (final doc in res.docs) {
+      eventList.add( EventItem.parseJson(doc.data()) );
+    }
+
+    return eventList;
+  }
 
   //===== test =====
   static Future<List<EventItem>> testFetch() async {
