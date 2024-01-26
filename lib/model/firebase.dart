@@ -15,19 +15,38 @@ import 'package:acm_app/model/event_item.dart';
 //TODO: local firebase caching, fetch by range
 
 class Database {
+  static DateTime lastRead = DateTime(1, 1, 1);
 
   static Future<List<EventItem>> fetchByRange(DateTime? minDate, DateTime? maxDate) async {
     final db = FirebaseFirestore.instance;
-    final res = await db.collection("semesterEvent").where(
+    List<String> localIds = List.empty();
+    final idQuerry = await db.collection("semesterEvent").get(const GetOptions(source: Source.cache));
+    for (final doc in idQuerry.docs) {
+      localIds.add( doc.data()["id"] );
+    }
+
+    //online querry
+    //will hopefully store in local cache
+    final onlineRes = await db.collection("semesterEvent").where( Filter.or(
+      Filter("id", whereIn: localIds),
+      Filter("lastUpdated", isGreaterThan: lastRead)
+    ) ).get(const GetOptions(source: Source.server));
+
+    if (onlineRes.docs.isNotEmpty) {
+      lastRead = DateTime.now();
+    }
+
+    //offline querry
+    final offlineRes = await db.collection("semesterEvent").where(
       "datetime", 
       isGreaterThanOrEqualTo: Timestamp.fromDate(minDate as DateTime),
       isLessThanOrEqualTo: Timestamp.fromDate(maxDate as DateTime)
-    ).get();
+    ).get(const GetOptions(source: Source.cache));
 
-    return _fetch(res);
+    return _toEventItems(offlineRes);
   }
 
-  static List<EventItem> _fetch(QuerySnapshot<Map<String, dynamic>> res) {
+  static List<EventItem> _toEventItems(QuerySnapshot<Map<String, dynamic>> res) {
     List<EventItem> eventList = [];
     for (final doc in res.docs) {
       eventList.add( EventItem.parseJson(doc.data()) );
@@ -57,4 +76,6 @@ class Database {
     print("================ TEST =====================");
     print( res.data()?['datetime'].toDate() );
   }
+
+  
 }
