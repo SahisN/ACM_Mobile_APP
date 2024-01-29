@@ -6,9 +6,9 @@ import 'package:acm_app/model/firebase.dart';
 
 bool isExpanded = false;
 List<EventItem> eventList = [
-  EventItem('A', 'djfnef'),
-  EventItem('B', 'djfnef'),
-  EventItem('C', 'djfnef'),
+  EventItem('A', DateTime(1,1,1), "nowhere", 'djfnef'),
+  EventItem('B', DateTime(1,1,1), "nowhere", 'djfnef'),
+  EventItem('C', DateTime(1,1,1), "nowhere", 'djfnef'),
 ];
 
 class CalendarPage extends StatefulWidget {
@@ -47,7 +47,7 @@ class _CalendarPageState extends State<CalendarPage> {
 
   void _fetchEvents() async {
     //calls firebase class to return a list of events
-    final newList = await Database.testFetch();
+    final newList = await Database.fetchByDay(now);
     setState(() {
       eventList = newList;
     });
@@ -123,11 +123,12 @@ class _CalendarPageState extends State<CalendarPage> {
 
             //Display Event list if not emtpy, otherwise display "No event" text
             eventList.isEmpty
-                ? const Text(
+                ? const Expanded(child: Text(
                     "No Events for today",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                   )
+                )
                 : Expanded(
                     child: ListView.builder(
                       itemCount: eventList.length,
