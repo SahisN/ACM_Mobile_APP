@@ -1,0 +1,4 @@
+enum userPreference {
+  darkMode,
+  notification,
+}

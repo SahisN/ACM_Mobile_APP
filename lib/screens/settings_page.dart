@@ -1,47 +1,56 @@
+import 'package:acm_app/provider/theme_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({Key? key}) : super(key: key);
 
   @override
-  _SettingsPageState createState() => _SettingsPageState();
+  State<SettingsPage> createState() => _SettingsPageState();
 }
 
 class _SettingsPageState extends State<SettingsPage> {
-  bool _switchValue1 = false;
-  bool _switchValue2 = false;
-
   @override
   Widget build(BuildContext context) {
+    bool darkMode = Provider.of<ThemeProvider>(context).darkModeSelected;
+    bool notification = false;
+
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(16.0), // Padding around the entire content
+        padding:
+            const EdgeInsets.all(16.0), // Padding around the entire content
         child: Column(
           children: [
             const SizedBox(height: 100.0),
             Table(
-              columnWidths: {
+              columnWidths: const {
                 0: FlexColumnWidth(0.5), // Column width for the Switch
-                1: FlexColumnWidth(2),   // Column width for the Text
+                1: FlexColumnWidth(2), // Column width for the Text
               },
               children: [
                 TableRow(
                   children: [
                     Row(
                       children: [
-                        const Expanded(
+                        Expanded(
                           child: Text(
                             'Dark Theme',
-                            style: TextStyle(fontSize: 32.0), // Font size of the Text
+                            style: TextStyle(
+                              fontSize: 32.0,
+                              color:
+                                  Theme.of(context).colorScheme.inversePrimary,
+                            ), // Font size of the Text
                           ),
                         ),
                         Switch(
-                          value: _switchValue1,
+                          value: darkMode,
                           onChanged: (value) {
                             setState(() {
-                              _switchValue1 = value;
+                              Provider.of<ThemeProvider>(context, listen: false)
+                                  .toggleTheme();
+                              darkMode = value;
                             });
-                            // Code that will control what will happen when switch is turn on/off
+                            // Code that will control what will the theme
                           },
                         ),
                       ],
@@ -52,17 +61,21 @@ class _SettingsPageState extends State<SettingsPage> {
                   children: [
                     Row(
                       children: [
-                        const Expanded(
+                        Expanded(
                           child: Text(
                             'Notifications',
-                            style: TextStyle(fontSize: 32.0),
+                            style: TextStyle(
+                              fontSize: 32.0,
+                              color:
+                                  Theme.of(context).colorScheme.inversePrimary,
+                            ),
                           ),
                         ),
                         Switch(
-                          value: _switchValue2,
+                          value: notification,
                           onChanged: (value) {
                             setState(() {
-                              _switchValue2 = value;
+                              notification = value;
                             });
                             // Code that will control what will happen when switch is turn on/off
                           },
