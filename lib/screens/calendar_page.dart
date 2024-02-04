@@ -90,6 +90,9 @@ class _CalendarPageState extends State<CalendarPage> {
                   color: Theme.of(context).focusColor,
                 ),
               ),
+              calendarBuilders: const CalendarBuilders(
+                  //markerBuilder:
+                  ),
               availableGestures: AvailableGestures.all,
               selectedDayPredicate: (day) => isSameDay(day, now),
               focusedDay: now,
