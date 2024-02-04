@@ -42,6 +42,10 @@ dependencies:
   flutter_native_splash: ^2.3.5
   provider:
   riverpod: ^2.4.9
+  firebase_core: ^2.15.1
+  firebase_auth: ^4.7.3
+  firebase_storage: ^11.2.6
+  cloud_firestore: ^4.13.6
 
 flutter_native_splash:
   # This package generates native code to customize Flutter's default white native splash screen
