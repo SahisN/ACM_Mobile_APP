@@ -44,13 +44,13 @@ class _SettingsPageState extends State<SettingsPage> {
                         ),
                         Switch(
                           value: darkMode,
-                          onChanged: (value) {
+                          onChanged: (darkModeSelected) {
                             setState(() {
-                              Provider.of<ThemeProvider>(context, listen: false)
-                                  .toggleTheme();
-                              darkMode = value;
+                              darkMode = darkModeSelected;
                             });
                             // Code that will control what will the theme
+                            Provider.of<ThemeProvider>(context, listen: false)
+                                .toggleTheme();
                           },
                         ),
                       ],
@@ -73,9 +73,9 @@ class _SettingsPageState extends State<SettingsPage> {
                         ),
                         Switch(
                           value: notification,
-                          onChanged: (value) {
+                          onChanged: (isEnabled) {
                             setState(() {
-                              notification = value;
+                              notification = isEnabled;
                             });
                             // Code that will control what will happen when switch is turn on/off
                           },
