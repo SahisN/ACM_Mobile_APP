@@ -4,6 +4,7 @@ import 'package:acm_app/model/event_item.dart';
 import 'package:acm_app/widget/event_card.dart';
 import 'package:acm_app/model/firebase.dart';
 
+bool isInitialized = false;
 bool isExpanded = false;
 Map<DateTime, List<EventItem>> eventMap = {};
 
@@ -53,7 +54,8 @@ class _CalendarPageState extends State<CalendarPage> {
 
   //initially fetch all events and load to eventMap
   void _iniFetch() async {
-    List<EventItem> events = await Database.fetchByRange(firstDate, lastDay);
+    List<EventItem> events = await Database.fetchByRange_googleCal(firstDate, lastDay);
+    //List<EventItem> events = await Database.fetchByRange(firstDate, lastDay);
 
     for (EventItem eve in events) {
       DateTime date = DateTime(eve.dateTime.year, eve.dateTime.month, eve.dateTime.day);
@@ -72,6 +74,7 @@ class _CalendarPageState extends State<CalendarPage> {
   @override
   void initState() {
     super.initState();
+    if (isInitialized) return;
     _iniFetch();
   }
 

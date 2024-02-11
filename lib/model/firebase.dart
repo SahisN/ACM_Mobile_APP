@@ -1,4 +1,6 @@
 //import 'dart:convert';
+import 'dart:convert';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:http/http.dart' as http;
 import 'package:acm_app/model/event_item.dart';
@@ -91,19 +93,26 @@ class Database {
 
   //===== Google Calendar API =============================
 
-  static void fetchByDay_googleCal(DateTime day) async
+  static Future<List<EventItem>> fetchByRange_googleCal(DateTime minDate, DateTime maxDate) async
   {
     Uri url = Uri.https("www.googleapis.com", "/calendar/v3/calendars/acm.calstatela@gmail.com/events", {
       "key": KEY,
-      "singleEvents": true,
-      "maxResults": 2000,
-      "minTime": "${day.year}-${day.month}-${day.day}",
-      "maxTime": "${day.year}-${day.month}-${day.day}"
+      "singleEvents": "true",
+      "maxResults": "2000",
+      "minTime": "${minDate.year}-${minDate.month}-${minDate.day}",
+      "maxTime": "${maxDate.year}-${maxDate.month}-${maxDate.day}"
     }); 
   
     var res = await http.get(url);
+    Map<String, dynamic> resJson = jsonDecode(res.body);
+    List<EventItem> eventList = [];
     
-    
+    for (Map<String, dynamic> item in resJson["items"]) {
+      if (item["kind"] != "calendar#event") continue;
+      eventList.add(EventItem.parseJson_googleCal( item ));
+    }
+
+    return eventList;
   }
 
 
