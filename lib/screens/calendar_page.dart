@@ -5,11 +5,7 @@ import 'package:acm_app/widget/event_card.dart';
 import 'package:acm_app/model/firebase.dart';
 
 bool isExpanded = false;
-List<EventItem> eventList = [
-  EventItem('A', DateTime(1,1,1), "nowhere", 'djfnef'),
-  EventItem('B', DateTime(1,1,1), "nowhere", 'djfnef'),
-  EventItem('C', DateTime(1,1,1), "nowhere", 'djfnef'),
-];
+Map<DateTime, List<EventItem>> eventMap = {};
 
 class CalendarPage extends StatefulWidget {
   const CalendarPage({super.key});
@@ -25,17 +21,10 @@ class _CalendarPageState extends State<CalendarPage> {
   final lastDay =
       DateTime.utc(2025, 7, 31); //DateTime(now.year + 5, now.month);
 
-  void _onRangeSelected(DateTime? start, DateTime? end, DateTime? focus) {
-    setState(() async {
-      eventList = await Database.fetchByRange(start, end);
-    });
-  }
-
   void _onDaySelected(DateTime day, DateTime focusedDay) {
     setState(() {
       now = day;
     });
-    _fetchEvents();
   }
 
   // ignore: unused_element
@@ -45,12 +34,45 @@ class _CalendarPageState extends State<CalendarPage> {
     });
   }
 
-  void _fetchEvents() async {
-    //calls firebase class to return a list of events
-    final newList = await Database.fetchByDay(now);
-    setState(() {
-      eventList = newList;
-    });
+  //TableCalendar eventLoader function
+  List<EventItem> _getEvents(DateTime day) {
+    DateTime date = DateTime(day.year, day.month, day.day);
+    return eventMap[date] ?? [];
+  }
+
+  ListView _eventListview() {
+    List<EventItem> eventList =
+        eventMap[DateTime(now.year, now.month, now.day)] ?? [];
+
+    return ListView.builder(
+      itemCount: eventList.length,
+      shrinkWrap: true,
+      itemBuilder: (_, i) => EventCard(eventList[i]),
+    );
+  }
+
+  //initially fetch all events and load to eventMap
+  void _iniFetch() async {
+    List<EventItem> events = await Database.fetchByRange(firstDate, lastDay);
+
+    for (EventItem eve in events) {
+      DateTime date = DateTime(eve.dateTime.year, eve.dateTime.month, eve.dateTime.day);
+
+      //map a list to a date key if not existed
+      if (!eventMap.containsKey(date)) {
+        eventMap.addAll({date: <EventItem>[]});
+      }
+
+      eventMap[date]!.add(eve);
+    }
+
+    setState(() {});
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _iniFetch();
   }
 
   @override
@@ -71,6 +93,7 @@ class _CalendarPageState extends State<CalendarPage> {
           mainAxisSize: MainAxisSize.min,
           children: [
             TableCalendar(
+              eventLoader: _getEvents,
               locale: "en_US",
               headerStyle: HeaderStyle(
                 formatButtonVisible: false,
@@ -106,7 +129,7 @@ class _CalendarPageState extends State<CalendarPage> {
               firstDay: firstDate,
               lastDay: lastDay,
               onDaySelected: _onDaySelected,
-              onRangeSelected: _onRangeSelected,
+              //onPageChanged: _onPageChanged,
               calendarFormat:
                   isExpanded ? CalendarFormat.month : CalendarFormat.twoWeeks,
             ),
@@ -122,20 +145,14 @@ class _CalendarPageState extends State<CalendarPage> {
             const SizedBox(height: 15),
 
             //Display Event list if not emtpy, otherwise display "No event" text
-            eventList.isEmpty
-                ? const Expanded(child: Text(
+            _getEvents(now).isEmpty
+                ? const Expanded(
+                    child: Text(
                     "No Events for today",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-                  )
-                )
-                : Expanded(
-                    child: ListView.builder(
-                      itemCount: eventList.length,
-                      shrinkWrap: true,
-                      itemBuilder: (_, i) => EventCard(eventList[i]),
-                    ),
-                  )
+                  ))
+                : Expanded(child: _eventListview())
           ],
         ),
       ),

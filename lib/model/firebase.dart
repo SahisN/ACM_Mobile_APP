@@ -1,20 +1,21 @@
 //import 'dart:convert';
 import 'package:cloud_firestore/cloud_firestore.dart';
-//import 'package:http/http.dart' as http;
+import 'package:http/http.dart' as http;
 import 'package:acm_app/model/event_item.dart';
 
 String collectionName = "InnoTestEvents";
+const KEY = "AIzaSyDWd_CvG8RYdp-wiwIWB2jM0qn3mn1F0zU";
 
 ///===== FireStore Docs ==============================
 ///
 /// Getting DateTime: firestore timestamps has a converting
 ///   function "toDate()" that returns the relvent DateTime object
 /// 
-/// 
+/// _fetchLastest: will query firestore online and store it locally
 ///
 ///===================================================
 
-//TODO: local firebase caching, fetch by range
+//TODO: Google calendar API
 
 class Database {
   static DateTime lastRead = DateTime(1, 1, 1);
@@ -42,7 +43,7 @@ class Database {
     final db = FirebaseFirestore.instance;
     
     _fetchLatest();
-
+    
     //offline querry
     final offlineRes = await db.collection(collectionName).where(
       "datetime", 
@@ -86,6 +87,27 @@ class Database {
       print("[ONLINE] : " + onlineRes.docs.length.toString() + " items");
     }
   }
+
+
+  //===== Google Calendar API =============================
+
+  static void fetchByDay_googleCal(DateTime day) async
+  {
+    Uri url = Uri.https("www.googleapis.com", "/calendar/v3/calendars/acm.calstatela@gmail.com/events", {
+      "key": KEY,
+      "singleEvents": true,
+      "maxResults": 2000,
+      "minTime": "${day.year}-${day.month}-${day.day}",
+      "maxTime": "${day.year}-${day.month}-${day.day}"
+    }); 
+  
+    var res = await http.get(url);
+    
+    
+  }
+
+
+
 
   //===== test =====
   static Future<List<EventItem>> testFetch() async {

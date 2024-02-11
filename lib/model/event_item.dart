@@ -19,4 +19,15 @@ class EventItem {
 
     return EventItem(name, dateTime, location, imageURL);
   }
+
+
+  factory EventItem.parseJson_googleCal(Map<String, dynamic> json) {
+    //type casting
+    final name = json['name'] as String;
+    final location = json['location'] as String;
+    final imageURL = json['imgUrl'] as String;
+    final DateTime dateTime = (json['datetime'] as Timestamp).toDate();
+
+    return EventItem(name, dateTime, location, imageURL);
+  }
 }
