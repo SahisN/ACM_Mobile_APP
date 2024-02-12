@@ -14,8 +14,8 @@ final socialMediaTypes = [
     url: 'https://discord.com/invite/wX58JRv',
   ),
   SocialMediaType(
-    bgColor: [Colors.lightBlueAccent],
-    imageLogo: 'assets/images/linkedin.png',
+    bgColor: [Colors.black54],
+    imageLogo: 'assets/images/linkedin_2.png',
     url: 'https://www.linkedin.com/in/acm-cal-state-la-2a92b4260/',
   ),
   SocialMediaType(
