@@ -221,6 +221,7 @@ flutter:
     - assets/images/linkedin.png
     - assets/images/acm_blob.png
     - assets/images/3d_acm_logo.png
+    - assets/images/gmail.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
