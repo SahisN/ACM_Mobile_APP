@@ -8,13 +8,14 @@ final socialMediaTypes = [
     url: 'https://acm-calstatela.com',
   ),
   SocialMediaType(
-    bgColor: [Colors.blue],
+    bgColor: [Colors.indigo.shade700],
+
     imageLogo: 'assets/images/discord.png',
     url: 'https://discord.com/invite/wX58JRv',
   ),
   SocialMediaType(
-    bgColor: [Colors.lightBlueAccent],
-    imageLogo: 'assets/images/linkedin.png',
+    bgColor: [Colors.black54],
+    imageLogo: 'assets/images/linkedin_2.png',
     url: 'https://www.linkedin.com/in/acm-cal-state-la-2a92b4260/',
   ),
   SocialMediaType(
@@ -23,8 +24,8 @@ final socialMediaTypes = [
     url: 'https://www.instagram.com/calstatela_acm/?hl=en',
   ),
   SocialMediaType(
-    bgColor: [Colors.teal],
-    imageLogo: 'assets/images/facebook.png',
+    bgColor: [Color.fromARGB(255, 49, 111, 246)],
+    imageLogo: 'assets/images/facebook_logo.png',
     url: 'https://www.facebook.com/calstatela.acm',
   ),
   SocialMediaType(
