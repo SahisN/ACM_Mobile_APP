@@ -28,4 +28,8 @@ final socialMediaTypes = [
     imageLogo: 'assets/images/facebook_logo.png',
     url: 'https://www.facebook.com/calstatela.acm',
   ),
+  SocialMediaType(
+      bgColor: [Colors.white],
+      imageLogo: 'assets/images/gmail.png',
+      url: 'mailto:acm.calstatela@gmail.com?subject=Greetings ACM!')
 ];

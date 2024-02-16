@@ -40,6 +40,8 @@ dependencies:
   table_calendar: ^3.0.9
   google_nav_bar: ^5.0.6
   flutter_native_splash: ^2.3.5
+  provider:
+  riverpod: ^2.4.9
   firebase_core: ^2.15.1
   firebase_auth: ^4.7.3
   firebase_storage: ^11.2.6
@@ -223,6 +225,8 @@ flutter:
     - assets/images/facebook_3.png
     - assets/images/gmail-logo-2.png
     - assets/images/linkedin_2.png
+    - assets/images/gmail.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
