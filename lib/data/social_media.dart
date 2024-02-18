@@ -14,7 +14,7 @@ final socialMediaTypes = [
   ),
   SocialMediaType(
     bgColor: [Colors.teal.shade400],
-    imageLogo: 'assets/images/linkedin_2.png',
+    imageLogo: 'assets/images/linkedin.png',
     url: 'https://www.linkedin.com/in/acm-cal-state-la-2a92b4260/',
   ),
   SocialMediaType(
@@ -24,7 +24,7 @@ final socialMediaTypes = [
   ),
   SocialMediaType(
     bgColor: [Colors.blue],
-    imageLogo: 'assets/images/facebook_3.png',
+    imageLogo: 'assets/images/facebook.png',
     url: 'https://www.facebook.com/calstatela.acm',
   ),
   SocialMediaType(
