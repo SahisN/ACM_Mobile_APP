@@ -23,11 +23,13 @@ class ContactPage extends StatelessWidget {
           mainAxisSpacing: 20,
         ),
         children: socialMediaTypes
-            .map((social) => SocialMediaGridItem(
-                  bgColor: social.bgColor,
-                  imageLogo: social.imageLogo,
-                  url: social.url,
-                ))
+            .map(
+              (social) => SocialMediaGridItem(
+                bgColor: social.bgColor,
+                imageLogo: social.imageLogo,
+                url: social.url,
+              ),
+            )
             .toList(),
       ),
     );

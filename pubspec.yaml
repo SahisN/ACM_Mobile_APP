@@ -221,11 +221,11 @@ flutter:
     - assets/images/linkedin.png
     - assets/images/acm_blob.png
     - assets/images/3d_acm_logo.png
-    - assets/images/facebook_logo.png
     - assets/images/facebook_3.png
-    - assets/images/gmail-logo-2.png
     - assets/images/linkedin_2.png
     - assets/images/gmail.png
+    - assets/images/facebook_4.png
+    - assets/images/linkedin_3.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

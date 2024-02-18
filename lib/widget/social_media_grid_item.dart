@@ -25,7 +25,9 @@ class SocialMediaGridItem extends StatelessWidget {
           child: SizedBox(
             width: 90,
             height: 90,
-            child: Image.asset(imageLogo),
+            child: Image.asset(
+              imageLogo,
+            ),
           ),
         ),
       ),

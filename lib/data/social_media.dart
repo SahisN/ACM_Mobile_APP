@@ -3,18 +3,17 @@ import 'package:flutter/material.dart';
 
 final socialMediaTypes = [
   SocialMediaType(
-    bgColor: [Colors.black87],
+    bgColor: [const Color.fromARGB(255, 9, 43, 99)],
     imageLogo: 'assets/images/acm_blob.png',
     url: 'https://acm-calstatela.com',
   ),
   SocialMediaType(
     bgColor: [Colors.indigo.shade700],
-
     imageLogo: 'assets/images/discord.png',
     url: 'https://discord.com/invite/wX58JRv',
   ),
   SocialMediaType(
-    bgColor: [Colors.black54],
+    bgColor: [Colors.teal.shade400],
     imageLogo: 'assets/images/linkedin_2.png',
     url: 'https://www.linkedin.com/in/acm-cal-state-la-2a92b4260/',
   ),
@@ -24,8 +23,8 @@ final socialMediaTypes = [
     url: 'https://www.instagram.com/calstatela_acm/?hl=en',
   ),
   SocialMediaType(
-    bgColor: [Color.fromARGB(255, 49, 111, 246)],
-    imageLogo: 'assets/images/facebook_logo.png',
+    bgColor: [Colors.blue],
+    imageLogo: 'assets/images/facebook_3.png',
     url: 'https://www.facebook.com/calstatela.acm',
   ),
   SocialMediaType(
