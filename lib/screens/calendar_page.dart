@@ -68,6 +68,7 @@ class _CalendarPageState extends State<CalendarPage> {
       eventMap[date]!.add(eve);
     }
 
+    isInitialized = true;
     setState(() {});
   }
 
