@@ -5,9 +5,13 @@ import 'package:acm_app/widget/event_card.dart';
 
 bool isExpanded = false;
 List<EventItem> eventList = [
-  EventItem('A', 'djfnef', DateTime(1, 1, 1), "somewhere", ""),
-  EventItem('B', 'djfnef', DateTime(1, 1, 1), "somewhere", ""),
-  EventItem('C', 'djfnef', DateTime(1, 1, 1), "somewhere", ""),
+  EventItem('ACM GENERAL MEETING', 'The first meeting of the semester, in were any student is welcome to join. During this meeting students will meet board members and engage on club activities.', DateTime(1, 16, 2024),
+      "Salazar Hall 234", ""),
+  EventItem(
+      'ACM GAME NIGHT', 'Game night is an event that encourages Club members to relax, game and enjoy each others company. We hosted once a semester and we have tournaments where students can win prices.', DateTime(1, 1, 1), 
+      "Salazar Hall 163", ""),
+  EventItem('ACM MOVIE NIGHT','Movie night is the ACM Hangout where students meet up at the movie theater and enjoy a carefully selected film that will blow your socks off. Please make sure to sing up before tickets run out.', DateTime(1, 1, 1),
+  "Alhambra ", ""),
 ];
 
 class CalendarPage extends StatefulWidget {

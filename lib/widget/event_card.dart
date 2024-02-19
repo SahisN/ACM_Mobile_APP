@@ -1,4 +1,5 @@
 import 'package:acm_app/model/event_item.dart';
+import 'package:acm_app/navpages/event_detail.dart';
 import "package:flutter/material.dart";
 
 class EventCard extends StatelessWidget {
@@ -24,39 +25,33 @@ class EventCard extends StatelessWidget {
             shadowColor: Theme.of(context).shadowColor,
             //ListTile is a fixed height row
 
-            child: ExpansionTile(
-              //this is where the expansion part begins
-              leading: CircleAvatar(
-                backgroundColor: Theme.of(context).primaryColor,
-                //this gives the avatar that holds a "!" a char
-                child: const Text(
-                  "!",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                      color: Colors.white),
-                ),
-              ),
-              //This is where the parameters for CircleAvatar end
-              title: Text(event.name),
-              subtitle: Text(event.location),
-
-              //Theme.of(context).primaryColor,
-              trailing: const SizedBox(),
-              shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-              ),
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(100.0),
-                  child: Row(
-                    children: <Widget>[
-                      const Spacer(),
-                      Text(event.description),
-                    ],
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (ctx) => DetailPage(event: this.event)),
+                );
+              },
+              child: Ink(
+                child: GestureDetector(
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      backgroundColor: Theme.of(context).primaryColor,
+                      //this gives the avatar that holds a "!" a char
+                      child: const Text(
+                        "!",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                            color: Colors.white),
+                      ),
+                    ),
+                    title: Text(event.name),
+                    subtitle: Text(event.location),
                   ),
                 ),
-              ],
+              ),
             ),
           ),
         ],
