@@ -220,16 +220,13 @@ flutter:
     - assets/images/discord.png
     - assets/images/linkedin.png
     - assets/images/acm_blob.png
-<<<<<<< HEAD
     - assets/images/3d_acm_logo.png
     - assets/images/salazarhall.png
     - assets/images/edwardsAlhambra.png
-=======
     - assets/images/facebook.png
     - assets/images/gmail.png
    
 
->>>>>>> refs/remotes/origin/main
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
