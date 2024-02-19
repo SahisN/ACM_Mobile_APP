@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "417128442198",
+    "firebase_url": "https://acm-calstatela.firebaseio.com",
+    "project_id": "acm-calstatela",
+    "storage_bucket": "acm-calstatela.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417128442198:android:7aebc886fb4b530ba90ef7",
+        "android_client_info": {
+          "package_name": "com.example.acm_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417128442198-a2vgc8o94agvepq1odv9qnmreuqce6h4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCceJ4OPsNQAMY1zSW4ZBkPNJMi0s2dT4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "417128442198-a2vgc8o94agvepq1odv9qnmreuqce6h4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
