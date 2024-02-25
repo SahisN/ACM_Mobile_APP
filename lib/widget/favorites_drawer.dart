@@ -39,6 +39,20 @@ class FavoritesDrawer extends StatelessWidget {
               ],
             ),
           ),
+          ListTile(
+            leading: const Icon(Icons.calendar_month),
+            title: const Text('Home Page'),
+            onTap: () {
+              onSelectScreen('homepage');
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.favorite),
+            title: const Text('Favorites'),
+            onTap: () {
+              onSelectScreen('favorites');
+            },
+          ),
         ],
       ),
     );
