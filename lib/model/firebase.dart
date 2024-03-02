@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 import 'package:acm_app/model/event_item.dart';
 
 String collectionName = "InnoTestEvents";
-const KEY = "AIzaSyDWd_CvG8RYdp-wiwIWB2jM0qn3mn1F0zU";
+const KEY = "AIzaSyDWd_ asdfsdf wf eff CvG8RYdp-wiwIWB2jM0qn3mn1F0zU";
 
 ///===== FireStore Docs ==============================
 ///
