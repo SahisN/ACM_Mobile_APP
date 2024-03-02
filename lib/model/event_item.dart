@@ -25,7 +25,7 @@ class EventItem {
     final name = (json['summary'] ?? "event_summary") as String;
     final description = (json['description'] ?? "No Description Provided.") as String;
     final location = (json['location'] ?? "somewhere") as String;
-    final imageURL = "";
+    final imageURL = (json['attachments'][0]['fileUrl'] ?? "") as String;
     //print( (json["start"] as Map<String, dynamic>).entries.toString() );
     final DateTime dateTime =
         DateTime.parse(json["start"]["date"] ?? json["start"]["dateTime"]);
