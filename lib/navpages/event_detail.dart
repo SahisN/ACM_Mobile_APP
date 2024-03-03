@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import 'package:acm_app/model/event_item.dart';
 import 'package:acm_app/data/random_number.dart';
+import 'package:like_button/like_button.dart';
 
 class DetailPage extends StatelessWidget {
   const DetailPage({super.key, required this.event});
@@ -40,6 +41,7 @@ class DetailPage extends StatelessWidget {
             /* 
             need to review over this
              */
+            
             Positioned(
                 child: Row(
               children: [
@@ -55,6 +57,9 @@ class DetailPage extends StatelessWidget {
                 )
               ],
             )),
+
+          
+
             //This positioned holds the content that is found under the image
             Positioned(
                 top: 260,
@@ -72,26 +77,27 @@ class DetailPage extends StatelessWidget {
                   child: Column(
                     children: [
                       //this row will hold title
-                      Row(
-                        //will create a space between the title and date row
-                        //further changes will be done under child: Container
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
+                       Text(
                             event.name,
                             style: const TextStyle(
                               fontSize: 20,
-                              color: Colors.black54,
+                              color: Colors.black,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          const Text(
-                            //make custom string to date time
-                            //widget.event.dateTime.toString(),
-                            "5:00 pm",
+
+                      const SizedBox(
+                        height: 10,
+
+                      ),
+                      const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "October 19th, 4:00 p.m",
+                            textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 20,
-                              color: Colors.black54,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -101,6 +107,7 @@ class DetailPage extends StatelessWidget {
                         height: 10,
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Icon(
                             Icons.location_on,
@@ -117,19 +124,25 @@ class DetailPage extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
+                          //maybe put the time
                         ],
                       ),
                       
-                      const SizedBox(height: 20,),
-                      Text("Description:",
-                      style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.black.withOpacity(0.8),
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
 
-                      const SizedBox(height: 20,),
+                      const SizedBox(height: 30,),
+                      Align(alignment: Alignment.centerLeft,
+                        child: Text("Description:",
+                        
+                        style: TextStyle(
+                              
+                                fontSize: 20,
+                                color: Colors.black.withOpacity(0.8),
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                      ),
+
+                      const SizedBox(height: 5,),
                       Text(event.description,
                       style: const TextStyle(
                               fontSize: 20,
@@ -140,10 +153,16 @@ class DetailPage extends StatelessWidget {
                     ],
                   ),
                 )),
-           /* const Positioned(child: Row(
-              bottom:0,
-              chi
-            )) */
+            const Positioned(
+              top: 5,
+              right: 10,
+              child:LikeButton(
+                size: 40,
+              )
+                
+                
+              
+            ) 
           ],
         ),
       ),
