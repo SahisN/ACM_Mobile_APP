@@ -30,7 +30,7 @@ class EventCard extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (ctx) => DetailPage(event: event)),
+                      builder: (ctx) => DetailPage(event: event, firstDate: DateTime.utc(2023, 7, 31) )),
                 );
               },
               child: Ink(

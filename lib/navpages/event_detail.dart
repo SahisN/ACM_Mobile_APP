@@ -1,11 +1,14 @@
 import "package:flutter/material.dart";
 import 'package:acm_app/model/event_item.dart';
 import 'package:acm_app/data/random_number.dart';
+import 'package:intl/intl.dart';
 import 'package:like_button/like_button.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DetailPage extends StatelessWidget {
-  const DetailPage({super.key, required this.event});
+  const DetailPage({super.key, required this.event, required this.firstDate});
   final EventItem event;
+  final DateTime firstDate;
 
   @override
   Widget build(BuildContext context) {
@@ -90,13 +93,13 @@ class DetailPage extends StatelessWidget {
                         height: 10,
 
                       ),
-                      const Row(
+                      Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            "October 19th, 4:00 p.m",
+                            DateFormat('MMMM dd, h:mm a').format(firstDate),
                             textAlign: TextAlign.center,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),
