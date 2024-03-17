@@ -7,11 +7,11 @@ class SocialMediaGridItem extends StatelessWidget {
   final String url;
 
   const SocialMediaGridItem({
-    Key? key,
+    super.key,
     required this.bgColor,
     required this.imageLogo,
     required this.url,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
