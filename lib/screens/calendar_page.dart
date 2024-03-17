@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:acm_app/model/event_item.dart';
 import 'package:acm_app/widget/event_card.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 bool isExpanded = false;
 List<EventItem> eventList = [

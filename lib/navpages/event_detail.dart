@@ -3,7 +3,6 @@ import 'package:acm_app/model/event_item.dart';
 import 'package:acm_app/data/random_number.dart';
 import 'package:intl/intl.dart';
 import 'package:like_button/like_button.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class DetailPage extends StatelessWidget {
   const DetailPage({super.key, required this.event, required this.firstDate});
@@ -44,7 +43,7 @@ class DetailPage extends StatelessWidget {
             /* 
             need to review over this
              */
-            
+
             Positioned(
                 child: Row(
               children: [
@@ -60,8 +59,6 @@ class DetailPage extends StatelessWidget {
                 )
               ],
             )),
-
-          
 
             //This positioned holds the content that is found under the image
             Positioned(
@@ -80,18 +77,17 @@ class DetailPage extends StatelessWidget {
                   child: Column(
                     children: [
                       //this row will hold title
-                       Text(
-                            event.name,
-                            style: const TextStyle(
-                              fontSize: 20,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                      Text(
+                        event.name,
+                        style: const TextStyle(
+                          fontSize: 20,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
 
                       const SizedBox(
                         height: 10,
-
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -130,42 +126,42 @@ class DetailPage extends StatelessWidget {
                           //maybe put the time
                         ],
                       ),
-                      
 
-                      const SizedBox(height: 30,),
-                      Align(alignment: Alignment.centerLeft,
-                        child: Text("Description:",
-                        
-                        style: TextStyle(
-                              
-                                fontSize: 20,
-                                color: Colors.black.withOpacity(0.8),
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Description:",
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black.withOpacity(0.8),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
 
-                      const SizedBox(height: 5,),
-                      Text(event.description,
-                      style: const TextStyle(
-                              fontSize: 20,
-                              color: Colors.black54,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        event.description,
+                        style: const TextStyle(
+                          fontSize: 20,
+                          color: Colors.black54,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ],
                   ),
                 )),
             const Positioned(
-              top: 5,
-              right: 10,
-              child:LikeButton(
-                size: 40,
-              )
-                
-                
-              
-            ) 
+                top: 5,
+                right: 10,
+                child: LikeButton(
+                  size: 40,
+                ))
           ],
         ),
       ),
