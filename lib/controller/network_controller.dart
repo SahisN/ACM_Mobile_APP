@@ -1,5 +1,6 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 class NetworkController extends GetxController {
@@ -11,7 +12,21 @@ class NetworkController extends GetxController {
   void onInit() {
     super.onInit();
     // listen to the connection status
+    initConnectivity();
     _connectivity.onConnectivityChanged.listen(_updateConnectionStatus);
+  }
+
+  // check connection when the app is launched
+  Future<void> initConnectivity() async {
+    late ConnectivityResult result;
+
+    try {
+      result = await _connectivity.checkConnectivity();
+    } on PlatformException catch (_) {
+      return;
+    }
+
+    return _updateConnectionStatus(result);
   }
 
   // this function is called when network connection is updated
@@ -29,7 +44,7 @@ class NetworkController extends GetxController {
           ),
         ),
         isDismissible: true,
-        duration: const Duration(days: 1),
+        duration: const Duration(seconds: 10),
         backgroundColor: Colors.red[400]!,
         icon: const Icon(
           Icons.wifi_off,
@@ -59,7 +74,7 @@ class NetworkController extends GetxController {
             ),
           ),
           isDismissible: false,
-          duration: const Duration(seconds: 1),
+          duration: const Duration(seconds: 3),
           backgroundColor: Colors.green[400]!,
           icon: const Icon(
             Icons.wifi,
