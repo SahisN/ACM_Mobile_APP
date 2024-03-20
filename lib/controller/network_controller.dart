@@ -3,6 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
+/**
+* source: https://www.youtube.com/watch?v=bQ8T6W5fERg
+* author: Flutter Guys
+*/
+
 class NetworkController extends GetxController {
   final Connectivity _connectivity = Connectivity();
   bool wasDisconnected = false;
