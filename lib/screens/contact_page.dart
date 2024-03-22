@@ -2,10 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:acm_app/data/social_media.dart';
-import 'package:acm_app/widget/catagory_grid_item.dart';
+import 'package:acm_app/widget/social_media_grid_item.dart';
 
 class ContactPage extends StatelessWidget {
-  const ContactPage({Key? key}) : super(key: key);
+  const ContactPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,11 +23,13 @@ class ContactPage extends StatelessWidget {
           mainAxisSpacing: 20,
         ),
         children: socialMediaTypes
-            .map((social) => CategoryGridItem(
-                  bgColor: social.bgColor,
-                  imageLogo: social.imageLogo,
-                  url: social.url,
-                ))
+            .map(
+              (social) => SocialMediaGridItem(
+                bgColor: social.bgColor,
+                imageLogo: social.imageLogo,
+                url: social.url,
+              ),
+            )
             .toList(),
       ),
     );

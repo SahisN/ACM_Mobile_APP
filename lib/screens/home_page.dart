@@ -1,9 +1,10 @@
 import 'package:acm_app/screens/calendar_page.dart';
 import 'package:acm_app/screens/contact_page.dart';
-
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:acm_app/screens/settings_page.dart';
+import 'package:acm_app/screens/favorite_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -30,8 +31,9 @@ class _HomePageState extends State<HomePage> {
   // _screens stores all the list of screens
   static const List<Widget> _screens = <Widget>[
     CalendarPage(),
+    FavoritePage(),
     ContactPage(),
-    Center(child: Text('Settings')),
+    SettingsPage(),
   ];
 
   @override
@@ -39,14 +41,17 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       bottomNavigationBar: GNav(
         // stores tab_icon, name of the icon
-        tabs: const [
-          GButton(
+        tabs: [
+          const GButton(
             icon: Icons.calendar_month_sharp,
           ),
           GButton(
+            icon: _selectedIndex == 1 ? Icons.favorite : Icons.heart_broken,
+          ),
+          const GButton(
             icon: Icons.contacts_sharp,
           ),
-          GButton(
+          const GButton(
             icon: Icons.settings,
           )
         ],
@@ -59,8 +64,11 @@ class _HomePageState extends State<HomePage> {
 
         // inactive tab icon color
         color: Theme.of(context).secondaryHeaderColor,
+
         // active tab icon color
-        activeColor: Theme.of(context).focusColor,
+        activeColor: _selectedIndex == 1
+            ? Colors.red
+            : Theme.of(context).focusColor, //  theme.of(context).focusColor
         // tab color
         backgroundColor: Theme.of(context).colorScheme.primary,
 

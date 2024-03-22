@@ -8,6 +8,7 @@ bool isInitialized = false;
 bool isExpanded = false;
 Map<DateTime, List<EventItem>> eventMap = {};
 
+
 class CalendarPage extends StatefulWidget {
   const CalendarPage({super.key});
 
@@ -160,7 +161,7 @@ class _CalendarPageState extends State<CalendarPage> {
           ],
         ),
       ),
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.background
     );
   }
 }
