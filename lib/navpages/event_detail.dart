@@ -9,6 +9,13 @@ class DetailPage extends StatelessWidget {
   final EventItem event;
   final DateTime firstDate;
 
+  ImageProvider _provideImage() {
+    if (event.imageURL == '') {
+      return const AssetImage("assets/images/3d_acm_logo.png");
+    }
+    return NetworkImage(event.imageURL);      //'https://picsum.photos/id/${getRandomInteger()}/200/300'
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,8 +39,7 @@ class DetailPage extends StatelessWidget {
                 height: 300,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: NetworkImage(
-                        'https://picsum.photos/id/${getRandomInteger()}/200/300'),
+                    image: _provideImage(), 
                     fit: BoxFit.cover,
                   ),
                 ),
