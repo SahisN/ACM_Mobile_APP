@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
-/**
-* source: https://www.youtube.com/watch?v=bQ8T6W5fERg
-* author: Flutter Guys
-*/
+/// source: https://www.youtube.com/watch?v=bQ8T6W5fERg
+/// author: Flutter Guys
 
 class NetworkController extends GetxController {
   final Connectivity _connectivity = Connectivity();
@@ -17,13 +15,13 @@ class NetworkController extends GetxController {
   void onInit() {
     super.onInit();
     // listen to the connection status
-    initConnectivity();
+    //initConnectivity();
     _connectivity.onConnectivityChanged.listen(_updateConnectionStatus);
   }
 
   // check connection when the app is launched
   Future<void> initConnectivity() async {
-    late ConnectivityResult result;
+    late List<ConnectivityResult> result;
 
     try {
       result = await _connectivity.checkConnectivity();
@@ -35,9 +33,9 @@ class NetworkController extends GetxController {
   }
 
   // this function is called when network connection is updated
-  void _updateConnectionStatus(ConnectivityResult connectivityResult) {
+  void _updateConnectionStatus(List<ConnectivityResult> connectivityResult) {
     // if user is not connected to internet show a snack bar
-    if (connectivityResult == ConnectivityResult.none) {
+    if (connectivityResult[0] == ConnectivityResult.none) {
       wasDisconnected = true;
       // no internet snackbar (popup)
       Get.rawSnackbar(
