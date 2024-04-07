@@ -49,8 +49,9 @@ dependencies:
   firebase_storage: ^11.2.6
   cloud_firestore: ^4.13.6
   like_button: ^2.0.5
-  connectivity_plus: ^5.0.2
+  connectivity_plus: ^6.0.1
   get: ^4.6.6
+  firebase_messaging: ^14.8.0
   
 
   
@@ -208,7 +209,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
