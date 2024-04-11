@@ -16,7 +16,7 @@ class DetailPage extends StatelessWidget {
       //The  Text is just a placeholder, ------ MUST CHANGE THIS -----
       /*
       appBar: AppBar(
-        title: const Text(""),
+       
       ),*/
       body: SizedBox(
         width: double.maxFinite,
