@@ -1,16 +1,20 @@
+import 'package:acm_app/screens/favorite_page.dart';
 import "package:flutter/material.dart";
 import 'package:acm_app/model/event_item.dart';
 import 'package:acm_app/data/random_number.dart';
 import 'package:intl/intl.dart';
 import 'package:like_button/like_button.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class DetailPage extends StatelessWidget {
+class DetailPage extends ConsumerWidget {
   const DetailPage({super.key, required this.event, required this.firstDate});
   final EventItem event;
   final DateTime firstDate;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final favorites = ref.watch(favoriteProvider.notifier);
+
     return Scaffold(
       //The appBar allows the page to return to the calendar page
       //The  Text is just a placeholder, ------ MUST CHANGE THIS -----
@@ -156,12 +160,26 @@ class DetailPage extends StatelessWidget {
                     ],
                   ),
                 )),
-            const Positioned(
-                top: 5,
-                right: 10,
-                child: LikeButton(
-                  size: 40,
-                ))
+            Positioned(
+              top: 5,
+              right: 10,
+              child: LikeButton(
+                size: 40,
+                onTap: (bool isLiked) async {
+                  if (isLiked) {
+                    favorites.remove(event);
+                  } else {
+                    favorites.add(event);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const FavoritePage()),
+                    );
+                  }
+                  return !isLiked;
+                },
+              ),
+            )
           ],
         ),
       ),
