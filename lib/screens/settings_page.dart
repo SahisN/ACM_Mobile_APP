@@ -1,7 +1,14 @@
+// theme
 import 'package:acm_app/provider/theme_provider.dart';
+// pages
+import 'package:acm_app/screens/settings/about_page.dart';
 import 'package:acm_app/screens/settings/contact_page.dart';
+import 'package:acm_app/screens/settings/feedback_page.dart';
+import 'package:acm_app/screens/settings/notification_page.dart';
+// widgets
 import 'package:acm_app/widget/settings_switch.dart';
 import 'package:acm_app/widget/settings_tile.dart';
+//essential
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -47,7 +54,12 @@ class _SettingsPageState extends State<SettingsPage> {
                 icon: Icons.notifications_outlined,
                 title: 'Notification',
                 onTap: () {
-                  // Handle tap
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const NotificationPage(),
+                    ),
+                  );
                 },
               ),
 
@@ -69,7 +81,12 @@ class _SettingsPageState extends State<SettingsPage> {
                 icon: Icons.help_outline,
                 title: 'About Us',
                 onTap: () {
-                  // Handle tap
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AboutPage(),
+                    ),
+                  );
                 },
               ),
 
@@ -107,7 +124,12 @@ class _SettingsPageState extends State<SettingsPage> {
                 icon: Icons.send_outlined,
                 title: 'Send Feedback',
                 onTap: () {
-                  // Handle tap
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const FeedbackPage(),
+                    ),
+                  );
                 },
               ),
             ],
