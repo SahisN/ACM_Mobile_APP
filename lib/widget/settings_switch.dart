@@ -1,16 +1,22 @@
+
+
 import 'package:flutter/material.dart';
 
-class SettingsTile extends StatelessWidget {
+class SettingsSwitch extends StatelessWidget {
   final IconData icon;
   final String title;
-  final VoidCallback onTap;
+  final void Function(bool value) onChanged;
+  final bool value;
 
-  const SettingsTile({
+  const SettingsSwitch({
     super.key,
     required this.icon,
     required this.title,
-    required this.onTap,
+    required this.value,
+    required this.onChanged,
   });
+
+  
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +33,7 @@ class SettingsTile extends StatelessWidget {
       child: ListTile(
         leading: Icon(icon),
         title: Text(title, style: const TextStyle(fontSize: 18),),
-        trailing: const Icon(Icons.chevron_right),
-        onTap: onTap,
+        trailing: Switch(value: value, onChanged: onChanged,),
       ),
     );
   }

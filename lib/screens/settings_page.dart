@@ -1,7 +1,10 @@
+
 import 'package:acm_app/provider/theme_provider.dart';
+import 'package:acm_app/widget/settings_switch.dart';
 import 'package:acm_app/widget/settings_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -11,56 +14,100 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
+  
   @override
   Widget build(BuildContext context) {
-    //bool darkMode = Provider.of<ThemeProvider>(context).darkModeSelected;
+    bool darkMode = Provider.of<ThemeProvider>(context).darkModeSelected;
     //bool notification = false;
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('Settings'),
       ),
-      body: Container(
-        padding: const EdgeInsets.only(left: 25),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(
-              height: 15,
-            ),
+      body: SingleChildScrollView(
 
-            // General settings
-            const Text(
-              'General',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+        child: Container(
+          padding: const EdgeInsets.only(left: 25),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 20,
               ),
-            ),
-            SettingsTile(
-              icon: Icons.notifications_outlined,
-              title: 'Notification',
-              onTap: () {
-                // Handle tap
-              },
-            ),
+        
+              // General settings
+              const Text(
+                'General',
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
 
-            SettingsTile(
-              icon: Icons.dark_mode_outlined,
-              title: 'Dark Mode',
-              onTap: () {
-                // Handle tap
-              },
-            ),
+              const SizedBox(height: 10),
 
-            SettingsTile(
-              icon: Icons.help_outline,
-              title: 'About Us',
-              onTap: () {
-                // Handle tap
-              },
-            ),
-          ],
+              SettingsTile(
+                icon: Icons.notifications_outlined,
+                title: 'Notification',
+                onTap: () {
+                  // Handle tap
+                },
+              ),
+        
+              SettingsSwitch(
+                icon: Icons.dark_mode_outlined,
+                title: 'Dark Mode',
+                value: darkMode,
+                onChanged: (bool darkModeSelected) {
+                  setState(() {
+                            darkMode = darkModeSelected;
+                          });
+                          // Code that will control what will the theme
+                          Provider.of<ThemeProvider>(context, listen: false)
+                              .toggleTheme();
+                      
+                },
+              ),
+        
+              SettingsTile(
+                icon: Icons.help_outline,
+                title: 'About Us',
+                onTap: () {
+                  // Handle tap
+                },
+              ),
+        
+              // dividing space using sizebox
+              const SizedBox(height: 20,),
+        
+              // Feedback
+              const Text(
+                'Feedback',
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+
+              const SizedBox(height: 10),
+        
+              SettingsTile(
+                icon: Icons.contacts_outlined,
+                title: 'Contact US',
+                onTap: () {
+                  // Handle tap
+                },
+              ),
+        
+              SettingsTile(
+                icon: Icons.send_outlined,
+                title: 'Send Feedback',
+                onTap: () {
+                  // Handle tap
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );
