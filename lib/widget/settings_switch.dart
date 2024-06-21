@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class SettingsSwitch extends StatelessWidget {
@@ -16,8 +14,6 @@ class SettingsSwitch extends StatelessWidget {
     required this.onChanged,
   });
 
-  
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,8 +28,14 @@ class SettingsSwitch extends StatelessWidget {
       ),
       child: ListTile(
         leading: Icon(icon),
-        title: Text(title, style: const TextStyle(fontSize: 18),),
-        trailing: Switch(value: value, onChanged: onChanged,),
+        title: Text(
+          title,
+          style: const TextStyle(fontSize: 18),
+        ),
+        trailing: Switch(
+          value: value,
+          onChanged: onChanged,
+        ),
       ),
     );
   }
