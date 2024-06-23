@@ -5,6 +5,7 @@ class SettingsSwitch extends StatelessWidget {
   final String title;
   final void Function(bool value) onChanged;
   final bool value;
+  final double size;
 
   const SettingsSwitch({
     super.key,
@@ -12,6 +13,7 @@ class SettingsSwitch extends StatelessWidget {
     required this.title,
     required this.value,
     required this.onChanged,
+    required this.size,
   });
 
   @override
@@ -30,7 +32,7 @@ class SettingsSwitch extends StatelessWidget {
         leading: Icon(icon),
         title: Text(
           title,
-          style: const TextStyle(fontSize: 18),
+          style: TextStyle(fontSize: size),
         ),
         trailing: Switch(
           value: value,

@@ -1,3 +1,4 @@
+import 'package:acm_app/widget/title_check_box.dart';
 import 'package:acm_app/widget/notification_wheel_picker.dart';
 import 'package:acm_app/widget/settings_switch.dart';
 import 'package:flutter/material.dart';
@@ -25,6 +26,7 @@ class NotificationPage extends StatelessWidget {
               SettingsSwitch(
                 icon: Icons.notifications_outlined,
                 title: 'Allow Notification',
+                size: 22,
                 value: true,
                 onChanged: (bool allowNotification) {},
               ),
@@ -96,6 +98,12 @@ class NotificationPage extends StatelessWidget {
                     onChanged: (int newMinute) {},
                   ),
                 ],
+              ),
+              TitleCheckBox(
+                isCheckedIcon: Icons.check,
+                isUncheckedIcon: Icons.close,
+                isChecked: (bool? selected) {},
+                title: 'Favorites Only',
               )
             ],
           ),

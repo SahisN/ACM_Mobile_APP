@@ -66,6 +66,7 @@ class _SettingsPageState extends State<SettingsPage> {
               SettingsSwitch(
                 icon: Icons.dark_mode_outlined,
                 title: 'Dark Mode',
+                size: 18,
                 value: darkMode,
                 onChanged: (bool darkModeSelected) {
                   setState(() {
