@@ -37,6 +37,7 @@ class SettingsSwitch extends StatelessWidget {
         trailing: Switch(
           value: value,
           onChanged: onChanged,
+          activeColor: Colors.white,
         ),
       ),
     );

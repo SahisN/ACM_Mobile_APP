@@ -1,5 +1,5 @@
 // theme
-import 'package:acm_app/provider/theme_provider.dart';
+import 'package:acm_app/provider/state_provider.dart';
 // pages
 import 'package:acm_app/screens/settings/about_page.dart';
 import 'package:acm_app/screens/settings/contact_page.dart';
@@ -22,7 +22,7 @@ class SettingsPage extends StatefulWidget {
 class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
-    bool darkMode = Provider.of<ThemeProvider>(context).darkModeSelected;
+    bool darkMode = Provider.of<StateProvider>(context).darkModeSelected;
     //bool notification = false;
 
     return Scaffold(
@@ -30,113 +30,141 @@ class _SettingsPageState extends State<SettingsPage> {
         title: const Text('Settings'),
       ),
       body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.only(left: 25),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(
-                height: 20,
-              ),
-
-              // General settings
-              Text(
-                'General',
-                style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                    color: Theme.of(context).colorScheme.inversePrimary),
-              ),
-
-              const SizedBox(height: 10),
-
-              SettingsTile(
-                icon: Icons.notifications_outlined,
-                title: 'Notification',
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const NotificationPage(),
-                    ),
-                  );
-                },
-              ),
-
-              SettingsSwitch(
-                icon: Icons.dark_mode_outlined,
-                title: 'Dark Mode',
-                size: 18,
-                value: darkMode,
-                onChanged: (bool darkModeSelected) {
-                  setState(() {
-                    darkMode = darkModeSelected;
-                  });
-                  // Code that will control what will the theme
-                  Provider.of<ThemeProvider>(context, listen: false)
-                      .toggleTheme();
-                },
-              ),
-
-              SettingsTile(
-                icon: Icons.help_outline,
-                title: 'About Us',
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const AboutPage(),
-                    ),
-                  );
-                },
-              ),
-
-              // dividing space using sizebox
-              const SizedBox(
-                height: 20,
-              ),
-
-              // Feedback
-              Text(
-                'Feedback',
-                style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                  color: Theme.of(context).colorScheme.inversePrimary,
+        child: Column(
+          children: [
+            Container(
+              padding: const EdgeInsets.only(left: 25),
+              height: 250,
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.primary,
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(20),
                 ),
               ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                    height: 20,
+                  ),
 
-              const SizedBox(height: 10),
+                  // General settings
+                  Text(
+                    'General',
+                    style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).colorScheme.inversePrimary),
+                  ),
 
-              SettingsTile(
-                icon: Icons.contacts_outlined,
-                title: 'Contact US',
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ContactPage(),
-                    ),
-                  );
-                },
+                  const SizedBox(height: 10),
+
+                  SettingsTile(
+                    icon: Icons.notifications_outlined,
+                    title: 'Notification',
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const NotificationPage(),
+                        ),
+                      );
+                    },
+                  ),
+
+                  SettingsSwitch(
+                    icon: Icons.dark_mode_outlined,
+                    title: 'Dark Mode',
+                    size: 18,
+                    value: darkMode,
+                    onChanged: (bool darkModeSelected) {
+                      setState(() {
+                        darkMode = darkModeSelected;
+                      });
+                      // Code that will control what will the theme
+                      Provider.of<StateProvider>(context, listen: false)
+                          .toggleTheme();
+                    },
+                  ),
+
+                  SettingsTile(
+                    icon: Icons.help_outline,
+                    title: 'About Us',
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const AboutPage(),
+                        ),
+                      );
+                    },
+                  ),
+                ],
               ),
-
-              SettingsTile(
-                icon: Icons.send_outlined,
-                title: 'Send Feedback',
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const FeedbackPage(),
-                    ),
-                  );
-                },
+            ),
+            // dividing space using sizebox
+            const SizedBox(
+              height: 40,
+            ),
+            Container(
+              padding: const EdgeInsets.only(left: 25),
+              height: 190,
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.primary,
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(20),
+                ),
               ),
-            ],
-          ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  // Feedback
+                  Text(
+                    'Feedback',
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: Theme.of(context).colorScheme.inversePrimary,
+                    ),
+                  ),
+
+                  const SizedBox(height: 10),
+
+                  SettingsTile(
+                    icon: Icons.contacts_outlined,
+                    title: 'Contact US',
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ContactPage(),
+                        ),
+                      );
+                    },
+                  ),
+
+                  SettingsTile(
+                    icon: Icons.send_outlined,
+                    title: 'Send Feedback',
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const FeedbackPage(),
+                        ),
+                      );
+                    },
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
+      backgroundColor: Theme.of(context).colorScheme.surface,
     );
   }
 }
