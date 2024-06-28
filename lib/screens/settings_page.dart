@@ -27,14 +27,20 @@ class _SettingsPageState extends State<SettingsPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Settings'),
+        title: const Text(
+          'Settings',
+          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
+            const SizedBox(
+              height: 15,
+            ),
             Container(
               padding: const EdgeInsets.only(left: 25),
-              height: 250,
+              height: 240,
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.primary,
                 borderRadius: const BorderRadius.all(
@@ -77,6 +83,8 @@ class _SettingsPageState extends State<SettingsPage> {
                     title: 'Dark Mode',
                     size: 18,
                     value: darkMode,
+                    active: Colors.white,
+                    inactive: Colors.black,
                     onChanged: (bool darkModeSelected) {
                       setState(() {
                         darkMode = darkModeSelected;

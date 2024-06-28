@@ -6,6 +6,8 @@ class SettingsSwitch extends StatelessWidget {
   final void Function(bool value) onChanged;
   final bool value;
   final double size;
+  final Color active;
+  final Color inactive;
 
   const SettingsSwitch({
     super.key,
@@ -14,6 +16,8 @@ class SettingsSwitch extends StatelessWidget {
     required this.value,
     required this.onChanged,
     required this.size,
+    required this.active,
+    required this.inactive,
   });
 
   @override
@@ -37,7 +41,9 @@ class SettingsSwitch extends StatelessWidget {
         trailing: Switch(
           value: value,
           onChanged: onChanged,
-          activeColor: Colors.white,
+          activeColor: active,
+          inactiveThumbColor: inactive,
+          thumbColor: WidgetStateProperty.all(inactive),
         ),
       ),
     );

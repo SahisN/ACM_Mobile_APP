@@ -22,11 +22,17 @@ class _NotificationWheelPickerState extends State<NotificationWheelPicker> {
   final now = TimeOfDay.now();
 
   late final wheel = WheelPickerController(
-      itemCount: widget.range, initialIndex: widget.initialValue);
+    itemCount: widget.range,
+    initialIndex: widget.initialValue,
+  );
 
   @override
   Widget build(BuildContext context) {
-    const textStyle = TextStyle(fontSize: 26.0, height: 1.5);
+    final textStyle = TextStyle(
+      fontSize: 26.0,
+      height: 1.5,
+      color: Theme.of(context).colorScheme.inversePrimary,
+    );
     final wheelStyle = WheelPickerStyle(
       size: 200,
       itemExtent: textStyle.fontSize! * textStyle.height!, // Text height
@@ -38,10 +44,12 @@ class _NotificationWheelPickerState extends State<NotificationWheelPicker> {
 
     Widget itemBuilder(BuildContext context, int index) {
       return Text(
-          "$index".padLeft(
-            2,
-          ),
-          style: textStyle);
+        "$index".padLeft(
+          2,
+        ),
+        style: textStyle,
+        selectionColor: Theme.of(context).colorScheme.inversePrimary,
+      );
     }
 
     return WheelPicker(
@@ -50,6 +58,7 @@ class _NotificationWheelPickerState extends State<NotificationWheelPicker> {
       style: wheelStyle,
       enableTap: true,
       onIndexChanged: widget.onChanged,
+      selectedIndexColor: Theme.of(context).colorScheme.inversePrimary,
     );
   }
 

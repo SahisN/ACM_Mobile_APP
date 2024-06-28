@@ -41,8 +41,9 @@ class TitleCheckBox extends StatelessWidget {
           size: 35,
           //borderColor: Colors.grey.shade200,
           isRound: true,
-          checkedColor: Colors.grey.shade200,
-          uncheckedColor: Colors.grey.shade200,
+          checkedColor: Theme.of(context).colorScheme.surface,
+          uncheckedColor: Theme.of(context).colorScheme.surface,
+          borderColor: Theme.of(context).colorScheme.surface,
         ),
       ),
     );

@@ -24,6 +24,12 @@ class _NotificationPageState extends State<NotificationPage> {
       ),
       body: SingleChildScrollView(
         child: Container(
+          decoration: BoxDecoration(
+            color: Theme.of(context).colorScheme.primary,
+            borderRadius: const BorderRadius.all(
+              Radius.circular(20),
+            ),
+          ),
           padding: const EdgeInsets.only(left: 25),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,6 +44,9 @@ class _NotificationPageState extends State<NotificationPage> {
                 title: 'Allow Notification',
                 size: 22,
                 value: notificationState,
+                active: Colors
+                    .green, //Theme.of(context).colorScheme.inverseSurface,
+                inactive: Theme.of(context).colorScheme.inversePrimary,
                 onChanged: (bool allowNotification) {
                   setState(() {
                     notificationState = allowNotification;
@@ -121,7 +130,7 @@ class _NotificationPageState extends State<NotificationPage> {
                 isUncheckedIcon: Icons.close,
                 isChecked: (bool? selected) {},
                 title: 'Favorites Only',
-              )
+              ),
             ],
           ),
         ),
