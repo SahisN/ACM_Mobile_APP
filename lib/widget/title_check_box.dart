@@ -47,18 +47,5 @@ class TitleCheckBox extends StatelessWidget {
         ),
       ),
     );
-
-    /**
-    RoundCheckBox(
-      onTap: isChecked,
-      animationDuration: const Duration(milliseconds: 500),
-      isChecked: true,
-      checkedWidget: Icon(isCheckedIcon),
-      uncheckedWidget: Icon(isUncheckedIcon),
-      isRound: true,
-      checkedColor: Colors.green,
-      uncheckedColor: Colors.white,
-    );
-    */
   }
 }
