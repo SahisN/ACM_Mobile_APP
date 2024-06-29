@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class SettingsSwitch extends StatelessWidget {
@@ -7,6 +5,9 @@ class SettingsSwitch extends StatelessWidget {
   final String title;
   final void Function(bool value) onChanged;
   final bool value;
+  final double size;
+  final Color active;
+  final Color inactive;
 
   const SettingsSwitch({
     super.key,
@@ -14,9 +15,10 @@ class SettingsSwitch extends StatelessWidget {
     required this.title,
     required this.value,
     required this.onChanged,
+    required this.size,
+    required this.active,
+    required this.inactive,
   });
-
-  
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +34,17 @@ class SettingsSwitch extends StatelessWidget {
       ),
       child: ListTile(
         leading: Icon(icon),
-        title: Text(title, style: const TextStyle(fontSize: 18),),
-        trailing: Switch(value: value, onChanged: onChanged,),
+        title: Text(
+          title,
+          style: TextStyle(fontSize: size),
+        ),
+        trailing: Switch(
+          value: value,
+          onChanged: onChanged,
+          activeColor: active,
+          inactiveThumbColor: inactive,
+          thumbColor: WidgetStateProperty.all(inactive),
+        ),
       ),
     );
   }

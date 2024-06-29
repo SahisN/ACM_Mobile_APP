@@ -146,6 +146,6 @@ class _CalendarPageState extends State<CalendarPage> {
             ],
           ),
         ),
-        backgroundColor: Theme.of(context).colorScheme.background);
+        backgroundColor: Theme.of(context).colorScheme.surface);
   }
 }
