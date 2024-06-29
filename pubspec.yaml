@@ -33,7 +33,6 @@ dependencies:
   url_launcher: ^6.0.0
   intl: any
 
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -51,9 +50,10 @@ dependencies:
   like_button: ^2.0.5
   connectivity_plus: ^5.0.2
   get: ^4.6.6
-  
+  wheel_picker: ^0.0.4
+  roundcheckbox: ^2.0.5
+  shared_preferences: ^2.2.3
 
-  
 flutter_native_splash:
   # This package generates native code to customize Flutter's default white native splash screen
   # with background color and splash image.
@@ -232,8 +232,6 @@ flutter:
     - assets/images/edwardsAlhambra.png
     - assets/images/facebook.png
     - assets/images/gmail.png
-   
-
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
