@@ -1,4 +1,5 @@
 import 'package:acm_app/provider/state_provider.dart';
+import 'package:acm_app/user_preferences.dart';
 import 'package:acm_app/widget/title_check_box.dart';
 import 'package:acm_app/widget/notification_wheel_picker.dart';
 import 'package:acm_app/widget/settings_switch.dart';
@@ -13,10 +14,27 @@ class NotificationPage extends StatefulWidget {
 }
 
 class _NotificationPageState extends State<NotificationPage> {
+  late bool notificationState;
+  late List<int> timeState;
+  late bool favoriteOnlyState;
+
+  @override
+  void dispose() {
+    // save all changes here
+    // print(notificationState);
+
+    UserPreferences.setNotification(notificationState);
+    UserPreferences.setTime(timeState);
+    UserPreferences.setFavoriteOnly(favoriteOnlyState);
+
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    bool notificationState =
-        Provider.of<StateProvider>(context).notificationState;
+    notificationState = Provider.of<StateProvider>(context).notificationState;
+    timeState = Provider.of<StateProvider>(context).time;
+    favoriteOnlyState = Provider.of<StateProvider>(context).favoriteOnlyState;
 
     return Scaffold(
       appBar: AppBar(
@@ -102,16 +120,20 @@ class _NotificationPageState extends State<NotificationPage> {
                   // days wheel
                   NotificationWheelPicker(
                     range: 5,
-                    initialValue: 0,
-                    onChanged: (int newDay) {},
+                    initialValue: timeState[0],
+                    onChanged: (int newDay) {
+                      timeState[0] = newDay;
+                    },
                   ),
                   const SizedBox(width: 75),
 
                   // hours wheel
                   NotificationWheelPicker(
                     range: 12,
-                    initialValue: 0,
-                    onChanged: (int newHour) {},
+                    initialValue: timeState[1],
+                    onChanged: (int newHour) {
+                      timeState[1] = newHour;
+                    },
                   ),
                   const SizedBox(
                     width: 80,
@@ -120,12 +142,15 @@ class _NotificationPageState extends State<NotificationPage> {
                   // minutes wheel
                   NotificationWheelPicker(
                     range: 60,
-                    initialValue: 0,
-                    onChanged: (int newMinute) {},
+                    initialValue: timeState[2],
+                    onChanged: (int newMinute) {
+                      timeState[2] = newMinute;
+                    },
                   ),
                 ],
               ),
               TitleCheckBox(
+                checked: favoriteOnlyState,
                 isCheckedIcon: Icons.check,
                 isUncheckedIcon: Icons.close,
                 isChecked: (bool? selected) {},

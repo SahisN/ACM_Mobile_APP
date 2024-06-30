@@ -9,8 +9,14 @@ class StateProvider with ChangeNotifier {
   ThemeData get themeData => _themeData;
   bool get darkModeSelected => _darkModeSelected;
 
-  bool _allowNotification = false;
+  bool _allowNotification = UserPreferences.getNotification();
   bool get notificationState => _allowNotification;
+
+  final List<int> _reminderTime = UserPreferences.getTime();
+  List<int> get time => _reminderTime;
+
+  final bool _favoritesOnly = UserPreferences.getFavorite();
+  bool get favoriteOnlyState => _favoritesOnly;
 
   // Sets the theme depending on ThemeData value
   set themeData(ThemeData themeData) {
@@ -29,6 +35,7 @@ class StateProvider with ChangeNotifier {
       themeData = lightMode;
       _darkModeSelected = false;
     }
+
     UserPreferences.setTheme(_darkModeSelected);
   }
 
@@ -38,5 +45,7 @@ class StateProvider with ChangeNotifier {
     } else {
       _allowNotification = true;
     }
+
+    UserPreferences.setNotification(_allowNotification);
   }
 }

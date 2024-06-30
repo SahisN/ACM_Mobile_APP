@@ -6,6 +6,7 @@ class TitleCheckBox extends StatelessWidget {
   final IconData isUncheckedIcon;
   final Function(bool? selected) isChecked;
   final String title;
+  final bool checked;
 
   const TitleCheckBox({
     super.key,
@@ -13,6 +14,7 @@ class TitleCheckBox extends StatelessWidget {
     required this.isUncheckedIcon,
     required this.isChecked,
     required this.title,
+    required this.checked,
   });
 
   @override
@@ -35,7 +37,7 @@ class TitleCheckBox extends StatelessWidget {
         trailing: RoundCheckBox(
           onTap: isChecked,
           animationDuration: const Duration(milliseconds: 500),
-          isChecked: true,
+          isChecked: checked,
           checkedWidget: Icon(isCheckedIcon),
           uncheckedWidget: Icon(isUncheckedIcon),
           size: 35,
