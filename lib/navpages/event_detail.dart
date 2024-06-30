@@ -99,7 +99,7 @@ class DetailPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            DateFormat('MMMM dd, h:mm a').format(firstDate),
+                            DateFormat('MMMM dd, h:mm a').format( event.dateTime ),
                             textAlign: TextAlign.center,
                             style: const TextStyle(
                               fontSize: 20,

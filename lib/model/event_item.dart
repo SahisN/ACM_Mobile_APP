@@ -12,12 +12,13 @@ class EventItem {
   //returns a new EventItem from the passed in event json map;
   factory EventItem.parseJson(Map<String, dynamic> json) {
     //type casting
-    final name = json['name'] as String;
-    final location = json['location'] as String;
-    final imageURL = json['imgUrl'] as String;
+    final name = (json['name'] ?? "event_name") as String;
+    final description = (json['description'] ?? "No Description Provided.") as String;
+    final location = (json['location'] ?? "somwhere") as String;
+    final imageURL = (json['imageUrl'] ?? "") as String;
     final DateTime dateTime = (json['datetime'] as Timestamp).toDate();
 
-    return EventItem(name, dateTime, '', location, imageURL);
+    return EventItem(name, dateTime, description, location, imageURL);
   }
 
   factory EventItem.parseJson_googleCal(Map<String, dynamic> json) {

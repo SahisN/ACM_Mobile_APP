@@ -6,7 +6,7 @@ import 'package:acm_app/model/firebase.dart';
 
 bool isInitialized = false;
 bool isExpanded = false;
-Map<DateTime, List<EventItem>> eventMap = {};
+//Map<DateTime, List<EventItem>> eventMap = {};
 
 
 class CalendarPage extends StatefulWidget {
@@ -18,10 +18,11 @@ class CalendarPage extends StatefulWidget {
 
 class _CalendarPageState extends State<CalendarPage> {
   DateTime now = DateTime.now();
-  final firstDate =
-      DateTime.utc(2023, 7, 31); //DateTime(now.year - 1, now.month);
+  final firstDate = 
+      DateTime(DateTime.now().year, DateTime.now().month - 2, 1); //DateTime(now.year - 1, now.month);
   final lastDay =
-      DateTime.utc(2025, 7, 31); //DateTime(now.year + 5, now.month);
+      DateTime.utc(DateTime.now().year + 5, 1, 1); //DateTime(now.year + 5, now.month);
+   
 
   void _onDaySelected(DateTime day, DateTime focusedDay) {
     setState(() {
@@ -39,12 +40,12 @@ class _CalendarPageState extends State<CalendarPage> {
   //TableCalendar eventLoader function
   List<EventItem> _getEvents(DateTime day) {
     DateTime date = DateTime(day.year, day.month, day.day);
-    return eventMap[date] ?? [];
+    return Database.eventMap[date] ?? [];
   }
 
   ListView _eventListview() {
     List<EventItem> eventList =
-        eventMap[DateTime(now.year, now.month, now.day)] ?? [];
+        Database.eventMap[DateTime(now.year, now.month, now.day)] ?? [];
 
     return ListView.builder(
       itemCount: eventList.length,
@@ -53,8 +54,9 @@ class _CalendarPageState extends State<CalendarPage> {
     );
   }
 
-  //initially fetch all events and load to eventMap
+  //initially fetch all events and load to Database.eventMap
   void _iniFetch() async {
+    /*
     List<EventItem> events = await Database.fetchByRange_googleCal(firstDate, lastDay);
     //List<EventItem> events = await Database.fetchByRange(firstDate, lastDay);
 
@@ -62,22 +64,32 @@ class _CalendarPageState extends State<CalendarPage> {
       DateTime date = DateTime(eve.dateTime.year, eve.dateTime.month, eve.dateTime.day);
 
       //map a list to a date key if not existed
-      if (!eventMap.containsKey(date)) {
-        eventMap.addAll({date: <EventItem>[]});
+      if (!Database.eventMap.containsKey(date)) {
+        Database.eventMap.addAll({date: <EventItem>[]});
       }
 
-      eventMap[date]!.add(eve);
+      Database.eventMap[date]!.add(eve);
     }
+    */
+    /*
+    await Database.fetchByRange_googleCal(firstDate, lastDay);
 
     isInitialized = true;
     setState(() {});
+    */
   }
 
   @override
   void initState() {
     super.initState();
     if (isInitialized) return;
-    _iniFetch();
+    Database.fetchByRange_googleCal(firstDate, lastDay).then((value) {
+      isInitialized = true;
+      setState(() {});
+    });
+    if (!Database.subscribedToMsg) {
+      Database.subscribeToEventUpdates();
+    }
   }
 
   @override
