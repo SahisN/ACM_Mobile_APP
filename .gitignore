@@ -1,4 +1,5 @@
 # Miscellaneous
+.token
 *.class
 *.log
 *.pyc
