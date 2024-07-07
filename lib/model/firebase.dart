@@ -31,6 +31,7 @@ class Database {
   static Map<DateTime, List<EventItem>> eventMap = {};
 
   static Future<void> init() async {
+    /*
     final dir = await getApplicationDocumentsDirectory();
     final file = File('${dir.path}$SAVE_PATH');
 
@@ -52,13 +53,131 @@ class Database {
         eventMap[item.dateTime]?.add(item);
       }
     }
-
+    */
     Database.subscribeToEventUpdates();
 
     return Future(() => null);
   }
 
-  /*
+
+  //===== Google Calendar API =============================
+
+  static Future<void> fetchByRange_googleCal(DateTime minDate, DateTime maxDate) async
+  {
+    Uri url = Uri.https("www.googleapis.com", "/calendar/v3/calendars/acm.calstatela@gmail.com/events", {
+      "key": KEY,
+      "singleEvents": "true",
+      "maxResults": "2000",
+      "minTime": "${minDate.year}-${minDate.month}-${minDate.day}",
+      "maxTime": "${maxDate.year}-${maxDate.month}-${maxDate.day}"
+    }); 
+  
+    var res = await http.get(url);
+    Map<String, dynamic> resJson = jsonDecode(res.body);
+    //List<EventItem> eventList = [];
+    
+    for (Map<String, dynamic> item in resJson["items"]) {
+      if (item["kind"] != "calendar#event") continue;
+
+      final eventItem = EventItem.parseJson_googleCal(item);
+      //map a list to a date key if not existed
+      if (!Database.eventMap.containsKey(eventItem.dateTime)) {
+        Database.eventMap.addAll({eventItem.dateTime: <EventItem>[]});
+      }
+
+      Database.eventMap[eventItem.dateTime]!.add(eventItem);
+    }
+
+    return Future(() => null);
+  }
+
+  //===== Firebase Messaging =============================================
+
+  static void subscribeToEventUpdates() {
+    if (subscribedToMsg) return;
+
+    FirebaseMessaging.instance.subscribeToTopic(UPDATE_TOPIC)
+      .then((value) {
+        subscribedToMsg = true;
+        FirebaseMessaging.onMessage.listen(Database._onMsgReceived);
+        FirebaseMessaging.onBackgroundMessage(Database._onMsgReceived);
+        print("Subscribed!");
+      });
+  }
+
+
+  static Future<void> _onMsgReceived(RemoteMessage msg) {
+    if (msg.from != "/topics/" + UPDATE_TOPIC) {
+      //print(msg.from);
+      return Future.error(Exception("Wrong Topic!"));
+    }
+
+    print("Topic Received!");
+    //updateSavedEvents();
+
+    return Future(() => null);
+  }
+
+
+  static void updateSavedEvents() async {
+     final db = FirebaseFirestore.instance;
+    
+    //offline querry
+    final res = await db.collection(collectionName).where(
+      "latest_date_changed", 
+      isGreaterThan: lastRead
+    ).get(const GetOptions(source: Source.server));
+
+    if (res.docs.isNotEmpty) {
+      (res.docs[0].data()['latest_date_change'] as Timestamp).toString();
+    }
+  }
+
+
+
+  static Future<void> _saveToDrive() async {
+    final dir = await getApplicationDocumentsDirectory();
+    final file = File('${dir.path}$SAVE_PATH');
+    final List<EventItem> eventList = List<EventItem>.empty();
+    
+    for (List<EventItem> itemList in eventMap.values) {
+      eventList.addAll(itemList);
+    }
+
+    String jsonStr = jsonEncode({"last_read": lastRead, "events": eventList});
+    file.writeAsStringSync(jsonStr, mode: FileMode.writeOnly);
+
+    return Future(() => null);
+  }
+
+
+  //===== test =====
+  static Future<List<EventItem>> testFetch() async {
+    final db = FirebaseFirestore.instance;
+
+    final res = await db.collection("semesterEvents").get();
+
+    List<EventItem> eventList = [];
+    for (final doc in res.docs) {
+      eventList.add( EventItem.parseJson(doc.data()) );
+    }
+
+    return eventList;
+  }
+
+  static void testTimeStamp() async {
+    final db = FirebaseFirestore.instance;
+    
+    final res = await db.collection("pastEvents").doc("86qBaCqngKs8GuM8Hqff").get();
+    print("================ TEST =====================");
+    print( res.data()?['datetime'].toDate() );
+  }
+
+  
+}
+
+
+/*
   static Future<List<EventItem>> fetchByDay(DateTime? day) async {
     final db = FirebaseFirestore.instance;
 
@@ -127,120 +246,3 @@ class Database {
     }
   }
   */
-
-
-  //===== Google Calendar API =============================
-
-  static Future<void> fetchByRange_googleCal(DateTime minDate, DateTime maxDate) async
-  {
-    Uri url = Uri.https("www.googleapis.com", "/calendar/v3/calendars/acm.calstatela@gmail.com/events", {
-      "key": KEY,
-      "singleEvents": "true",
-      "maxResults": "2000",
-      "minTime": "${minDate.year}-${minDate.month}-${minDate.day}",
-      "maxTime": "${maxDate.year}-${maxDate.month}-${maxDate.day}"
-    }); 
-  
-    var res = await http.get(url);
-    Map<String, dynamic> resJson = jsonDecode(res.body);
-    //List<EventItem> eventList = [];
-    
-    for (Map<String, dynamic> item in resJson["items"]) {
-      if (item["kind"] != "calendar#event") continue;
-
-      final eventItem = EventItem.parseJson_googleCal(item);
-      //map a list to a date key if not existed
-      if (!Database.eventMap.containsKey(eventItem.dateTime)) {
-        Database.eventMap.addAll({eventItem.dateTime: <EventItem>[]});
-      }
-
-      Database.eventMap[eventItem.dateTime]!.add(eventItem);
-    }
-
-    return Future(() => null);
-  }
-
-  //===== Firebase Messaging =============================================
-
-  static void subscribeToEventUpdates() {
-    if (subscribedToMsg) return;
-
-    FirebaseMessaging.instance.subscribeToTopic(UPDATE_TOPIC)
-      .then((value) {
-        subscribedToMsg = true;
-        FirebaseMessaging.onMessage.listen(Database._onMsgReceived);
-        FirebaseMessaging.onBackgroundMessage(Database._onMsgReceived);
-        print("Subscribed!");
-      });
-  }
-
-
-  static Future<void> _onMsgReceived(RemoteMessage msg) {
-    if (msg.from != "/topics/" + UPDATE_TOPIC) {
-      //print(msg.from);
-      return Future.error(Exception("Wrong Topic!"));
-    }
-
-    print("Topic Received!");
-    updateSavedEvents();
-
-    return Future(() => null);
-  }
-
-
-  static void updateSavedEvents() async {
-     final db = FirebaseFirestore.instance;
-    
-    //offline querry
-    final res = await db.collection(collectionName).where(
-      "latest_date_changed", 
-      isGreaterThan: lastRead
-    ).get(const GetOptions(source: Source.server));
-
-    if (res.docs.isNotEmpty) {
-      (res.docs[0].data()['latest_date_change'] as Timestamp).toString();
-    }
-  }
-
-
-
-  static Future<void> _saveToDrive() async {
-    final dir = await getApplicationDocumentsDirectory();
-    final file = File('${dir.path}$SAVE_PATH');
-    final List<EventItem> eventList = List<EventItem>.empty();
-    
-    for (List<EventItem> itemList in eventMap.values) {
-      eventList.addAll(itemList);
-    }
-
-    String jsonStr = jsonEncode({"last_read": lastRead, "events": eventList});
-    file.writeAsStringSync(jsonStr, mode: FileMode.writeOnly);
-
-    return Future(() => null);
-  }
-
-
-  //===== test =====
-  static Future<List<EventItem>> testFetch() async {
-    final db = FirebaseFirestore.instance;
-
-    final res = await db.collection("semesterEvents").get();
-
-    List<EventItem> eventList = [];
-    for (final doc in res.docs) {
-      eventList.add( EventItem.parseJson(doc.data()) );
-    }
-
-    return eventList;
-  }
-
-  static void testTimeStamp() async {
-    final db = FirebaseFirestore.instance;
-    
-    final res = await db.collection("pastEvents").doc("86qBaCqngKs8GuM8Hqff").get();
-    print("================ TEST =====================");
-    print( res.data()?['datetime'].toDate() );
-  }
-
-  
-}
