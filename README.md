@@ -4,7 +4,7 @@ A new Flutter project.
 
 devs:
  * Howard N.
- * Sahis
+ * Sahis N
  * Eric M
  * Angel Gutierrez Sanjuan
 

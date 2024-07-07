@@ -1,5 +1,5 @@
 import 'package:acm_app/screens/calendar_page.dart';
-import 'package:acm_app/screens/contact_page.dart';
+import 'package:acm_app/screens/settings_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -32,7 +32,6 @@ class _HomePageState extends State<HomePage> {
   static const List<Widget> _screens = <Widget>[
     CalendarPage(),
     FavoritePage(),
-    ContactPage(),
     SettingsPage(),
   ];
 
@@ -47,9 +46,6 @@ class _HomePageState extends State<HomePage> {
           ),
           GButton(
             icon: _selectedIndex == 1 ? Icons.favorite : Icons.heart_broken,
-          ),
-          const GButton(
-            icon: Icons.contacts_sharp,
           ),
           const GButton(
             icon: Icons.settings,

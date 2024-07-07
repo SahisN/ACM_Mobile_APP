@@ -1,6 +1,6 @@
 import 'package:acm_app/dependency_injection.dart';
 import 'package:acm_app/firebase_options.dart';
-import 'package:acm_app/provider/theme_provider.dart';
+import 'package:acm_app/provider/state_provider.dart';
 import 'package:acm_app/screens/home_page.dart';
 import 'package:acm_app/model/firebase.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -16,7 +16,7 @@ Future<void> main() async {
   await Database.init();
   runApp(
     ChangeNotifierProvider(
-      create: (context) => ThemeProvider(),
+      create: (context) => StateProvider(),
       child: const MyApp(),
     ),
   );
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
-      theme: Provider.of<ThemeProvider>(context).themeData,
+      theme: Provider.of<StateProvider>(context).themeData,
     );
   }
 }

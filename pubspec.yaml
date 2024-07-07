@@ -52,6 +52,9 @@ dependencies:
   connectivity_plus: ^5.0.2
   get: ^4.6.6
   firebase_messaging: ^14.9.4
+  wheel_picker: ^0.0.5
+  roundcheckbox: ^2.0.5
+
   
 
   
