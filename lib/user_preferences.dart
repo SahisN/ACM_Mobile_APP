@@ -32,21 +32,6 @@ class UserPreferences {
     await _preferences.setBool(_favoritesKey, isFavorite);
   }
 
-  // ignore: slash_for_doc_comments
-  /**
-  static Future setDays(int day) async {
-    await _preferences.setInt(_daysKey, day);
-  }
-
-  static Future setHours(int hours) async {
-    await _preferences.setInt(_hoursKey, hours);
-  }
-
-  static Future setMinutes(int minutes) async {
-    await _preferences.setInt(_minutesKey, minutes);
-  }
-  */
-
   static bool getFavorite() {
     return _preferences.getBool(_favoritesKey) ?? false;
   }

@@ -23,7 +23,6 @@ class _NotificationPageState extends State<NotificationPage> {
     // save all changes here
     // print(notificationState);
 
-    UserPreferences.setNotification(notificationState);
     UserPreferences.setTime(timeState);
     UserPreferences.setFavoriteOnly(favoriteOnlyState);
 
