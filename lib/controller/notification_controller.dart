@@ -25,7 +25,36 @@ class NotificationController {
   /// Use this method to detect when the user taps on a notification or action button
   @pragma("vm:entry-point")
   static Future<void> onActionReceivedMethod(
-      ReceivedAction receivedAction) async {
-    // Your code goes here
+      ReceivedAction receivedAction) async {}
+
+  static Future<void> showNotification({
+    required final String title,
+    required final String body,
+    required final String channelKey,
+    final String? summary,
+    final ActionType actionType = ActionType.Default,
+    final NotificationLayout notificationLayout = NotificationLayout.Default,
+    final NotificationCategory? category,
+    final bool scheduled = false,
+    final int? interval,
+    final Map<String, String>? payload,
+  }) async {
+    assert(!scheduled || (scheduled && interval != null));
+
+    await AwesomeNotifications().createNotification(
+        content: NotificationContent(
+            id: -1,
+            channelKey: 'high_importance_channel',
+            title: title,
+            body: body,
+            payload: payload),
+        schedule: scheduled
+            ? NotificationInterval(
+                interval: interval,
+                timeZone:
+                    await AwesomeNotifications().getLocalTimeZoneIdentifier(),
+                preciseAlarm: true,
+              )
+            : null);
   }
 }

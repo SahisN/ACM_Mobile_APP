@@ -77,13 +77,13 @@ class _HomePageState extends State<HomePage> {
             setState(() {
               _selectedIndex = index;
             });
-            AwesomeNotifications().createNotification(
-                content: NotificationContent(
-              id: 1,
-              channelKey: 'event_reminder',
-              title: 'Test Notification',
-              body: 'Testing local notification',
-            ));
+            NotificationController.showNotification(
+              title: 'ACM Show',
+              body: 'First General meeting',
+              channelKey: 'high_importance_channel',
+              summary: 'small summary',
+              notificationLayout: NotificationLayout.Messaging,
+            );
           }
         },
       ),
