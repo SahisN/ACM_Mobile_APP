@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class SettingsSwitch extends StatelessWidget {
   final IconData icon;
@@ -43,7 +44,6 @@ class SettingsSwitch extends StatelessWidget {
           onChanged: onChanged,
           activeColor: active,
           inactiveThumbColor: inactive,
-          thumbColor: WidgetStateProperty.all(inactive),
         ),
       ),
     );

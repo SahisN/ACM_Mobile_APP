@@ -18,14 +18,16 @@ admin.initializeApp({
 });
 
 const CHANNEL_ID = "27a09b59-bdeb-474b-81ee-cc2d7d4c35af";
-const WATCH_RES_URI = "www.googleapi.com/calendar/v3/calendars/acm.calstatela@gmail.com/events/watch";
-const TOKEN = readFileSync("./tok.token");
+const WATCH_RES_URI = "https://www.googleapis.com/calendar/v3/calendars/acm.calstatela@gmail.com/events/watch";
+const TOKEN = readFileSync("./tok.token").toString();
 var RESOURCE_ID = readFileSync("./resourceID.token");
 
 
 exports.googleCal_onChange = onRequest( async (req, res) => {
+    /*
     if (req.headers["X-Goog-Channel-ID"] != CHANNEL_ID) 
         return res.json({success: false, error: "Wrong Channel!"});
+    */
 
     //Update timestamp on firestore db
     await admin.app().firestore().collection("InnoTestEvents").doc("HF6JXpd6aAxOaUJGXTts").set({
@@ -48,8 +50,9 @@ exports.googleCal_onChange = onRequest( async (req, res) => {
 
 exports.googleCal_sendWatch = onRequest( async (req, res) => {
     try {
+        console.log("Send Watch Request");
         let watch_res = await fetch(WATCH_RES_URI, {
-            method: "post",
+            method: "POST",
             headers: {
                 "Authorization": TOKEN,
                 "Content-Type": "application/json"
@@ -62,11 +65,19 @@ exports.googleCal_sendWatch = onRequest( async (req, res) => {
         });
 
         let json = await watch_res.json();
+        console.log(json);
 
         RESOURCE_ID = json["resourceId"] ? json["resourceId"] : "";
+        console.log(RESOURCE_ID);
         writeFileSync("./resourceID.token", RESOURCE_ID);
+
+        if (RESOURCE_ID == "")
+            return res.send("Failed to Establish Channel!");
+        
+        return res.send("Channel Established!");
     }
     catch (e) {
+        console.log(e);
         return res.send(e);
     }
 });
@@ -82,9 +93,7 @@ exports.googleCal_stopWatch = onRequest((req, res) => {
                 "Content-Type": "application/json"
             },
             body: {
-                "id": CHANNEL_ID,
-                "type": "web_hook",
-                "address": "https://us-central1-acm-calstatela.cloudfunctions.net/googleCal_onChange"
+                "id": CHANNEL_ID
             }
         });
     }
@@ -94,7 +103,7 @@ exports.googleCal_stopWatch = onRequest((req, res) => {
 });
 
 
-
+/*
 exports.testFunc = onRequest( async (req, res) => {
     //res.json({msg: "Returned!"});
     let msg = {
@@ -106,6 +115,7 @@ exports.testFunc = onRequest( async (req, res) => {
     await admin.app().messaging().send(msg);
     res.send("<p>Returned!</p>");
 });
+*/
 
 
 /*

@@ -172,7 +172,8 @@ class _CalendarPageState extends State<CalendarPage> {
                 : Expanded(child: _eventListview())
           ],
         ),
-        
-        backgroundColor: Theme.of(context).colorScheme.surface);
+      ),
+      backgroundColor: Theme.of(context).colorScheme.surface
+    );
   }
 }
