@@ -42,19 +42,16 @@ class NotificationController {
     assert(!scheduled || (scheduled && interval != null));
 
     await AwesomeNotifications().createNotification(
-        content: NotificationContent(
-            id: -1,
-            channelKey: 'high_importance_channel',
-            title: title,
-            body: body,
-            payload: payload),
-        schedule: scheduled
-            ? NotificationInterval(
-                interval: interval,
-                timeZone:
-                    await AwesomeNotifications().getLocalTimeZoneIdentifier(),
-                preciseAlarm: true,
-              )
-            : null);
+      content: NotificationContent(
+          id: -1,
+          channelKey: 'event_group',
+          title: title,
+          body: body,
+          payload: payload),
+      schedule: scheduled
+          ? NotificationCalendar(
+              allowWhileIdle: true, day: 21, hour: 16, minute: 24, second: 0)
+          : null,
+    );
   }
 }

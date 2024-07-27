@@ -77,13 +77,6 @@ class _HomePageState extends State<HomePage> {
             setState(() {
               _selectedIndex = index;
             });
-            NotificationController.showNotification(
-              title: 'ACM Show',
-              body: 'First General meeting',
-              channelKey: 'high_importance_channel',
-              summary: 'small summary',
-              notificationLayout: NotificationLayout.Messaging,
-            );
           }
         },
       ),

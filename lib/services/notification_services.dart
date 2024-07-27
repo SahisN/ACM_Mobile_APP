@@ -7,15 +7,15 @@ class NotificationServices {
       null,
       [
         NotificationChannel(
-          channelGroupKey: 'high_importance_channel',
-          channelKey: 'high_importance_channel',
+          channelGroupKey: 'event_group',
+          channelKey: 'event_group',
           channelName: 'Event Reminder',
           channelDescription: 'Test notifcation channel',
         ),
       ],
       channelGroups: [
         NotificationChannelGroup(
-          channelGroupKey: 'high_importance_channel_group',
+          channelGroupKey: 'event_group',
           channelGroupName: 'event_group',
         )
       ],
