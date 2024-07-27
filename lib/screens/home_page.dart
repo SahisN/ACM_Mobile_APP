@@ -1,5 +1,7 @@
+import 'package:acm_app/controller/notification_controller.dart';
 import 'package:acm_app/screens/calendar_page.dart';
 import 'package:acm_app/screens/settings_page.dart';
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -25,6 +27,18 @@ void _getMessage() async {
 }
 
 class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    AwesomeNotifications().setListeners(
+      onActionReceivedMethod: NotificationController.onActionReceivedMethod,
+      onNotificationDisplayedMethod:
+          NotificationController.onNotificationDisplayedMethod,
+      onDismissActionReceivedMethod:
+          NotificationController.onDismissActionReceivedMethod,
+    );
+    super.initState();
+  }
+
   // _selectedIndex is used to select apporiate screen from _screen List
   int _selectedIndex = 0;
 

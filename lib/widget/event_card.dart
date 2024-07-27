@@ -20,6 +20,7 @@ class EventCard extends StatelessWidget {
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(40)),
             ),
+            color: Theme.of(context).colorScheme.primary,
             //elevates the card and gives a shadow to it.
             elevation: 15,
             shadowColor: Theme.of(context).shadowColor,
@@ -30,7 +31,8 @@ class EventCard extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (ctx) => DetailPage(event: event, firstDate: DateTime.utc(2023, 7, 31) )),
+                      builder: (ctx) => DetailPage(
+                          event: event, firstDate: DateTime.utc(2023, 7, 31))),
                 );
               },
               child: Ink(

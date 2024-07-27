@@ -2,25 +2,29 @@ import 'package:acm_app/dependency_injection.dart';
 import 'package:acm_app/firebase_options.dart';
 import 'package:acm_app/provider/state_provider.dart';
 import 'package:acm_app/screens/home_page.dart';
+import 'package:acm_app/services/notification_services.dart';
 import 'package:acm_app/model/firebase.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
-//import 'package:google_fonts/google_fonts.dart';
+import 'package:acm_app/user_preferences.dart';
 
-
-Future<void> main() async {
+Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  DependencyInjection.init();
+  await UserPreferences.init();
+  await NotificationServices.initializeNotification();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await Database.init();
+  
   runApp(
     ChangeNotifierProvider(
       create: (context) => StateProvider(),
       child: const MyApp(),
     ),
   );
-  DependencyInjection.init();
+
 }
 
 class MyApp extends StatelessWidget {
