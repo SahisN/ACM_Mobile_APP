@@ -17,14 +17,13 @@ Future main() async {
   await NotificationServices.initializeNotification();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await Database.init();
-  
+
   runApp(
     ChangeNotifierProvider(
       create: (context) => StateProvider(),
       child: const MyApp(),
     ),
   );
-
 }
 
 class MyApp extends StatelessWidget {
