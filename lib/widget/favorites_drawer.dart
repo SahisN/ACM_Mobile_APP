@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'providers.dart';
 
-class FavoritesDrawer extends StatelessWidget {
-  const FavoritesDrawer({super.key, required this.onSelectScreen});
+class FavoritesDrawer extends ConsumerWidget {
+  //constructor to receive screen selection and callback
+  const FavoritesDrawer({Key? key, required this.onSelectScreen})
+      : super(key: key);
 
   final void Function(String screenIdentifier) onSelectScreen;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final favoriteCards = ref.watch(favoriteCardsProvider);
+
     return Drawer(
       child: Column(
         children: [
