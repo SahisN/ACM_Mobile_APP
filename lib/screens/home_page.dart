@@ -5,7 +5,6 @@ import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:acm_app/screens/settings_page.dart';
 import 'package:acm_app/screens/favorite_page.dart';
 
 class HomePage extends StatefulWidget {
