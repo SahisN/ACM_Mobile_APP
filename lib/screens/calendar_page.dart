@@ -17,7 +17,7 @@ class CalendarPage extends StatefulWidget {
 
 class _CalendarPageState extends State<CalendarPage> {
   DateTime now = DateTime.now();
-  final firstDate = DateTime(DateTime.now().year, DateTime.now().month - 2,
+  final firstDate = DateTime(DateTime.now().year, DateTime.now().month - 6,
       1); //DateTime(now.year - 1, now.month);
   final lastDay = DateTime.utc(
       DateTime.now().year + 5, 1, 1); //DateTime(now.year + 5, now.month);
@@ -161,12 +161,14 @@ class _CalendarPageState extends State<CalendarPage> {
 
               //Display Event list if not emtpy, otherwise display "No event" text
               _getEvents(now).isEmpty
-                  ? const Expanded(
+                  ? Expanded(
                       child: Text(
                       "No Events for today",
                       textAlign: TextAlign.center,
-                      style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).colorScheme.inversePrimary),
                     ))
                   : Expanded(child: _eventListview())
             ],

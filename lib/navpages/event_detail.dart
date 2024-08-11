@@ -13,7 +13,8 @@ class DetailPage extends StatelessWidget {
     if (event.imageURL == '') {
       return const AssetImage("assets/images/3d_acm_logo.png");
     }
-    return NetworkImage(event.imageURL);      //'https://picsum.photos/id/${getRandomInteger()}/200/300'
+    return NetworkImage(event
+        .imageURL); //'https://picsum.photos/id/${getRandomInteger()}/200/300'
   }
 
   @override
@@ -39,7 +40,7 @@ class DetailPage extends StatelessWidget {
                 height: 300,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: _provideImage(), 
+                    image: _provideImage(),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -61,7 +62,7 @@ class DetailPage extends StatelessWidget {
                   Change the icon to a back 
                   */
                   icon: const Icon(Icons.arrow_back_ios_new_sharp),
-                  color: Colors.black,
+                  color: Theme.of(context).colorScheme.onPrimary,
                 )
               ],
             )),
@@ -74,9 +75,9 @@ class DetailPage extends StatelessWidget {
 
                   width: MediaQuery.of(context).size.width,
                   height: 500,
-                  decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
+                  decoration: BoxDecoration(
+                      color: Theme.of(context).colorScheme.primary,
+                      borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(30),
                           topRight: Radius.circular(30))),
                   //Column will be used to organized the content
@@ -85,9 +86,9 @@ class DetailPage extends StatelessWidget {
                       //this row will hold title
                       Text(
                         event.name,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 20,
-                          color: Colors.black,
+                          color: Theme.of(context).colorScheme.onPrimary,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -99,11 +100,13 @@ class DetailPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            DateFormat('MMMM dd, h:mm a').format( event.dateTime ),
+                            DateFormat('MMMM dd, h:mm a')
+                                .format(event.dateTime),
                             textAlign: TextAlign.center,
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
+                              color: Theme.of(context).colorScheme.onPrimary,
                             ),
                           ),
                         ],
@@ -142,7 +145,7 @@ class DetailPage extends StatelessWidget {
                           "Description:",
                           style: TextStyle(
                             fontSize: 20,
-                            color: Colors.black.withOpacity(0.8),
+                            color: Theme.of(context).colorScheme.onPrimary,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -153,9 +156,9 @@ class DetailPage extends StatelessWidget {
                       ),
                       Text(
                         event.description,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 20,
-                          color: Colors.black54,
+                          color: Theme.of(context).colorScheme.onPrimary,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
