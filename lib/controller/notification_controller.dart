@@ -27,7 +27,9 @@ class NotificationController {
   static Future<void> onActionReceivedMethod(
       ReceivedAction receivedAction) async {}
 
+  // Use this method to schedule notification
   static Future<void> showNotification({
+    required final int id,
     required final String title,
     required final String body,
     required final String channelKey,
@@ -35,23 +37,35 @@ class NotificationController {
     final ActionType actionType = ActionType.Default,
     final NotificationLayout notificationLayout = NotificationLayout.Default,
     final NotificationCategory? category,
-    final bool scheduled = false,
-    final int? interval,
     final Map<String, String>? payload,
+    required final int days, // 21
+    required final int hours, // 16
+    required final int minutes, // 24
   }) async {
-    assert(!scheduled || (scheduled && interval != null));
-
     await AwesomeNotifications().createNotification(
       content: NotificationContent(
-          id: -1,
+          id: id,
           channelKey: 'event_group',
           title: title,
           body: body,
           payload: payload),
-      schedule: scheduled
-          ? NotificationCalendar(
-              allowWhileIdle: true, day: 21, hour: 16, minute: 24, second: 0)
-          : null,
+      schedule: NotificationCalendar(
+        allowWhileIdle: true,
+        day: days,
+        hour: hours,
+        minute: minutes,
+      ),
     );
+  }
+
+  // Use this method to cancel specific notification with notificationId
+  // notificationId should correspond to eventId in event_details widget
+  static Future<void> cancelNotifications(final int notificationId) async {
+    await AwesomeNotifications().cancel(notificationId);
+  }
+
+  // Use this method to cancel all notification
+  static Future<void> cancelAllNotifications() async {
+    await AwesomeNotifications().cancelAll();
   }
 }
