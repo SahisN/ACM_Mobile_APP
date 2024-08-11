@@ -1,3 +1,5 @@
+//class definition
+
 class EventItem {
   String name = "";
   String description = "";
@@ -5,6 +7,7 @@ class EventItem {
   DateTime dateTime;
   String location;
   
+  //constructor initializes EventItem
   EventItem(this.name, this.description, this.dateTime, this.location, this.imageURL);
 
   //returns a new EventItem from the passed in event json map;
@@ -18,4 +21,25 @@ class EventItem {
 
     return EventItem(name, descript, dateTime, location, imageURL);
   }
+
+  
+// comparison to check if the items are the same
+  @override
+  bool operator ==(Object other) => identical(this, other) || other is EventItem &&
+    runtimeType == other.runtimeType && 
+    name == other.name &&
+    description == other.description &&
+    dateTime == other.dateTime &&
+    location == other.location &&
+    imageURL == other.imageURL;
+// hash, no idea but from doc it needs to be added 
+// https://api.flutter.dev/flutter/dart-core/Object/hashCode.html
+    @override
+    int get hashCode =>
+      name.hashCode ^ 
+      description.hashCode ^
+      dateTime.hashCode ^
+      location.hashCode ^
+      imageURL.hashCode;
+
 }

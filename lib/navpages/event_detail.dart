@@ -1,10 +1,10 @@
-import 'package:acm_app/screens/favorite_page.dart';
 import "package:flutter/material.dart";
 import 'package:acm_app/model/event_item.dart';
 import 'package:acm_app/data/random_number.dart';
 import 'package:intl/intl.dart';
 import 'package:like_button/like_button.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:acm_app/provider/favorite_provider.dart';
 
 class DetailPage extends ConsumerWidget {
   const DetailPage({super.key, required this.event, required this.firstDate});
@@ -13,7 +13,7 @@ class DetailPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final favorites = ref.watch(favoriteProvider.notifier);
+    final isFavorite = ref.watch(favoriteProvider).contains(event);
 
     return Scaffold(
       //The appBar allows the page to return to the calendar page
@@ -49,11 +49,11 @@ class DetailPage extends ConsumerWidget {
              */
 
             Positioned(
-                child: Row(
-              children: [
-                IconButton(
-                  onPressed: () {
-                    Navigator.pop(context);
+              child: Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
                   },
                   /*
                   Change the icon to a back 
@@ -62,7 +62,8 @@ class DetailPage extends ConsumerWidget {
                   color: Colors.black,
                 )
               ],
-            )),
+            ),
+          ),
 
             //This positioned holds the content that is found under the image
             Positioned(
@@ -76,7 +77,9 @@ class DetailPage extends ConsumerWidget {
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(30),
-                          topRight: Radius.circular(30))),
+                          topRight: Radius.circular(30)
+                          ),
+                        ),
                   //Column will be used to organized the content
                   child: Column(
                     children: [
@@ -91,11 +94,10 @@ class DetailPage extends ConsumerWidget {
                       ),
 
                       const SizedBox(
-                        height: 10,
+                        height: 10
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+                      
+                      
                           Text(
                             DateFormat('MMMM dd, h:mm a').format(firstDate),
                             textAlign: TextAlign.center,
@@ -104,11 +106,9 @@ class DetailPage extends ConsumerWidget {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
+                          const SizedBox(
+                        height: 10),
+                       
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -117,8 +117,7 @@ class DetailPage extends ConsumerWidget {
                             color: Colors.blue,
                           ),
                           const SizedBox(
-                            width: 10,
-                          ),
+                            width: 10),
                           Text(
                             event.location,
                             style: const TextStyle(
@@ -131,9 +130,7 @@ class DetailPage extends ConsumerWidget {
                         ],
                       ),
 
-                      const SizedBox(
-                        height: 30,
-                      ),
+                      const SizedBox(height: 30),
                       Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
@@ -146,9 +143,7 @@ class DetailPage extends ConsumerWidget {
                         ),
                       ),
 
-                      const SizedBox(
-                        height: 5,
-                      ),
+                      const SizedBox(height: 5),
                       Text(
                         event.description,
                         style: const TextStyle(
@@ -159,30 +154,25 @@ class DetailPage extends ConsumerWidget {
                       ),
                     ],
                   ),
-                )),
+                ),
+              ),
+
             Positioned(
               top: 5,
               right: 10,
               child: LikeButton(
                 size: 40,
+                isLiked: isFavorite,
                 onTap: (bool isLiked) async {
-                  if (isLiked) {
-                    favorites.remove(event);
-                  } else {
-                    favorites.add(event);
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const FavoritePage()),
-                    );
-                  }
+                  ref.read(favoriteProvider.notifier).toggleFavorite(event);
                   return !isLiked;
-                },
-              ),
-            )
-          ],
+                  
+                 },
+                ),
+              )          
+            ],
+          ),
         ),
-      ),
     );
   }
 }

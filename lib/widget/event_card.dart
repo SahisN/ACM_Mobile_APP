@@ -1,14 +1,20 @@
 import 'package:acm_app/model/event_item.dart';
 import 'package:acm_app/navpages/event_detail.dart';
+import 'package:acm_app/provider/favorite_provider.dart';
 import "package:flutter/material.dart";
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:like_button/like_button.dart';
 
-class EventCard extends StatelessWidget {
+class EventCard extends ConsumerWidget{
   final EventItem event;
 
   const EventCard(this.event, {super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final favoriteEvents = ref.watch(favoriteProvider);
+    final isFavorite = favoriteEvents.contains(event);
+
     return Center(
       //Column allows for the cards to stack
       child: Column(
@@ -31,7 +37,9 @@ class EventCard extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (ctx) => DetailPage(
-                          event: event, firstDate: DateTime.utc(2023, 7, 31))),
+                          event: event, firstDate: DateTime.utc(2023, 7, 31)
+                          ),
+                          ),
                 );
               },
               child: Ink(
@@ -50,6 +58,15 @@ class EventCard extends StatelessWidget {
                     ),
                     title: Text(event.name),
                     subtitle: Text(event.location),
+                    trailing: LikeButton(
+                      size: 30,
+                      isLiked: isFavorite,
+                      onTap: ((isLiked) async{
+                        ref.read(favoriteProvider.notifier).toggleFavorite(event);
+                        return !isLiked; 
+                      }
+                      ),
+                    ),
                   ),
                 ),
               ),
