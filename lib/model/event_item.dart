@@ -16,7 +16,7 @@ class EventItem {
     final description = (json['description'] ?? "No Description Provided.") as String;
     final location = (json['location'] ?? "somwhere") as String;
     final imageURL = (json['imageUrl'] ?? "") as String;
-    final DateTime dateTime = (json['datetime'] as Timestamp).toDate();
+    final DateTime dateTime = DateTime.parse(json['datetime']);
 
     return EventItem(name, dateTime, description, location, imageURL);
   }
