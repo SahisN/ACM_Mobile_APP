@@ -2,12 +2,14 @@
 import 'dart:convert';
 //import 'dart:html';
 import 'dart:io';
+import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:http/http.dart' as http;
 import 'package:acm_app/model/event_item.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 String collectionName = "InnoTestEvents";
 const String UPDATE_TOPIC = "event_update";
@@ -88,6 +90,86 @@ class Database {
       Database.eventMap[eventItem.dateTime]!.add(eventItem);
     }
 
+    await cache();
+
+    return Future(() => null);
+  }
+
+  //loads from cache, return true if loaded
+  /* Event json 
+  *   [
+        {
+          name: string,
+          description: string,
+          location: imageUrl,
+          datetime: ISO
+        }
+      ]
+  *
+  */
+  static Future<bool> loadEvents() async {
+    final SharedPreferences pref = await SharedPreferences.getInstance();
+    final jsonStr = await pref.getString('events') ?? "";
+
+    if (jsonStr == "") {
+      print("Empty cache");
+      return false;
+    }
+
+    //parse current event
+    final List< String > jsonObj = jsonDecode(jsonStr);
+
+    Database.eventMap.clear();
+    for (final event in jsonObj) {
+      final eventItem = EventItem.parseJson( jsonDecode(event) );
+
+      //map a list to a date key if not existed
+      if (!Database.eventMap.containsKey(eventItem.dateTime)) {
+        Database.eventMap.addAll({eventItem.dateTime: <EventItem>[]});
+      }
+
+      Database.eventMap[eventItem.dateTime]!.add(eventItem);
+    }
+
+    return true;
+    
+    
+    //lastRead = Timestamp.fromDate( DateTime.parse(jsonObj["last_read"] as String) );
+    
+    //----- Used with watch notification -----------------
+    //check lastest date with firebase doc date
+    //final db = FirebaseFirestore.instance;
+    /*
+    final res = await db.collection(collectionName).where(
+      "latest_date_change",
+      isGreaterThan: lastRead
+    ).get(const GetOptions(source: Source.server));
+    */
+
+    //if server doc date greater return false
+    /*
+    if (res.docs.isEmpty) {
+      return false;
+    }
+    */
+
+    //else return true and parse into eventItems
+    //return true;
+  }
+
+
+  //Save to Cache
+  static Future<void> cache() async {
+    final SharedPreferences pref = await SharedPreferences.getInstance();
+    final eventList = [];
+
+    for (final entry in eventMap.entries) {
+      for (final event in entry.value) {
+        eventList.add(event.toJson());
+      }
+    }
+
+    pref.setString("events", jsonEncode(eventList));
     return Future(() => null);
   }
 

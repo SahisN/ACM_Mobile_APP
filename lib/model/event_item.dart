@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class EventItem {
@@ -33,5 +35,9 @@ class EventItem {
         DateTime.parse(json["start"]["date"] ?? json["start"]["dateTime"]);
 
     return EventItem(name, dateTime, description, location, imageURL);
+  }
+
+  String toJson() {
+    return jsonEncode(this);
   }
 }

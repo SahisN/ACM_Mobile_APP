@@ -83,10 +83,17 @@ class _CalendarPageState extends State<CalendarPage> {
   void initState() {
     super.initState();
     if (isInitialized) return;
-    Database.fetchByRange_googleCal(firstDate, lastDay).then((value) {
-      isInitialized = true;
-      setState(() {});
+    //temp cache
+    Database.loadEvents().then((results) => {
+      if (!results) {
+        Database.fetchByRange_googleCal(firstDate, lastDay).then((value) {
+          isInitialized = true;
+          setState(() {});
+        })
+      }
+      else isInitialized = true
     });
+    
     if (!Database.subscribedToMsg) {
       Database.subscribeToEventUpdates();
     }

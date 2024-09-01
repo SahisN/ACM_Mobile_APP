@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
         // this function is invoked whenever user clicks a tab
         // recieves the tab index and updates _selectedIndex
         onTabChange: (index) {
-          _getMessage();
+          //_getMessage();
           // used to update _selectedIndex and restart Widget Build()
           if (index != _selectedIndex) {
             setState(() {
