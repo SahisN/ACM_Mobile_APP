@@ -48,7 +48,9 @@ class _CalendarPageState extends State<CalendarPage> {
     return ListView.builder(
       itemCount: eventList.length,
       shrinkWrap: true,
-      itemBuilder: (_, i) => EventCard(eventList[i]),
+      itemBuilder: (_, i) => EventCard(
+        eventList[i],
+      ),
     );
   }
 
