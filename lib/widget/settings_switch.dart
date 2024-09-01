@@ -43,7 +43,7 @@ class SettingsSwitch extends StatelessWidget {
           onChanged: onChanged,
           activeColor: active,
           inactiveThumbColor: inactive,
-          thumbColor: WidgetStateProperty.all(inactive),
+          //thumbColor: WidgetStateProperty.all(inactive),
         ),
       ),
     );
