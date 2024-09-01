@@ -1,9 +1,9 @@
+import 'package:acm_app/controller/notification_controller.dart';
 import 'package:acm_app/screens/calendar_page.dart';
 import 'package:acm_app/screens/settings_page.dart';
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:acm_app/screens/settings_page.dart';
 import 'package:acm_app/screens/favorite_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -13,18 +13,30 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-void _getMessage() async {
-  // getting data from firestore
-  final userData = await FirebaseFirestore.instance
-      .collection('semesterEvents')
-      .doc('W9jFmK5aakGLKv1t7jhq')
-      .get();
+// void _getMessage() async {
+//   // getting data from firestore
+//   final userData = await FirebaseFirestore.instance
+//       .collection('semesterEvents')
+//       .doc('W9jFmK5aakGLKv1t7jhq')
+//       .get();
 
-  // printing in
-  print(userData['altText']);
-}
+//   // printing in
+//   print(userData['altText']);
+// }
 
 class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    AwesomeNotifications().setListeners(
+      onActionReceivedMethod: NotificationController.onActionReceivedMethod,
+      onNotificationDisplayedMethod:
+          NotificationController.onNotificationDisplayedMethod,
+      onDismissActionReceivedMethod:
+          NotificationController.onDismissActionReceivedMethod,
+    );
+    super.initState();
+  }
+
   // _selectedIndex is used to select apporiate screen from _screen List
   int _selectedIndex = 0;
 
@@ -72,6 +84,7 @@ class _HomePageState extends State<HomePage> {
         // recieves the tab index and updates _selectedIndex
         onTabChange: (index) {
           //_getMessage();
+          // _getMessage();
           // used to update _selectedIndex and restart Widget Build()
           if (index != _selectedIndex) {
             setState(() {
