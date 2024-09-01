@@ -84,17 +84,18 @@ class _CalendarPageState extends State<CalendarPage> {
     //temp cache
     Database.loadEvents().then((results) => {
       if (!results) {
+        print("Fetching From Google"),
         Database.fetchByRange_googleCal(firstDate, lastDay).then((value) {
-          isInitialized = true;
           setState(() {});
         })
       }
-      else isInitialized = true
     });
     
     if (!Database.subscribedToMsg) {
       Database.subscribeToEventUpdates();
     }
+
+    isInitialized = true;
   }
 
   @override
@@ -105,9 +106,16 @@ class _CalendarPageState extends State<CalendarPage> {
           title: const Text('Calendar'),
           actions: [
             IconButton(
+              onPressed: () {
+                Database.fetchByRange_googleCal(firstDate, lastDay).then((val) => setState(() {}));
+              },
+              icon: Icon(Icons.refresh)
+            ),
+            IconButton(
                 onPressed: _onExpand,
                 icon: Icon(
-                    isExpanded ? Icons.arrow_drop_up : Icons.arrow_drop_down))
+                    isExpanded ? Icons.arrow_drop_up : Icons.arrow_drop_down)
+            )
           ],
         ),
         body: Center(

@@ -13,7 +13,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 String collectionName = "InnoTestEvents";
 const String UPDATE_TOPIC = "event_update";
-const KEY = "";
+const KEY = "AIzaSyCTyxLBkRIG6bVq9q_KHydsQ_iJ2y8RZZE";
 const SAVE_PATH = "/acm-app-save.json";
 
 
@@ -117,11 +117,11 @@ class Database {
     }
 
     //parse current event
-    final List< String > jsonObj = jsonDecode(jsonStr);
+    final List< dynamic > jsonObj = jsonDecode(jsonStr);
 
     Database.eventMap.clear();
     for (final event in jsonObj) {
-      final eventItem = EventItem.parseJson( jsonDecode(event) );
+      final eventItem = EventItem.parseJson( jsonDecode(event as String) );
 
       //map a list to a date key if not existed
       if (!Database.eventMap.containsKey(eventItem.dateTime)) {
