@@ -16,16 +16,14 @@ const String UPDATE_TOPIC = "event_update";
 const KEY = "AIzaSyCTyxLBkRIG6bVq9q_KHydsQ_iJ2y8RZZE";
 const SAVE_PATH = "/acm-app-save.json";
 
-
 ///===== FireStore Docs ==============================
 ///
 /// Getting DateTime: firestore timestamps has a converting
 ///   function "toDate()" that returns the relvent DateTime object
-/// 
+///
 /// _fetchLastest: will query firestore online and store it locally
 ///
 ///===================================================
-
 
 class Database {
   static bool subscribedToMsg = false;
@@ -61,23 +59,23 @@ class Database {
     return Future(() => null);
   }
 
-
   //===== Google Calendar API =============================
 
-  static Future<void> fetchByRange_googleCal(DateTime minDate, DateTime maxDate) async
-  {
-    Uri url = Uri.https("www.googleapis.com", "/calendar/v3/calendars/acm.calstatela@gmail.com/events", {
+  static Future<void> fetchByRange_googleCal(
+      DateTime minDate, DateTime maxDate) async {
+    Uri url = Uri.https("www.googleapis.com",
+        "/calendar/v3/calendars/acm.calstatela@gmail.com/events", {
       "key": KEY,
       "singleEvents": "true",
       "maxResults": "2000",
       "minTime": "${minDate.year}-${minDate.month}-${minDate.day}",
       "maxTime": "${maxDate.year}-${maxDate.month}-${maxDate.day}"
-    }); 
-  
+    });
+
     var res = await http.get(url);
     Map<String, dynamic> resJson = jsonDecode(res.body);
     //List<EventItem> eventList = [];
-    
+
     for (Map<String, dynamic> item in resJson["items"]) {
       if (item["kind"] != "calendar#event") continue;
 
@@ -178,15 +176,13 @@ class Database {
   static void subscribeToEventUpdates() {
     if (subscribedToMsg) return;
 
-    FirebaseMessaging.instance.subscribeToTopic(UPDATE_TOPIC)
-      .then((value) {
-        subscribedToMsg = true;
-        FirebaseMessaging.onMessage.listen(Database._onMsgReceived);
-        FirebaseMessaging.onBackgroundMessage(Database._onMsgReceived);
-        print("Subscribed!");
-      });
+    FirebaseMessaging.instance.subscribeToTopic(UPDATE_TOPIC).then((value) {
+      subscribedToMsg = true;
+      FirebaseMessaging.onMessage.listen(Database._onMsgReceived);
+      FirebaseMessaging.onBackgroundMessage(Database._onMsgReceived);
+      print("Subscribed!");
+    });
   }
-
 
   static Future<void> _onMsgReceived(RemoteMessage msg) {
     if (msg.from != "/topics/" + UPDATE_TOPIC) {
@@ -200,28 +196,25 @@ class Database {
     return Future(() => null);
   }
 
-
   static void updateSavedEvents() async {
-     final db = FirebaseFirestore.instance;
-    
+    final db = FirebaseFirestore.instance;
+
     //offline querry
-    final res = await db.collection(collectionName).where(
-      "latest_date_changed", 
-      isGreaterThan: lastRead
-    ).get(const GetOptions(source: Source.server));
+    final res = await db
+        .collection(collectionName)
+        .where("latest_date_changed", isGreaterThan: lastRead)
+        .get(const GetOptions(source: Source.server));
 
     if (res.docs.isNotEmpty) {
       (res.docs[0].data()['latest_date_change'] as Timestamp).toString();
     }
   }
 
-
-
   static Future<void> _saveToDrive() async {
     final dir = await getApplicationDocumentsDirectory();
     final file = File('${dir.path}$SAVE_PATH');
     final List<EventItem> eventList = List<EventItem>.empty();
-    
+
     for (List<EventItem> itemList in eventMap.values) {
       eventList.addAll(itemList);
     }
@@ -232,7 +225,6 @@ class Database {
     return Future(() => null);
   }
 
-
   //===== test =====
   static Future<List<EventItem>> testFetch() async {
     final db = FirebaseFirestore.instance;
@@ -241,7 +233,7 @@ class Database {
 
     List<EventItem> eventList = [];
     for (final doc in res.docs) {
-      eventList.add( EventItem.parseJson(doc.data()) );
+      eventList.add(EventItem.parseJson(doc.data()));
     }
 
     return eventList;
@@ -249,15 +241,13 @@ class Database {
 
   static void testTimeStamp() async {
     final db = FirebaseFirestore.instance;
-    
-    final res = await db.collection("pastEvents").doc("86qBaCqngKs8GuM8Hqff").get();
+
+    final res =
+        await db.collection("pastEvents").doc("86qBaCqngKs8GuM8Hqff").get();
     print("================ TEST =====================");
-    print( res.data()?['datetime'].toDate() );
+    print(res.data()?['datetime'].toDate());
   }
-
-  
 }
-
 
 /*
   static Future<List<EventItem>> fetchByDay(DateTime? day) async {

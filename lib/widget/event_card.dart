@@ -1,11 +1,14 @@
 import 'package:acm_app/model/event_item.dart';
-import 'package:acm_app/navpages/event_detail.dart';
+import 'package:acm_app/screens/event_detail.dart';
 import "package:flutter/material.dart";
 
 class EventCard extends StatelessWidget {
   final EventItem event;
 
-  const EventCard(this.event, {super.key});
+  const EventCard(
+    this.event, {
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +35,8 @@ class EventCard extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (ctx) => DetailPage(
-                          event: event, firstDate: DateTime.utc(2023, 7, 31))),
+                            event: event,
+                          )),
                 );
               },
               child: Ink(
