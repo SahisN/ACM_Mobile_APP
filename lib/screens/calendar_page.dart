@@ -6,7 +6,6 @@ import 'package:acm_app/model/firebase.dart';
 
 bool isInitialized = false;
 bool isExpanded = false;
-//Map<DateTime, List<EventItem>> eventMap = {};
 
 class CalendarPage extends StatefulWidget {
   const CalendarPage({super.key});
@@ -17,10 +16,10 @@ class CalendarPage extends StatefulWidget {
 
 class _CalendarPageState extends State<CalendarPage> {
   DateTime now = DateTime.now();
-  final firstDate = DateTime(DateTime.now().year, DateTime.now().month - 6,
-      1); //DateTime(now.year - 1, now.month);
-  final lastDay = DateTime.utc(
-      DateTime.now().year + 5, 1, 1); //DateTime(now.year + 5, now.month);
+  //DateTime(now.year - 1, now.month);
+  final firstDate = DateTime(DateTime.now().year, DateTime.now().month - 6,1);
+  //DateTime(now.year + 5, now.month);
+  final lastDay = DateTime.utc(DateTime.now().year + 5, 1, 1);
 
   void _onDaySelected(DateTime day, DateTime focusedDay) {
     setState(() {
@@ -54,50 +53,26 @@ class _CalendarPageState extends State<CalendarPage> {
     );
   }
 
-  //initially fetch all events and load to Database.eventMap
-  void _iniFetch() async {
-    /*
-    List<EventItem> events = await Database.fetchByRange_googleCal(firstDate, lastDay);
-    //List<EventItem> events = await Database.fetchByRange(firstDate, lastDay);
-
-    for (EventItem eve in events) {
-      DateTime date = DateTime(eve.dateTime.year, eve.dateTime.month, eve.dateTime.day);
-
-      //map a list to a date key if not existed
-      if (!Database.eventMap.containsKey(date)) {
-        Database.eventMap.addAll({date: <EventItem>[]});
-      }
-
-      Database.eventMap[date]!.add(eve);
-    }
-    */
-    /*
-    await Database.fetchByRange_googleCal(firstDate, lastDay);
-
-    isInitialized = true;
-    setState(() {});
-    */
-  }
-
   @override
   void initState() {
     super.initState();
-    if (isInitialized) return;
-    //temp cache
-    Database.loadEvents().then((results) => {
-      if (!results) {
-        print("Fetching From Google"),
-        Database.fetchByRange_googleCal(firstDate, lastDay).then((value) {
-          setState(() {});
-        })
-      }
-    });
     
+    //load events
+    if (!Database.isEventsLoaded) {
+      Database.loadEventsFromCache().then((isLoaded) => {
+        if (!isLoaded) {
+          print("Fetching From Google"),
+          Database.fetchCalendarEvents(firstDate, lastDay).then((value) {
+            setState(() {});
+          })
+        }
+      });
+    }
+    
+    //subscribe to firebase messaging
     if (!Database.subscribedToMsg) {
       Database.subscribeToEventUpdates();
     }
-
-    isInitialized = true;
   }
 
   @override
@@ -109,7 +84,8 @@ class _CalendarPageState extends State<CalendarPage> {
           actions: [
             IconButton(
               onPressed: () {
-                Database.fetchByRange_googleCal(firstDate, lastDay).then((val) => setState(() {}));
+                Database.fetchCalendarEvents(firstDate, lastDay)
+                  .then((val) => setState(() {}));
               },
               icon: Icon(Icons.refresh)
             ),

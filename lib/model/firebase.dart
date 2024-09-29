@@ -26,6 +26,7 @@ const SAVE_PATH = "/acm-app-save.json";
 ///===================================================
 
 class Database {
+  static bool isEventsLoaded = false;
   static bool subscribedToMsg = false;
   static Timestamp lastRead = Timestamp(1, 0);
   static Map<DateTime, List<EventItem>> eventMap = {};
@@ -61,8 +62,8 @@ class Database {
 
   //===== Google Calendar API =============================
 
-  static Future<void> fetchByRange_googleCal(
-      DateTime minDate, DateTime maxDate) async {
+  //retreives google calendar events from ACM calendar
+  static Future<void> fetchCalendarEvents( DateTime minDate, DateTime maxDate ) async {
     Uri url = Uri.https("www.googleapis.com",
         "/calendar/v3/calendars/acm.calstatela@gmail.com/events", {
       "key": KEY,
@@ -74,18 +75,28 @@ class Database {
 
     var res = await http.get(url);
     Map<String, dynamic> resJson = jsonDecode(res.body);
-    //List<EventItem> eventList = [];
+
+
+    if (resJson.isEmpty || resJson['items'] == null) {
+      print("request returned emptied");
+      return;
+    }
+    if (isEventsLoaded) {
+      eventMap.clear();
+    }
 
     for (Map<String, dynamic> item in resJson["items"]) {
       if (item["kind"] != "calendar#event") continue;
 
       final eventItem = EventItem.parseJson_googleCal(item);
+      DateTime dateKey = DateTime(eventItem.dateTime.year, eventItem.dateTime.month, eventItem.dateTime.day);
       //map a list to a date key if not existed
-      if (!Database.eventMap.containsKey(eventItem.dateTime)) {
-        Database.eventMap.addAll({eventItem.dateTime: <EventItem>[]});
+      if (!Database.eventMap.containsKey(dateKey)) {
+        Database.eventMap.addAll({dateKey: <EventItem>[]});
       }
 
-      Database.eventMap[eventItem.dateTime]!.add(eventItem);
+      Database.eventMap[dateKey]!.add(eventItem);
+      //print( eventMap[eventItem.dateTime] );
     }
 
     await cache();
@@ -105,7 +116,13 @@ class Database {
       ]
   *
   */
-  static Future<bool> loadEvents() async {
+  static Future<bool> loadEventsFromCache() async {
+    if (isEventsLoaded) {
+      //clears current events in memory
+      Database.eventMap.clear();
+      isEventsLoaded = false;
+    }
+
     final SharedPreferences pref = await SharedPreferences.getInstance();
     final jsonStr = await pref.getString('events') ?? "";
 
@@ -117,7 +134,6 @@ class Database {
     //parse current event
     final List< dynamic > jsonObj = jsonDecode(jsonStr);
 
-    Database.eventMap.clear();
     for (final event in jsonObj) {
       final eventItem = EventItem.parseJson( jsonDecode(event as String) );
 
@@ -129,6 +145,7 @@ class Database {
       Database.eventMap[eventItem.dateTime]!.add(eventItem);
     }
 
+    isEventsLoaded = true;
     return true;
     
     

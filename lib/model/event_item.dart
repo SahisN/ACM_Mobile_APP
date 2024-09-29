@@ -25,6 +25,7 @@ class EventItem {
     return EventItem(name, dateTime, description, location, imageURL, id);
   }
 
+  //parse from google calendar event to desired EventItem format
   factory EventItem.parseJson_googleCal(Map<String, dynamic> json) {
     //type casting
     final id = json['id'] as String;
@@ -43,6 +44,7 @@ class EventItem {
     return EventItem(name, dateTime, description, location, imageURL, id);
   }
 
+  //convert and return an EventItem instance to a Json string format
   String toJson() {
     Map<String, dynamic> jsonMap = <String, dynamic>{};
     jsonMap['name'] = name;
@@ -53,5 +55,9 @@ class EventItem {
     jsonMap['uid'] = uid;
     
     return jsonEncode(jsonMap);
+  }
+
+  String toString() {
+    return '{name: ${name}, description: ${description}, location: ${location}, dateTime: ${dateTime}}';
   }
 }
