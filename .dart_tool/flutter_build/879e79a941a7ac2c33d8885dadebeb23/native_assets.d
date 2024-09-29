@@ -1,0 +1,1 @@
+ C:\\Users\\HowieDoIt\\Documents\\CSULA\\ACM_innovations\\ACM_app\\ACM_Mobile_APP\\.dart_tool\\flutter_build\\879e79a941a7ac2c33d8885dadebeb23\\native_assets.yaml: 

@@ -1,0 +1,1098 @@
+-- Merging decision tree log ---
+application
+INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:7:5-37:19
+MERGED from [:firebase_auth] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_auth] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_storage] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_storage] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:cloud_firestore] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:cloud_firestore] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-48:19
+MERGED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-48:19
+MERGED from [:firebase_core] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_core] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:14:5-50:19
+MERGED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:14:5-50:19
+MERGED from [:url_launcher_android] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-14:19
+MERGED from [:url_launcher_android] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-14:19
+MERGED from [me.carda:AndroidAwnCore:0.9.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8fb44917214b1f7078a5716e7c968a1a\transformed\jetified-AndroidAwnCore-0.9.3\AndroidManifest.xml:14:5-29:19
+MERGED from [me.carda:AndroidAwnCore:0.9.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8fb44917214b1f7078a5716e7c968a1a\transformed\jetified-AndroidAwnCore-0.9.3\AndroidManifest.xml:14:5-29:19
+MERGED from [com.google.android.material:material:1.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\5c8de55ec25e95d070cb40101e125bb8\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\5c8de55ec25e95d070cb40101e125bb8\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\7dc828c258d41340ff3020aa54732066\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\7dc828c258d41340ff3020aa54732066\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:28:5-64:19
+MERGED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:28:5-64:19
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\07bc617b63b437cda78d16bcb8084c18\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:26:5-37:19
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\07bc617b63b437cda78d16bcb8084c18\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:26:5-37:19
+MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f6abc83b05941d4736e94a9e27c1a813\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:11:5-22:19
+MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f6abc83b05941d4736e94a9e27c1a813\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:11:5-22:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\594ae181a8146aa6f6d0cce44c3057b7\transformed\jetified-firebase-appcheck-17.1.2\AndroidManifest.xml:21:5-32:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\594ae181a8146aa6f6d0cce44c3057b7\transformed\jetified-firebase-appcheck-17.1.2\AndroidManifest.xml:21:5-32:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2acaae8c7b458348fda3ee338b8132e2\transformed\jetified-firebase-common-ktx-20.4.3\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2acaae8c7b458348fda3ee338b8132e2\transformed\jetified-firebase-common-ktx-20.4.3\AndroidManifest.xml:8:5-16:19
+MERGED from [androidx.room:room-runtime:2.5.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\534740f5fe9a2ae174052dbfc3a4f44f\transformed\room-runtime-2.5.0\AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.room:room-runtime:2.5.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\534740f5fe9a2ae174052dbfc3a4f44f\transformed\room-runtime-2.5.0\AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\HowieDoIt\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\HowieDoIt\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6798b41b76d4ce1080e881ffb02dc3eb\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6798b41b76d4ce1080e881ffb02dc3eb\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\c6a02f983a15746f43bf8039f758a00b\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\c6a02f983a15746f43bf8039f758a00b\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d4ee856b0501bd4e2deb987ae70e355\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d4ee856b0501bd4e2deb987ae70e355\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6bad7846deb81c7c62cfaa0fd60febef\transformed\jetified-integrity-1.2.0\AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6bad7846deb81c7c62cfaa0fd60febef\transformed\jetified-integrity-1.2.0\AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a27cb51afc10d101c016514d69a0e689\transformed\jetified-firebase-iid-interop-17.1.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a27cb51afc10d101c016514d69a0e689\transformed\jetified-firebase-iid-interop-17.1.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\4fab47392613a0302efda62576966564\transformed\jetified-play-services-stats-17.0.2\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\4fab47392613a0302efda62576966564\transformed\jetified-play-services-stats-17.0.2\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6769c345c0e8710e593b0ea82bd7658a\transformed\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6769c345c0e8710e593b0ea82bd7658a\transformed\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\cf3711ac839d34e74f773fb1632a1ae7\transformed\jetified-firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\cf3711ac839d34e74f773fb1632a1ae7\transformed\jetified-firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\4b9d22533576529904e76f8ef61c175c\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\4b9d22533576529904e76f8ef61c175c\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\dd8a2bf1c10ec55fe6eff843bfdb2b0a\transformed\jetified-play-services-tasks-18.1.0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\dd8a2bf1c10ec55fe6eff843bfdb2b0a\transformed\jetified-play-services-tasks-18.1.0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\c3e05c9fbf3e6c63974105ad6d97e1f5\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\c3e05c9fbf3e6c63974105ad6d97e1f5\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\98f8115e8f56ec67d96e5a388c46890f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\98f8115e8f56ec67d96e5a388c46890f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.10.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.10.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2183eebe79b9cdf856b67bdd4ed484c0\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2183eebe79b9cdf856b67bdd4ed484c0\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f5fcd9d21efbf86a0ac70e1d2cc111ed\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f5fcd9d21efbf86a0ac70e1d2cc111ed\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6668cc85eff5929d44d91f927ab7e655\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6668cc85eff5929d44d91f927ab7e655\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ed00c8c1e57b625569439525e3d45c4f\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:23:5-31:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ed00c8c1e57b625569439525e3d45c4f\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:23:5-31:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\af73949769087a357b326260c4043148\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\af73949769087a357b326260c4043148\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b039ec23eadf3bb398bcb791f1383592\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:25:5-39:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b039ec23eadf3bb398bcb791f1383592\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:25:5-39:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.10.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
+	android:name
+		INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml
+manifest
+ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:1:1-49:12
+INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:1:1-49:12
+INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:1:1-49:12
+INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:1:1-49:12
+MERGED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:1:1-49:12
+MERGED from [:shared_preferences_android] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:firebase_auth] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:firebase_storage] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:cloud_firestore] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-50:12
+MERGED from [:firebase_core] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-52:12
+MERGED from [:url_launcher_android] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-16:12
+MERGED from [:path_provider_android] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:connectivity_plus] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\connectivity_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:flutter_native_splash] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\flutter_native_splash\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [me.carda:AndroidAwnCore:0.9.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8fb44917214b1f7078a5716e7c968a1a\transformed\jetified-AndroidAwnCore-0.9.3\AndroidManifest.xml:2:1-31:12
+MERGED from [com.google.android.material:material:1.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\5c8de55ec25e95d070cb40101e125bb8\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:17:1-75:12
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\7dc828c258d41340ff3020aa54732066\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:17:1-66:12
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\07bc617b63b437cda78d16bcb8084c18\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f6abc83b05941d4736e94a9e27c1a813\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:2:1-24:12
+MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\594ae181a8146aa6f6d0cce44c3057b7\transformed\jetified-firebase-appcheck-17.1.2\AndroidManifest.xml:15:1-34:12
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2acaae8c7b458348fda3ee338b8132e2\transformed\jetified-firebase-common-ktx-20.4.3\AndroidManifest.xml:2:1-18:12
+MERGED from [androidx.room:room-runtime:2.5.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\534740f5fe9a2ae174052dbfc3a4f44f\transformed\room-runtime-2.5.0\AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\HowieDoIt\.gradle\caches\transforms-3\142c24f2530665bb6deb4123ab140714\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\HowieDoIt\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\e692383bc856ae0bb0d1d640054d2ace\transformed\jetified-recaptcha-18.4.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6f6ab2739702ad57be5e1c749dda57d4\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6798b41b76d4ce1080e881ffb02dc3eb\transformed\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\9cb2897c440f756ddc400d89a1ad071d\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\c6a02f983a15746f43bf8039f758a00b\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d4ee856b0501bd4e2deb987ae70e355\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b43c9aaed4ca2272e9703d6ddcc124c1\transformed\jetified-play-services-auth-api-phone-17.4.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6bad7846deb81c7c62cfaa0fd60febef\transformed\jetified-integrity-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a27cb51afc10d101c016514d69a0e689\transformed\jetified-firebase-iid-interop-17.1.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ad94281bac4b6758b18a0d40c8fb4186\transformed\jetified-play-services-cloud-messaging-17.1.0\AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\4fab47392613a0302efda62576966564\transformed\jetified-play-services-stats-17.0.2\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6769c345c0e8710e593b0ea82bd7658a\transformed\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\cf3711ac839d34e74f773fb1632a1ae7\transformed\jetified-firebase-appcheck-interop-17.1.0\AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\50fc96c2a2966955414af4bc010f3f79\transformed\jetified-firebase-installations-interop-17.1.1\AndroidManifest.xml:15:1-19:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\93ee2037c2c407d25f6a3820caf56267\transformed\jetified-firebase-database-collection-18.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\4b9d22533576529904e76f8ef61c175c\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\dd8a2bf1c10ec55fe6eff843bfdb2b0a\transformed\jetified-play-services-tasks-18.1.0\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\c3e05c9fbf3e6c63974105ad6d97e1f5\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2e4a2a7cd82488f978a5a7f9a6af0979\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0a7b0b82625d5673a4709937d5e3de7f\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.8.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\08d55680ad2953abe77528c3a5186df7\transformed\jetified-activity-1.8.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.browser:browser:1.5.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a3fbb37dd5ef93c98bc80ddf0289d0af\transformed\browser-1.5.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.7.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a38cf9aee03a0a4fd4ff8247f913910a\transformed\media-1.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2127c3474630e29a60996120be0fab68\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\98f8115e8f56ec67d96e5a388c46890f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2d105e5216d524131c4c1fa2fe0df478\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\62194ac1eeb6dda758cec0d0a3669e6e\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8dafe1523c78d203b3103364ec18b1ea\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\86e255b632f48cec6faafa38e761b8cd\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\102ec08c80a8e3874dbb2d65decd788f\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2fc23539d7b7a460b49a473bbb805f4b\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.10.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\81c4a79d1739fabcfe6c6b2148f64568\transformed\jetified-core-ktx-1.10.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a1c54a9cb0069017a571c3a925e84300\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\aa3cbedcef3ee23bf0d03abede347041\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\73e9214f5c1a2878cad8e78e78318741\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\1785142d0f9c68a72cbca825b530cc2c\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\c79b67e0f9cb05890e4013ed15709c82\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.10.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\526bb5512d8d3f2d15bcce29fe0c92ba\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b4d5aa1cd75766d64d9e72d95b885cc8\transformed\jetified-lifecycle-service-2.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-reactivestreams:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\fd5b7ddb78067d110dc3ca7e71eb2066\transformed\lifecycle-reactivestreams-2.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2183eebe79b9cdf856b67bdd4ed484c0\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\08a5c1248b5e9a636aede73245683bfa\transformed\lifecycle-livedata-2.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\397e6087a7a7dc934a902c04bab8630e\transformed\lifecycle-livedata-core-2.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\16b43ec4d4d703c704cd90c51d5d42eb\transformed\lifecycle-viewmodel-2.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6047402913d961f13a2b1594593b91cd\transformed\lifecycle-runtime-2.6.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\cf77f4f2e7e8613859aac78b170de6a1\transformed\jetified-lifecycle-viewmodel-savedstate-2.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\32f0428c95f204398e2292da57739ce8\transformed\localbroadcastmanager-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f5fcd9d21efbf86a0ac70e1d2cc111ed\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\fcf486669bd3283ac86e13b69736f6ad\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite-framework:2.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6946a89d1f59601134f010b764c6d310\transformed\sqlite-framework-2.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d645965218c04d7480879770f3766fb\transformed\sqlite-2.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ba5cbacca9596aa589f17f054708aaf8\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6668cc85eff5929d44d91f927ab7e655\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\HowieDoIt\.gradle\caches\transforms-3\e4883182308f82efeff8244125c4e99c\transformed\jetified-firebase-components-17.1.5\AndroidManifest.xml:15:1-20:12
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ed00c8c1e57b625569439525e3d45c4f\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:15:1-33:12
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\af73949769087a357b326260c4043148\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:15:1-37:12
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b039ec23eadf3bb398bcb791f1383592\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.android.datatransport:transport-api:3.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\10d5925ba023493039c0d477cfded460\transformed\jetified-transport-api-3.1.0\AndroidManifest.xml:15:1-20:12
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0df9428b2e6f472fb75d59243970b311\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\84288ad1fa78cf3fb8fb9e63aa8bd3b9\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\d9da5155600720598049711def8f09d5\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6511295f879fe38787a2a783248db52b\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2d7b2a20f14a47bef3578fe37c2b1445\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\3d3a17a299379e3d54a62db038deb3a7\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\65ffbf7ff5a5fa53bf2b305a168dede4\transformed\jetified-grpc-android-1.57.2\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ae329bc8a0eb87982c4fe41e3ec5da7f\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:2:1-52:12
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\9f69f0524f044217ee057b21fea5dcb5\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
+INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:2:5-48
+		INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:2:5-48
+		INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\debug\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:1:1-49:12
+		INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\debug\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:1:1-49:12
+		INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\debug\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.VIBRATE
+ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:3:5-65
+MERGED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-66
+MERGED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-66
+	android:name
+		ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:3:22-63
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:4:5-80
+MERGED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-81
+MERGED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-81
+	android:name
+		ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:4:22-78
+uses-permission#android.permission.SCHEDULE_EXACT_ALARM
+ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:5:5-78
+	android:name
+		ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:5:22-76
+uses-permission#android.permission.ACCESS_NOTIFICATION_POLICY
+ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:6:5-84
+	android:name
+		ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:6:22-82
+queries
+ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:43:5-48:15
+intent#action:name:android.intent.action.PROCESS_TEXT+data:mimeType:text/plain
+ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:44:9-47:18
+action#android.intent.action.PROCESS_TEXT
+ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:45:13-72
+	android:name
+		ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:45:21-70
+data
+ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:46:13-50
+	android:mimeType
+		ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml:46:19-48
+uses-sdk
+INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml
+MERGED from [:shared_preferences_android] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:shared_preferences_android] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_auth] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_auth] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_storage] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_storage] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:cloud_firestore] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:cloud_firestore] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_core] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_core] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:url_launcher_android] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:url_launcher_android] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:connectivity_plus] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\connectivity_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:connectivity_plus] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\connectivity_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_native_splash] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\flutter_native_splash\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_native_splash] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\flutter_native_splash\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [me.carda:AndroidAwnCore:0.9.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8fb44917214b1f7078a5716e7c968a1a\transformed\jetified-AndroidAwnCore-0.9.3\AndroidManifest.xml:5:5-7:41
+MERGED from [me.carda:AndroidAwnCore:0.9.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8fb44917214b1f7078a5716e7c968a1a\transformed\jetified-AndroidAwnCore-0.9.3\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.material:material:1.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\5c8de55ec25e95d070cb40101e125bb8\transformed\material-1.11.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\5c8de55ec25e95d070cb40101e125bb8\transformed\material-1.11.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:21:5-23:64
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:21:5-23:64
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\7dc828c258d41340ff3020aa54732066\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\7dc828c258d41340ff3020aa54732066\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\07bc617b63b437cda78d16bcb8084c18\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\07bc617b63b437cda78d16bcb8084c18\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f6abc83b05941d4736e94a9e27c1a813\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f6abc83b05941d4736e94a9e27c1a813\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\594ae181a8146aa6f6d0cce44c3057b7\transformed\jetified-firebase-appcheck-17.1.2\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\594ae181a8146aa6f6d0cce44c3057b7\transformed\jetified-firebase-appcheck-17.1.2\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2acaae8c7b458348fda3ee338b8132e2\transformed\jetified-firebase-common-ktx-20.4.3\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2acaae8c7b458348fda3ee338b8132e2\transformed\jetified-firebase-common-ktx-20.4.3\AndroidManifest.xml:5:5-44
+MERGED from [androidx.room:room-runtime:2.5.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\534740f5fe9a2ae174052dbfc3a4f44f\transformed\room-runtime-2.5.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-runtime:2.5.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\534740f5fe9a2ae174052dbfc3a4f44f\transformed\room-runtime-2.5.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\HowieDoIt\.gradle\caches\transforms-3\142c24f2530665bb6deb4123ab140714\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\HowieDoIt\.gradle\caches\transforms-3\142c24f2530665bb6deb4123ab140714\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\HowieDoIt\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\HowieDoIt\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\e692383bc856ae0bb0d1d640054d2ace\transformed\jetified-recaptcha-18.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\e692383bc856ae0bb0d1d640054d2ace\transformed\jetified-recaptcha-18.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6f6ab2739702ad57be5e1c749dda57d4\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6f6ab2739702ad57be5e1c749dda57d4\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6798b41b76d4ce1080e881ffb02dc3eb\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6798b41b76d4ce1080e881ffb02dc3eb\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\9cb2897c440f756ddc400d89a1ad071d\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\9cb2897c440f756ddc400d89a1ad071d\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\c6a02f983a15746f43bf8039f758a00b\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\c6a02f983a15746f43bf8039f758a00b\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d4ee856b0501bd4e2deb987ae70e355\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d4ee856b0501bd4e2deb987ae70e355\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:19:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b43c9aaed4ca2272e9703d6ddcc124c1\transformed\jetified-play-services-auth-api-phone-17.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b43c9aaed4ca2272e9703d6ddcc124c1\transformed\jetified-play-services-auth-api-phone-17.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6bad7846deb81c7c62cfaa0fd60febef\transformed\jetified-integrity-1.2.0\AndroidManifest.xml:4:5-44
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6bad7846deb81c7c62cfaa0fd60febef\transformed\jetified-integrity-1.2.0\AndroidManifest.xml:4:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a27cb51afc10d101c016514d69a0e689\transformed\jetified-firebase-iid-interop-17.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a27cb51afc10d101c016514d69a0e689\transformed\jetified-firebase-iid-interop-17.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ad94281bac4b6758b18a0d40c8fb4186\transformed\jetified-play-services-cloud-messaging-17.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ad94281bac4b6758b18a0d40c8fb4186\transformed\jetified-play-services-cloud-messaging-17.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\4fab47392613a0302efda62576966564\transformed\jetified-play-services-stats-17.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\4fab47392613a0302efda62576966564\transformed\jetified-play-services-stats-17.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6769c345c0e8710e593b0ea82bd7658a\transformed\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6769c345c0e8710e593b0ea82bd7658a\transformed\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\cf3711ac839d34e74f773fb1632a1ae7\transformed\jetified-firebase-appcheck-interop-17.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\cf3711ac839d34e74f773fb1632a1ae7\transformed\jetified-firebase-appcheck-interop-17.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\50fc96c2a2966955414af4bc010f3f79\transformed\jetified-firebase-installations-interop-17.1.1\AndroidManifest.xml:17:5-44
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\50fc96c2a2966955414af4bc010f3f79\transformed\jetified-firebase-installations-interop-17.1.1\AndroidManifest.xml:17:5-44
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\93ee2037c2c407d25f6a3820caf56267\transformed\jetified-firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\93ee2037c2c407d25f6a3820caf56267\transformed\jetified-firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\4b9d22533576529904e76f8ef61c175c\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\4b9d22533576529904e76f8ef61c175c\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\dd8a2bf1c10ec55fe6eff843bfdb2b0a\transformed\jetified-play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\dd8a2bf1c10ec55fe6eff843bfdb2b0a\transformed\jetified-play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\c3e05c9fbf3e6c63974105ad6d97e1f5\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\c3e05c9fbf3e6c63974105ad6d97e1f5\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:18:5-43
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2e4a2a7cd82488f978a5a7f9a6af0979\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2e4a2a7cd82488f978a5a7f9a6af0979\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0a7b0b82625d5673a4709937d5e3de7f\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0a7b0b82625d5673a4709937d5e3de7f\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.8.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\08d55680ad2953abe77528c3a5186df7\transformed\jetified-activity-1.8.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\08d55680ad2953abe77528c3a5186df7\transformed\jetified-activity-1.8.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.5.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a3fbb37dd5ef93c98bc80ddf0289d0af\transformed\browser-1.5.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.5.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a3fbb37dd5ef93c98bc80ddf0289d0af\transformed\browser-1.5.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.7.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a38cf9aee03a0a4fd4ff8247f913910a\transformed\media-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.media:media:1.7.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a38cf9aee03a0a4fd4ff8247f913910a\transformed\media-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2127c3474630e29a60996120be0fab68\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2127c3474630e29a60996120be0fab68\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\98f8115e8f56ec67d96e5a388c46890f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\98f8115e8f56ec67d96e5a388c46890f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2d105e5216d524131c4c1fa2fe0df478\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2d105e5216d524131c4c1fa2fe0df478\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\62194ac1eeb6dda758cec0d0a3669e6e\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\62194ac1eeb6dda758cec0d0a3669e6e\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8dafe1523c78d203b3103364ec18b1ea\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8dafe1523c78d203b3103364ec18b1ea\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\86e255b632f48cec6faafa38e761b8cd\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\86e255b632f48cec6faafa38e761b8cd\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\102ec08c80a8e3874dbb2d65decd788f\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\102ec08c80a8e3874dbb2d65decd788f\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2fc23539d7b7a460b49a473bbb805f4b\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2fc23539d7b7a460b49a473bbb805f4b\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.10.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\81c4a79d1739fabcfe6c6b2148f64568\transformed\jetified-core-ktx-1.10.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.10.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\81c4a79d1739fabcfe6c6b2148f64568\transformed\jetified-core-ktx-1.10.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a1c54a9cb0069017a571c3a925e84300\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a1c54a9cb0069017a571c3a925e84300\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\aa3cbedcef3ee23bf0d03abede347041\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\aa3cbedcef3ee23bf0d03abede347041\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\73e9214f5c1a2878cad8e78e78318741\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\73e9214f5c1a2878cad8e78e78318741\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\1785142d0f9c68a72cbca825b530cc2c\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\1785142d0f9c68a72cbca825b530cc2c\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\c79b67e0f9cb05890e4013ed15709c82\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\c79b67e0f9cb05890e4013ed15709c82\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.10.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.10.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\526bb5512d8d3f2d15bcce29fe0c92ba\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\526bb5512d8d3f2d15bcce29fe0c92ba\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b4d5aa1cd75766d64d9e72d95b885cc8\transformed\jetified-lifecycle-service-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b4d5aa1cd75766d64d9e72d95b885cc8\transformed\jetified-lifecycle-service-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-reactivestreams:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\fd5b7ddb78067d110dc3ca7e71eb2066\transformed\lifecycle-reactivestreams-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-reactivestreams:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\fd5b7ddb78067d110dc3ca7e71eb2066\transformed\lifecycle-reactivestreams-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2183eebe79b9cdf856b67bdd4ed484c0\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2183eebe79b9cdf856b67bdd4ed484c0\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\08a5c1248b5e9a636aede73245683bfa\transformed\lifecycle-livedata-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\08a5c1248b5e9a636aede73245683bfa\transformed\lifecycle-livedata-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\397e6087a7a7dc934a902c04bab8630e\transformed\lifecycle-livedata-core-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\397e6087a7a7dc934a902c04bab8630e\transformed\lifecycle-livedata-core-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\16b43ec4d4d703c704cd90c51d5d42eb\transformed\lifecycle-viewmodel-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\16b43ec4d4d703c704cd90c51d5d42eb\transformed\lifecycle-viewmodel-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6047402913d961f13a2b1594593b91cd\transformed\lifecycle-runtime-2.6.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6047402913d961f13a2b1594593b91cd\transformed\lifecycle-runtime-2.6.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\cf77f4f2e7e8613859aac78b170de6a1\transformed\jetified-lifecycle-viewmodel-savedstate-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\cf77f4f2e7e8613859aac78b170de6a1\transformed\jetified-lifecycle-viewmodel-savedstate-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\32f0428c95f204398e2292da57739ce8\transformed\localbroadcastmanager-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\32f0428c95f204398e2292da57739ce8\transformed\localbroadcastmanager-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f5fcd9d21efbf86a0ac70e1d2cc111ed\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f5fcd9d21efbf86a0ac70e1d2cc111ed\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\fcf486669bd3283ac86e13b69736f6ad\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\fcf486669bd3283ac86e13b69736f6ad\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6946a89d1f59601134f010b764c6d310\transformed\sqlite-framework-2.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6946a89d1f59601134f010b764c6d310\transformed\sqlite-framework-2.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d645965218c04d7480879770f3766fb\transformed\sqlite-2.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d645965218c04d7480879770f3766fb\transformed\sqlite-2.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ba5cbacca9596aa589f17f054708aaf8\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ba5cbacca9596aa589f17f054708aaf8\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6668cc85eff5929d44d91f927ab7e655\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6668cc85eff5929d44d91f927ab7e655\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\HowieDoIt\.gradle\caches\transforms-3\e4883182308f82efeff8244125c4e99c\transformed\jetified-firebase-components-17.1.5\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\HowieDoIt\.gradle\caches\transforms-3\e4883182308f82efeff8244125c4e99c\transformed\jetified-firebase-components-17.1.5\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ed00c8c1e57b625569439525e3d45c4f\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ed00c8c1e57b625569439525e3d45c4f\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\af73949769087a357b326260c4043148\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\af73949769087a357b326260c4043148\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b039ec23eadf3bb398bcb791f1383592\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b039ec23eadf3bb398bcb791f1383592\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:3.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\10d5925ba023493039c0d477cfded460\transformed\jetified-transport-api-3.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.android.datatransport:transport-api:3.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\10d5925ba023493039c0d477cfded460\transformed\jetified-transport-api-3.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0df9428b2e6f472fb75d59243970b311\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0df9428b2e6f472fb75d59243970b311\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\84288ad1fa78cf3fb8fb9e63aa8bd3b9\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\84288ad1fa78cf3fb8fb9e63aa8bd3b9\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\d9da5155600720598049711def8f09d5\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\d9da5155600720598049711def8f09d5\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6511295f879fe38787a2a783248db52b\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6511295f879fe38787a2a783248db52b\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2d7b2a20f14a47bef3578fe37c2b1445\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2d7b2a20f14a47bef3578fe37c2b1445\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\3d3a17a299379e3d54a62db038deb3a7\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\3d3a17a299379e3d54a62db038deb3a7\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\65ffbf7ff5a5fa53bf2b305a168dede4\transformed\jetified-grpc-android-1.57.2\AndroidManifest.xml:5:5-44
+MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\65ffbf7ff5a5fa53bf2b305a168dede4\transformed\jetified-grpc-android-1.57.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ae329bc8a0eb87982c4fe41e3ec5da7f\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ae329bc8a0eb87982c4fe41e3ec5da7f\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:7:5-9:41
+MERGED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\9f69f0524f044217ee057b21fea5dcb5\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\9f69f0524f044217ee057b21fea5dcb5\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
+INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\debug\AndroidManifest.xml
+INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\debug\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:23:9-61
+	android:targetSdkVersion
+		INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\debug\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\debug\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\debug\AndroidManifest.xml:6:5-66
+MERGED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
+MERGED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\7dc828c258d41340ff3020aa54732066\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\7dc828c258d41340ff3020aa54732066\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\07bc617b63b437cda78d16bcb8084c18\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\07bc617b63b437cda78d16bcb8084c18\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f6abc83b05941d4736e94a9e27c1a813\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:8:5-67
+MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f6abc83b05941d4736e94a9e27c1a813\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\e692383bc856ae0bb0d1d640054d2ace\transformed\jetified-recaptcha-18.4.0\AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\e692383bc856ae0bb0d1d640054d2ace\transformed\jetified-recaptcha-18.4.0\AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ad94281bac4b6758b18a0d40c8fb4186\transformed\jetified-play-services-cloud-messaging-17.1.0\AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ad94281bac4b6758b18a0d40c8fb4186\transformed\jetified-play-services-cloud-messaging-17.1.0\AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\af73949769087a357b326260c4043148\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:25:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\af73949769087a357b326260c4043148\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:25:5-67
+	android:name
+		ADDED from C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\android\app\src\debug\AndroidManifest.xml:6:22-64
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [:firebase_auth] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_storage] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_storage] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:cloud_firestore] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:cloud_firestore] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:37:9-41:19
+MERGED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:37:9-41:19
+MERGED from [:firebase_core] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_core] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\7dc828c258d41340ff3020aa54732066\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\7dc828c258d41340ff3020aa54732066\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:54:9-63:19
+MERGED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:54:9-63:19
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\07bc617b63b437cda78d16bcb8084c18\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:27:9-36:19
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\07bc617b63b437cda78d16bcb8084c18\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:27:9-36:19
+MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f6abc83b05941d4736e94a9e27c1a813\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:12:9-21:19
+MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f6abc83b05941d4736e94a9e27c1a813\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:12:9-21:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\594ae181a8146aa6f6d0cce44c3057b7\transformed\jetified-firebase-appcheck-17.1.2\AndroidManifest.xml:22:9-31:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\594ae181a8146aa6f6d0cce44c3057b7\transformed\jetified-firebase-appcheck-17.1.2\AndroidManifest.xml:22:9-31:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2acaae8c7b458348fda3ee338b8132e2\transformed\jetified-firebase-common-ktx-20.4.3\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2acaae8c7b458348fda3ee338b8132e2\transformed\jetified-firebase-common-ktx-20.4.3\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d4ee856b0501bd4e2deb987ae70e355\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:30:9-38:19
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d4ee856b0501bd4e2deb987ae70e355\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:30:9-38:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ed00c8c1e57b625569439525e3d45c4f\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:24:9-30:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ed00c8c1e57b625569439525e3d45c4f\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:24:9-30:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:68:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d4ee856b0501bd4e2deb987ae70e355\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:34:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d4ee856b0501bd4e2deb987ae70e355\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:32:13-43
+	android:name
+		ADDED from [:firebase_auth] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-89
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar
+ADDED from [:firebase_auth] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [:firebase_auth] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [:firebase_auth] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_storage] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [:firebase_storage] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [:firebase_storage] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-126
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar
+ADDED from [:cloud_firestore] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [:cloud_firestore] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [:cloud_firestore] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-134
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-68
+MERGED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ad94281bac4b6758b18a0d40c8fb4186\transformed\jetified-play-services-cloud-messaging-17.1.0\AndroidManifest.xml:9:5-68
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ad94281bac4b6758b18a0d40c8fb4186\transformed\jetified-play-services-cloud-messaging-17.1.0\AndroidManifest.xml:9:5-68
+	android:name
+		ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-65
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-79
+MERGED from [:connectivity_plus] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\connectivity_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-79
+MERGED from [:connectivity_plus] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\connectivity_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-79
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\7dc828c258d41340ff3020aa54732066\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\7dc828c258d41340ff3020aa54732066\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\07bc617b63b437cda78d16bcb8084c18\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\07bc617b63b437cda78d16bcb8084c18\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f6abc83b05941d4736e94a9e27c1a813\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:7:5-79
+MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f6abc83b05941d4736e94a9e27c1a813\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\e692383bc856ae0bb0d1d640054d2ace\transformed\jetified-recaptcha-18.4.0\AndroidManifest.xml:8:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\e692383bc856ae0bb0d1d640054d2ace\transformed\jetified-recaptcha-18.4.0\AndroidManifest.xml:8:5-79
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ad94281bac4b6758b18a0d40c8fb4186\transformed\jetified-play-services-cloud-messaging-17.1.0\AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ad94281bac4b6758b18a0d40c8fb4186\transformed\jetified-play-services-cloud-messaging-17.1.0\AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\af73949769087a357b326260c4043148\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\af73949769087a357b326260c4043148\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b039ec23eadf3bb398bcb791f1383592\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b039ec23eadf3bb398bcb791f1383592\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:22:5-79
+MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\65ffbf7ff5a5fa53bf2b305a168dede4\transformed\jetified-grpc-android-1.57.2\AndroidManifest.xml:7:5-79
+MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\65ffbf7ff5a5fa53bf2b305a168dede4\transformed\jetified-grpc-android-1.57.2\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-76
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-77
+MERGED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-77
+MERGED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-77
+MERGED from [me.carda:AndroidAwnCore:0.9.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8fb44917214b1f7078a5716e7c968a1a\transformed\jetified-AndroidAwnCore-0.9.3\AndroidManifest.xml:9:5-77
+MERGED from [me.carda:AndroidAwnCore:0.9.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8fb44917214b1f7078a5716e7c968a1a\transformed\jetified-AndroidAwnCore-0.9.3\AndroidManifest.xml:9:5-77
+MERGED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:23:5-77
+MERGED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:23:5-77
+	android:name
+		ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:13:22-74
+service#io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService
+ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-19:72
+	android:exported
+		ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-37
+	android:permission
+		ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-69
+	android:name
+		ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-107
+service#io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService
+ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:20:9-26:19
+	android:exported
+		ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-37
+	android:name
+		ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-97
+intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
+ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-25:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:24:17-78
+	android:name
+		ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:24:25-75
+receiver#io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver
+ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:28:9-35:20
+	android:exported
+		ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-36
+	android:permission
+		ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:31:13-73
+	android:name
+		ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-98
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
+ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:32:13-34:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:33:17-81
+	android:name
+		ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:33:25-78
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:38:13-40:85
+	android:value
+		ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:40:17-82
+	android:name
+		ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:39:17-128
+provider#io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider
+ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:43:9-47:38
+	android:authorities
+		ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:45:13-88
+	android:exported
+		ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:46:13-37
+	android:initOrder
+		ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:47:13-35
+	android:name
+		ADDED from [:firebase_messaging] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_messaging\intermediates\merged_manifest\debug\AndroidManifest.xml:44:13-102
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
+ADDED from [:firebase_core] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [:firebase_core] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [:firebase_core] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+uses-permission#android.permission.BROADCAST_CLOSE_SYSTEM_DIALOGS
+ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-89
+	android:name
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-86
+receiver#me.carda.awesome_notifications.DartNotificationActionReceiver
+ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:15:9-17:39
+	android:exported
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-36
+	android:name
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-89
+receiver#me.carda.awesome_notifications.DartDismissedNotificationReceiver
+ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:18:9-20:39
+	android:exported
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-36
+	android:name
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-92
+receiver#me.carda.awesome_notifications.DartScheduledNotificationReceiver
+ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:21:9-23:39
+	android:exported
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-36
+	android:name
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-92
+receiver#me.carda.awesome_notifications.DartRefreshSchedulesReceiver
+ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:24:9-38:20
+	android:enabled
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-35
+	android:exported
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-36
+	android:name
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-87
+intent-filter#action:name:android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED+action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.LOCKED_BOOT_COMPLETED+action:name:android.intent.action.MY_PACKAGE_REPLACED+action:name:android.intent.action.QUICKBOOT_POWERON+action:name:com.htc.intent.action.QUICKBOOT_POWERON+category:name:android.intent.category.DEFAULT
+ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:28:13-37:29
+category#android.intent.category.DEFAULT
+ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-76
+	android:name
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:29:27-73
+action#android.intent.action.BOOT_COMPLETED
+ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:31:17-79
+	android:name
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:31:25-76
+action#android.intent.action.LOCKED_BOOT_COMPLETED
+ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:32:17-86
+	android:name
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:32:25-83
+action#android.intent.action.MY_PACKAGE_REPLACED
+ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:33:17-84
+	android:name
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:33:25-81
+action#android.intent.action.QUICKBOOT_POWERON
+ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:34:25-79
+action#com.htc.intent.action.QUICKBOOT_POWERON
+ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:35:25-79
+action#android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED
+ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:36:17-107
+	android:name
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:36:25-104
+service#me.carda.awesome_notifications.DartBackgroundService
+ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:40:9-43:72
+	android:exported
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:42:13-37
+	android:permission
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:43:13-69
+	android:name
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:41:13-80
+service#me.carda.awesome_notifications.core.services.ForegroundService
+ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:44:9-49:43
+MERGED from [me.carda:AndroidAwnCore:0.9.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8fb44917214b1f7078a5716e7c968a1a\transformed\jetified-AndroidAwnCore-0.9.3\AndroidManifest.xml:15:9-20:43
+MERGED from [me.carda:AndroidAwnCore:0.9.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8fb44917214b1f7078a5716e7c968a1a\transformed\jetified-AndroidAwnCore-0.9.3\AndroidManifest.xml:15:9-20:43
+	android:enabled
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:46:13-35
+	android:exported
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:47:13-37
+	android:stopWithTask
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:49:13-40
+	android:foregroundServiceType
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:48:13-54
+	android:name
+		ADDED from [:awesome_notifications] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\awesome_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:45:13-90
+activity#io.flutter.plugins.urllauncher.WebViewActivity
+ADDED from [:url_launcher_android] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-13:74
+	android:exported
+		ADDED from [:url_launcher_android] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-37
+	android:theme
+		ADDED from [:url_launcher_android] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-71
+	android:name
+		ADDED from [:url_launcher_android] C:\Users\HowieDoIt\Documents\CSULA\ACM_innovations\ACM_app\ACM_Mobile_APP\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-74
+uses-permission#android.permission.BIND_NOTIFICATION_LISTENER_SERVICE
+ADDED from [me.carda:AndroidAwnCore:0.9.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8fb44917214b1f7078a5716e7c968a1a\transformed\jetified-AndroidAwnCore-0.9.3\AndroidManifest.xml:10:5-12:38
+	android:maxSdkVersion
+		ADDED from [me.carda:AndroidAwnCore:0.9.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8fb44917214b1f7078a5716e7c968a1a\transformed\jetified-AndroidAwnCore-0.9.3\AndroidManifest.xml:12:9-35
+	android:name
+		ADDED from [me.carda:AndroidAwnCore:0.9.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8fb44917214b1f7078a5716e7c968a1a\transformed\jetified-AndroidAwnCore-0.9.3\AndroidManifest.xml:11:9-77
+service#me.carda.awesome_notifications.core.managers.StatusBarManager
+ADDED from [me.carda:AndroidAwnCore:0.9.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8fb44917214b1f7078a5716e7c968a1a\transformed\jetified-AndroidAwnCore-0.9.3\AndroidManifest.xml:21:9-28:19
+	android:label
+		ADDED from [me.carda:AndroidAwnCore:0.9.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8fb44917214b1f7078a5716e7c968a1a\transformed\jetified-AndroidAwnCore-0.9.3\AndroidManifest.xml:24:13-61
+	android:exported
+		ADDED from [me.carda:AndroidAwnCore:0.9.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8fb44917214b1f7078a5716e7c968a1a\transformed\jetified-AndroidAwnCore-0.9.3\AndroidManifest.xml:23:13-36
+	android:name
+		ADDED from [me.carda:AndroidAwnCore:0.9.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8fb44917214b1f7078a5716e7c968a1a\transformed\jetified-AndroidAwnCore-0.9.3\AndroidManifest.xml:22:13-89
+intent-filter#action:name:android.service.notification.NotificationListenerService
+ADDED from [me.carda:AndroidAwnCore:0.9.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8fb44917214b1f7078a5716e7c968a1a\transformed\jetified-AndroidAwnCore-0.9.3\AndroidManifest.xml:25:13-27:29
+action#android.service.notification.NotificationListenerService
+ADDED from [me.carda:AndroidAwnCore:0.9.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8fb44917214b1f7078a5716e7c968a1a\transformed\jetified-AndroidAwnCore-0.9.3\AndroidManifest.xml:26:17-99
+	android:name
+		ADDED from [me.carda:AndroidAwnCore:0.9.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8fb44917214b1f7078a5716e7c968a1a\transformed\jetified-AndroidAwnCore-0.9.3\AndroidManifest.xml:26:25-96
+activity#com.google.firebase.auth.internal.GenericIdpActivity
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:29:9-46:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:31:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:33:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:32:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:34:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:30:13-80
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:35:13-45:29
+action#android.intent.action.VIEW
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:36:17-69
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:36:25-66
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:39:17-78
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:39:27-75
+activity#com.google.firebase.auth.internal.RecaptchaActivity
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:47:9-64:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:49:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:51:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:50:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:52:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:48:13-79
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:53:13-63:29
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:69:13-71:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:71:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a6bd6391ef21328897caf6e03a97abbd\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:70:17-109
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar
+ADDED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\7dc828c258d41340ff3020aa54732066\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:17:13-19:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\7dc828c258d41340ff3020aa54732066\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:19:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\7dc828c258d41340ff3020aa54732066\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:18:17-122
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\7dc828c258d41340ff3020aa54732066\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\7dc828c258d41340ff3020aa54732066\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\7dc828c258d41340ff3020aa54732066\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:21:17-111
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:26:5-82
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ad94281bac4b6758b18a0d40c8fb4186\transformed\jetified-play-services-cloud-messaging-17.1.0\AndroidManifest.xml:11:5-82
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ad94281bac4b6758b18a0d40c8fb4186\transformed\jetified-play-services-cloud-messaging-17.1.0\AndroidManifest.xml:11:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:26:22-79
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:29:9-40:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:31:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:32:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:30:13-78
+meta-data#com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED
+ADDED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:37:13-39:40
+	android:value
+		ADDED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:39:17-37
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:38:17-92
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:46:9-53:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:49:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:48:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:47:13-82
+meta-data#com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar
+ADDED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:57:13-59:85
+	android:value
+		ADDED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:59:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:58:17-122
+meta-data#com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar
+ADDED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:60:13-62:85
+	android:value
+		ADDED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:62:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:23.4.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\6da6dea2f303825e096a56d1a70f3f70\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:61:17-119
+meta-data#com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar
+ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\07bc617b63b437cda78d16bcb8084c18\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:30:13-32:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\07bc617b63b437cda78d16bcb8084c18\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:32:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\07bc617b63b437cda78d16bcb8084c18\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:31:17-118
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\07bc617b63b437cda78d16bcb8084c18\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:33:13-35:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\07bc617b63b437cda78d16bcb8084c18\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\07bc617b63b437cda78d16bcb8084c18\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:34:17-107
+meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar
+ADDED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f6abc83b05941d4736e94a9e27c1a813\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:15:13-17:85
+	android:value
+		ADDED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f6abc83b05941d4736e94a9e27c1a813\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:17:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f6abc83b05941d4736e94a9e27c1a813\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:16:17-130
+meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
+ADDED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f6abc83b05941d4736e94a9e27c1a813\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:18:13-20:85
+	android:value
+		ADDED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f6abc83b05941d4736e94a9e27c1a813\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:20:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f6abc83b05941d4736e94a9e27c1a813\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:19:17-127
+meta-data#com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar
+ADDED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\594ae181a8146aa6f6d0cce44c3057b7\transformed\jetified-firebase-appcheck-17.1.2\AndroidManifest.xml:25:13-27:85
+	android:value
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\594ae181a8146aa6f6d0cce44c3057b7\transformed\jetified-firebase-appcheck-17.1.2\AndroidManifest.xml:27:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\594ae181a8146aa6f6d0cce44c3057b7\transformed\jetified-firebase-appcheck-17.1.2\AndroidManifest.xml:26:17-120
+meta-data#com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar
+ADDED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\594ae181a8146aa6f6d0cce44c3057b7\transformed\jetified-firebase-appcheck-17.1.2\AndroidManifest.xml:28:13-30:85
+	android:value
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\594ae181a8146aa6f6d0cce44c3057b7\transformed\jetified-firebase-appcheck-17.1.2\AndroidManifest.xml:30:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\HowieDoIt\.gradle\caches\transforms-3\594ae181a8146aa6f6d0cce44c3057b7\transformed\jetified-firebase-appcheck-17.1.2\AndroidManifest.xml:29:17-117
+meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar
+ADDED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2acaae8c7b458348fda3ee338b8132e2\transformed\jetified-firebase-common-ktx-20.4.3\AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2acaae8c7b458348fda3ee338b8132e2\transformed\jetified-firebase-common-ktx-20.4.3\AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2acaae8c7b458348fda3ee338b8132e2\transformed\jetified-firebase-common-ktx-20.4.3\AndroidManifest.xml:13:17-116
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.5.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\534740f5fe9a2ae174052dbfc3a4f44f\transformed\room-runtime-2.5.0\AndroidManifest.xml:24:9-28:63
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.5.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\534740f5fe9a2ae174052dbfc3a4f44f\transformed\room-runtime-2.5.0\AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.room:room-runtime:2.5.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\534740f5fe9a2ae174052dbfc3a4f44f\transformed\room-runtime-2.5.0\AndroidManifest.xml:28:13-60
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.5.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\534740f5fe9a2ae174052dbfc3a4f44f\transformed\room-runtime-2.5.0\AndroidManifest.xml:26:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.5.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\534740f5fe9a2ae174052dbfc3a4f44f\transformed\room-runtime-2.5.0\AndroidManifest.xml:25:13-74
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\HowieDoIt\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\HowieDoIt\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\HowieDoIt\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\HowieDoIt\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\HowieDoIt\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\HowieDoIt\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\e692383bc856ae0bb0d1d640054d2ace\transformed\jetified-recaptcha-18.4.0\AndroidManifest.xml:9:5-98
+	android:name
+		ADDED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\e692383bc856ae0bb0d1d640054d2ace\transformed\jetified-recaptcha-18.4.0\AndroidManifest.xml:9:22-95
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d4ee856b0501bd4e2deb987ae70e355\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:23:9-28:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d4ee856b0501bd4e2deb987ae70e355\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:25:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d4ee856b0501bd4e2deb987ae70e355\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:27:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d4ee856b0501bd4e2deb987ae70e355\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:26:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d4ee856b0501bd4e2deb987ae70e355\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:28:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d4ee856b0501bd4e2deb987ae70e355\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:24:13-77
+meta-data#com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar
+ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d4ee856b0501bd4e2deb987ae70e355\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:35:13-37:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d4ee856b0501bd4e2deb987ae70e355\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:37:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\HowieDoIt\.gradle\caches\transforms-3\8d4ee856b0501bd4e2deb987ae70e355\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:36:17-109
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\4b9d22533576529904e76f8ef61c175c\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\4b9d22533576529904e76f8ef61c175c\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\4b9d22533576529904e76f8ef61c175c\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\4b9d22533576529904e76f8ef61c175c\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\c3e05c9fbf3e6c63974105ad6d97e1f5\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\c3e05c9fbf3e6c63974105ad6d97e1f5\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\c3e05c9fbf3e6c63974105ad6d97e1f5\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:22:13-58
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\98f8115e8f56ec67d96e5a388c46890f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2183eebe79b9cdf856b67bdd4ed484c0\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2183eebe79b9cdf856b67bdd4ed484c0\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f5fcd9d21efbf86a0ac70e1d2cc111ed\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\f5fcd9d21efbf86a0ac70e1d2cc111ed\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\98f8115e8f56ec67d96e5a388c46890f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\98f8115e8f56ec67d96e5a388c46890f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\98f8115e8f56ec67d96e5a388c46890f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\98f8115e8f56ec67d96e5a388c46890f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\98f8115e8f56ec67d96e5a388c46890f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\98f8115e8f56ec67d96e5a388c46890f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\98f8115e8f56ec67d96e5a388c46890f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.10.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.10.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.10.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
+permission#com.example.fluttertest.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.10.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.10.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.10.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.10.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.10.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
+uses-permission#com.example.fluttertest.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.10.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.10.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\0b9c903fef8d2eb2a269c36999ef4a74\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2183eebe79b9cdf856b67bdd4ed484c0\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2183eebe79b9cdf856b67bdd4ed484c0\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\HowieDoIt\.gradle\caches\transforms-3\2183eebe79b9cdf856b67bdd4ed484c0\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HowieDoIt\.gradle\caches\transforms-3\a0ecce03964d1d4dc26ffab32b08b16e\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+meta-data#com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar
+ADDED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ed00c8c1e57b625569439525e3d45c4f\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:27:13-29:85
+	android:value
+		ADDED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ed00c8c1e57b625569439525e3d45c4f\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:29:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-datatransport:18.1.7] C:\Users\HowieDoIt\.gradle\caches\transforms-3\ed00c8c1e57b625569439525e3d45c4f\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:28:17-115
+service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\af73949769087a357b326260c4043148\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:28:9-34:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b039ec23eadf3bb398bcb791f1383592\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:36:9-38:40
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b039ec23eadf3bb398bcb791f1383592\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:36:9-38:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\af73949769087a357b326260c4043148\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\af73949769087a357b326260c4043148\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:29:13-103
+meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\af73949769087a357b326260c4043148\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:31:13-33:39
+	android:value
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\af73949769087a357b326260c4043148\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:33:17-36
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\af73949769087a357b326260c4043148\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:32:17-94
+service#com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService
+ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b039ec23eadf3bb398bcb791f1383592\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:26:9-30:19
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b039ec23eadf3bb398bcb791f1383592\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:28:13-37
+	android:permission
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b039ec23eadf3bb398bcb791f1383592\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b039ec23eadf3bb398bcb791f1383592\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:27:13-117
+receiver#com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver
+ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b039ec23eadf3bb398bcb791f1383592\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:32:9-34:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b039ec23eadf3bb398bcb791f1383592\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\HowieDoIt\.gradle\caches\transforms-3\b039ec23eadf3bb398bcb791f1383592\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:33:13-132
+uses-permission#com.sec.android.provider.badge.permission.READ
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:19:5-86
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:19:22-83
+uses-permission#com.sec.android.provider.badge.permission.WRITE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:20:5-87
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:20:22-84
+uses-permission#com.htc.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:23:5-81
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:23:22-78
+uses-permission#com.htc.launcher.permission.UPDATE_SHORTCUT
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:24:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:24:22-80
+uses-permission#com.sonyericsson.home.permission.BROADCAST_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:27:5-88
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:27:22-85
+uses-permission#com.sonymobile.home.permission.PROVIDER_INSERT_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:28:5-92
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:28:22-89
+uses-permission#com.anddoes.launcher.permission.UPDATE_COUNT
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:31:5-84
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:31:22-81
+uses-permission#com.majeur.launcher.permission.UPDATE_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:34:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:34:22-80
+uses-permission#com.huawei.android.launcher.permission.CHANGE_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:37:5-91
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:37:22-88
+uses-permission#com.huawei.android.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:38:5-92
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:38:22-89
+uses-permission#com.huawei.android.launcher.permission.WRITE_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:39:5-93
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:39:22-90
+uses-permission#android.permission.READ_APP_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:42:5-73
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:42:22-70
+uses-permission#com.oppo.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:45:5-82
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:45:22-79
+uses-permission#com.oppo.launcher.permission.WRITE_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:46:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:46:22-80
+uses-permission#me.everything.badger.permission.BADGE_COUNT_READ
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:49:5-88
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:49:22-85
+uses-permission#me.everything.badger.permission.BADGE_COUNT_WRITE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:50:5-89
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\HowieDoIt\.gradle\caches\transforms-3\90221658ea15b4fcc5d3d8e347e9b482\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:50:22-86

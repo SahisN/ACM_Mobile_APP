@@ -1,0 +1,4 @@
+#Sat Sep 23 14:54:58 PDT 2023
+base.0=C\:\\Users\\HowieDoIt\\Documents\\CSULA\\ACM_innovations\\ACM_app\\ACM_Mobile_APP\\build\\app\\intermediates\\dex\\profile\\mergeDexProfile\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
