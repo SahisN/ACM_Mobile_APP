@@ -1,1 +1,7 @@
 pubspec.lock
+build
+.vscode
+.dart_tool
+andriod
+ios
+lib/model/firebase.dart
