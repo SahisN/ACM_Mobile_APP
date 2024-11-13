@@ -2,16 +2,18 @@
 import 'dart:convert';
 //import 'dart:html';
 import 'dart:io';
+import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:http/http.dart' as http;
 import 'package:acm_app/model/event_item.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 String collectionName = "InnoTestEvents";
 const String UPDATE_TOPIC = "event_update";
-const KEY = "";
+const KEY = "AIzaSyCTyxLBkRIG6bVq9q_KHydsQ_iJ2y8RZZE";
 const SAVE_PATH = "/acm-app-save.json";
 
 ///===== FireStore Docs ==============================
@@ -24,6 +26,7 @@ const SAVE_PATH = "/acm-app-save.json";
 ///===================================================
 
 class Database {
+  static bool isEventsLoaded = false;
   static bool subscribedToMsg = false;
   static Timestamp lastRead = Timestamp(1, 0);
   static Map<DateTime, List<EventItem>> eventMap = {};
@@ -59,7 +62,8 @@ class Database {
 
   //===== Google Calendar API =============================
 
-  static Future<void> fetchByRange_googleCal(
+  //retreives google calendar events from ACM calendar
+  static Future<void> fetchCalendarEvents(
       DateTime minDate, DateTime maxDate) async {
     Uri url = Uri.https("www.googleapis.com",
         "/calendar/v3/calendars/acm.calstatela@gmail.com/events", {
@@ -72,12 +76,68 @@ class Database {
 
     var res = await http.get(url);
     Map<String, dynamic> resJson = jsonDecode(res.body);
-    //List<EventItem> eventList = [];
+
+    if (resJson.isEmpty || resJson['items'] == null) {
+      print("request returned emptied");
+      return;
+    }
+    if (isEventsLoaded) {
+      eventMap.clear();
+    }
 
     for (Map<String, dynamic> item in resJson["items"]) {
       if (item["kind"] != "calendar#event") continue;
 
       final eventItem = EventItem.parseJson_googleCal(item);
+      DateTime dateKey = DateTime(eventItem.dateTime.year,
+          eventItem.dateTime.month, eventItem.dateTime.day);
+      //map a list to a date key if not existed
+      if (!Database.eventMap.containsKey(dateKey)) {
+        Database.eventMap.addAll({dateKey: <EventItem>[]});
+      }
+
+      Database.eventMap[dateKey]!.add(eventItem);
+      //print( eventMap[eventItem.dateTime] );
+    }
+
+    await cache();
+
+    return Future(() => null);
+  }
+
+  //loads from cache, return true if loaded
+  /* Event json 
+  *   [
+        {
+          name: string,
+          description: string,
+          location: imageUrl,
+          datetime: ISO
+        }
+      ]
+  *
+  */
+  static Future<bool> loadEventsFromCache() async {
+    if (isEventsLoaded) {
+      //clears current events in memory
+      Database.eventMap.clear();
+      isEventsLoaded = false;
+    }
+
+    final SharedPreferences pref = await SharedPreferences.getInstance();
+    final jsonStr = await pref.getString('events') ?? "";
+
+    if (jsonStr == "") {
+      print("Empty cache");
+      return false;
+    }
+
+    //parse current event
+    final List<dynamic> jsonObj = jsonDecode(jsonStr);
+
+    for (final event in jsonObj) {
+      final eventItem = EventItem.parseJson(jsonDecode(event as String));
+
       //map a list to a date key if not existed
       if (!Database.eventMap.containsKey(eventItem.dateTime)) {
         Database.eventMap.addAll({eventItem.dateTime: <EventItem>[]});
@@ -86,6 +146,44 @@ class Database {
       Database.eventMap[eventItem.dateTime]!.add(eventItem);
     }
 
+    isEventsLoaded = true;
+    return true;
+
+    //lastRead = Timestamp.fromDate( DateTime.parse(jsonObj["last_read"] as String) );
+
+    //----- Used with watch notification -----------------
+    //check lastest date with firebase doc date
+    //final db = FirebaseFirestore.instance;
+    /*
+    final res = await db.collection(collectionName).where(
+      "latest_date_change",
+      isGreaterThan: lastRead
+    ).get(const GetOptions(source: Source.server));
+    */
+
+    //if server doc date greater return false
+    /*
+    if (res.docs.isEmpty) {
+      return false;
+    }
+    */
+
+    //else return true and parse into eventItems
+    //return true;
+  }
+
+  //Save to Cache
+  static Future<void> cache() async {
+    final SharedPreferences pref = await SharedPreferences.getInstance();
+    final eventList = [];
+
+    for (final entry in eventMap.entries) {
+      for (final event in entry.value) {
+        eventList.add(event.toJson());
+      }
+    }
+
+    pref.setString("events", jsonEncode(eventList));
     return Future(() => null);
   }
 
