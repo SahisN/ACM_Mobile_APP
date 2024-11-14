@@ -11,7 +11,7 @@ class FavoritePage extends ConsumerWidget {
     final favoriteEvents = ref.watch(favoriteEventProvider);
 
     // if favoriteEvents length is 0, then there is no events added to favorites
-    if (favoriteEvents.length == 0) {
+    if (favoriteEvents.isEmpty) {
       return Scaffold(
         appBar: AppBar(
           title: const Text('Favorites'),

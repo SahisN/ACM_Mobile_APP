@@ -1,3 +1,6 @@
+import 'dart:convert';
+
+import 'package:acm_app/model/event_item.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class UserPreferences {
@@ -7,6 +10,7 @@ class UserPreferences {
   static const _hoursKey = 'hour';
   static const _minutesKey = 'minute';
   static const _favoritesKey = 'favorite';
+  static const _favoriteEventKey = 'event';
 
   static late SharedPreferences _preferences;
 
@@ -50,5 +54,24 @@ class UserPreferences {
       _preferences.getInt(_hoursKey) ?? 0,
       _preferences.getInt(_minutesKey) ?? 0,
     ];
+  }
+
+  static void setFavoriteEvent(List<EventItem> favoriteEvents) async {
+    final jsonString =
+        jsonEncode(favoriteEvents.map((event) => event.toJson()).toList());
+
+    await _preferences.setString(_favoriteEventKey, jsonString);
+  }
+
+  static Future<List<EventItem>> getFavoriteEvents() async {
+    final jsonString = _preferences.getString(_favoriteEventKey);
+
+    if (jsonString == null) {
+      return [];
+    }
+
+    final List<dynamic> jsonList = jsonDecode(jsonString);
+
+    return jsonList.map((json) => EventItem.fromJson(json)).toList();
   }
 }
