@@ -12,16 +12,32 @@ class FavoriteEventNotifier extends StateNotifier<List<EventItem>> {
     state = storedFavorites;
   }
 
+  // bool isFavorite(EventItem currentEvent) {
+  //   return state.any((event) => event.uid == currentEvent.uid);
+  // }
+
   bool toggleFavoriteStatus(EventItem currentEvent) {
-    if (state.contains(currentEvent)) {
+    // if (state.contains(currentEvent)) {
+    //   state = state.where((event) => event.uid != currentEvent.uid).toList();
+    //   UserPreferences.setFavoriteEvent(state);
+    //   return false;
+    // } else {
+    //   state = [...state, currentEvent];
+    //   UserPreferences.setFavoriteEvent(state);
+    //   return true;
+    // }
+
+    final isFavorite = state.any((event) => event.uid == currentEvent.uid);
+
+    if (isFavorite) {
       state = state.where((event) => event.uid != currentEvent.uid).toList();
       UserPreferences.setFavoriteEvent(state);
       return false;
-    } else {
-      state = [...state, currentEvent];
-      UserPreferences.setFavoriteEvent(state);
-      return true;
     }
+
+    state = [...state, currentEvent];
+    UserPreferences.setFavoriteEvent(state);
+    return true;
   }
 }
 

@@ -21,7 +21,18 @@ class DetailPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final favoriteEvent = ref.watch(favoriteEventProvider);
     final bool isFavorite = favoriteEvent.contains(event);
-
+    // print(favoriteEvent[0].uid);
+    // print(favoriteEvent[0].name);
+    // print(favoriteEvent[0].location);
+    // print(favoriteEvent[0].imageURL);
+    // print(favoriteEvent[0].description);
+    // print(favoriteEvent[0].dateTime);
+    // print('event: ' + event.uid);
+    // print('event: ' + event.name);
+    // print('event: ' + event.location);
+    // print('event: ' + event.imageURL);
+    // print('event: ' + event.description);
+    // print(event.dateTime);
     Future<bool?> onLikedButtonTap(bool isLiked) {
       // return Future.value(true);
       final wasAdded =

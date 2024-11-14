@@ -20,6 +20,12 @@ class EventItem {
         'location': location,
       };
 
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    return other is EventItem && other.uid == uid;
+  }
+
   factory EventItem.fromJson(Map<String, dynamic> json) => EventItem(
         json['name'] as String? ?? '',
         json['dateTime'] != null
