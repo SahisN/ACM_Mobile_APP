@@ -68,4 +68,7 @@ class EventItem {
 
     return EventItem(name, dateTime, description, location, imageURL, _id);
   }
+
+  @override
+  int get hashCode => uid.hashCode;
 }
