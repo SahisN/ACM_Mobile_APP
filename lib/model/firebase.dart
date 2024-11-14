@@ -11,7 +11,7 @@ import 'package:acm_app/model/event_item.dart';
 
 String collectionName = "InnoTestEvents";
 const String UPDATE_TOPIC = "event_update";
-const KEY = "";
+const KEY = "AIzaSyDWd_ CvG8RYdp- wiwIWB2jM0qn3mn1F0zU";
 const SAVE_PATH = "/acm-app-save.json";
 
 ///===== FireStore Docs ==============================
