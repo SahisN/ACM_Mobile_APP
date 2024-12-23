@@ -48,7 +48,9 @@ class _CalendarPageState extends State<CalendarPage> {
     return ListView.builder(
       itemCount: eventList.length,
       shrinkWrap: true,
-      itemBuilder: (_, i) => EventCard(eventList[i]),
+      itemBuilder: (_, i) => EventCard(
+        eventList[i],
+      ),
     );
   }
 
@@ -82,8 +84,10 @@ class _CalendarPageState extends State<CalendarPage> {
     super.initState();
     if (isInitialized) return;
     Database.fetchByRange_googleCal(firstDate, lastDay).then((value) {
-      isInitialized = true;
-      setState(() {});
+      if (mounted) {
+        isInitialized = true;
+        setState(() {});
+      }
     });
     if (!Database.subscribedToMsg) {
       Database.subscribeToEventUpdates();

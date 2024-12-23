@@ -55,6 +55,7 @@ dependencies:
   shared_preferences: ^2.2.3
   awesome_notifications: ^0.9.3+1
   firebase_messaging: ^14.9.4
+  flutter_riverpod: ^2.5.1
 
 flutter_native_splash:
   # This package generates native code to customize Flutter's default white native splash screen

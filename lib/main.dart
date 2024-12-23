@@ -6,6 +6,7 @@ import 'package:acm_app/services/notification_services.dart';
 import 'package:acm_app/model/firebase.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart' as riverpod;
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:acm_app/user_preferences.dart';
@@ -19,9 +20,11 @@ Future main() async {
   await Database.init();
 
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => StateProvider(),
-      child: const MyApp(),
+    riverpod.ProviderScope(
+      child: ChangeNotifierProvider(
+        create: (context) => StateProvider(),
+        child: const MyApp(),
+      ),
     ),
   );
 }

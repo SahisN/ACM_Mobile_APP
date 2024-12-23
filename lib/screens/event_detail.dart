@@ -1,12 +1,13 @@
+import 'package:acm_app/provider/favorite_event_provider.dart';
 import "package:flutter/material.dart";
 import 'package:acm_app/model/event_item.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:like_button/like_button.dart';
 
-class DetailPage extends StatelessWidget {
-  const DetailPage({super.key, required this.event, required this.firstDate});
+class DetailPage extends ConsumerWidget {
+  const DetailPage({super.key, required this.event, d});
   final EventItem event;
-  final DateTime firstDate;
 
   ImageProvider _provideImage() {
     if (event.imageURL == '') {
@@ -17,14 +18,53 @@ class DetailPage extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final favoriteEvent = ref.watch(favoriteEventProvider);
+    final bool isFavorite = favoriteEvent.contains(event);
+    // print(favoriteEvent[0].uid);
+    // print(favoriteEvent[0].name);
+    // print(favoriteEvent[0].location);
+    // print(favoriteEvent[0].imageURL);
+    // print(favoriteEvent[0].description);
+    // print(favoriteEvent[0].dateTime);
+    // print('event: ' + event.uid);
+    // print('event: ' + event.name);
+    // print('event: ' + event.location);
+    // print('event: ' + event.imageURL);
+    // print('event: ' + event.description);
+    // print(event.dateTime);
+    Future<bool?> onLikedButtonTap(bool isLiked) {
+      // return Future.value(true);
+      final wasAdded =
+          ref.read(favoriteEventProvider.notifier).toggleFavoriteStatus(event);
+
+      // ignore: prefer_const_constructors
+      ScaffoldMessenger.of(context).clearSnackBars();
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+            content: wasAdded
+                ? const Text('Added to Favorite')
+                : const Text('Removed from Favorites'),
+            backgroundColor: wasAdded ? Colors.green : Colors.red),
+      );
+
+      return Future.value(wasAdded);
+    }
+
     return Scaffold(
       //The appBar allows the page to return to the calendar page
       //The  Text is just a placeholder, ------ MUST CHANGE THIS -----
-      /*
+
       appBar: AppBar(
         title: const Text(""),
-      ),*/
+        actions: [
+          LikeButton(
+            size: 40,
+            onTap: onLikedButtonTap,
+            isLiked: isFavorite,
+          )
+        ],
+      ),
       body: SizedBox(
         width: double.maxFinite,
         height: double.maxFinite,
@@ -49,22 +89,6 @@ class DetailPage extends StatelessWidget {
             /* 
             need to review over this
              */
-
-            Positioned(
-                child: Row(
-              children: [
-                IconButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  /*
-                  Change the icon to a back 
-                  */
-                  icon: const Icon(Icons.arrow_back_ios_new_sharp),
-                  color: Theme.of(context).colorScheme.onPrimary,
-                )
-              ],
-            )),
 
             //This positioned holds the content that is found under the image
             Positioned(
@@ -164,12 +188,6 @@ class DetailPage extends StatelessWidget {
                     ],
                   ),
                 )),
-            const Positioned(
-                top: 5,
-                right: 10,
-                child: LikeButton(
-                  size: 40,
-                ))
           ],
         ),
       ),
