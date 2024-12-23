@@ -1,4 +1,4 @@
-import 'package:url_launcher/url_launcher.dart';
+import 'package:acm_app/util/url_launcher.dart';
 import 'package:flutter/material.dart';
 
 class SocialMediaGridItem extends StatelessWidget {
@@ -17,7 +17,7 @@ class SocialMediaGridItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        _launchURL(url, context);
+        LaunchUrl(url, context);
       },
       child: Card(
         color: bgColor.isNotEmpty ? bgColor[0] : Colors.transparent,
@@ -34,31 +34,31 @@ class SocialMediaGridItem extends StatelessWidget {
     );
   }
 
-  Future<void> _launchURL(String url, context) async {
-    /*
-    if (await launchUrl(target)) {
-      // throw "Could not launch $url";
-      
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Unable to load link'),
-          duration: Duration(seconds: 5),
-        ),
-      );
-    }
-    */
+  // Future<void> _launchURL(String url, context) async {
+  //   /*
+  //   if (await launchUrl(target)) {
+  //     // throw "Could not launch $url";
 
-    try {
-      Uri target = Uri.parse(url);
-      await launchUrl(target);
-    } catch (_) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Unable to load link'),
-          duration: Duration(seconds: 2),
-        ),
-      );
-    }
-  }
+  //   } else {
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //       const SnackBar(
+  //         content: Text('Unable to load link'),
+  //         duration: Duration(seconds: 5),
+  //       ),
+  //     );
+  //   }
+  //   */
+
+  //   try {
+  //     Uri target = Uri.parse(url);
+  //     await launchUrl(target);
+  //   } catch (_) {
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //       const SnackBar(
+  //         content: Text('Unable to load link'),
+  //         duration: Duration(seconds: 2),
+  //       ),
+  //     );
+  //   }
+  // }
 }

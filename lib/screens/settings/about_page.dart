@@ -1,3 +1,4 @@
+import 'package:acm_app/util/url_launcher.dart';
 import 'package:acm_app/widget/sub_page.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,9 @@ class AboutPage extends StatelessWidget {
         actions: [
           // join acm button. Clicking this button will redirect user to ACM membership website
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              LaunchUrl('https://acm-calstatela.com/membership', context);
+            },
             style: TextButton.styleFrom(backgroundColor: Colors.blue),
             child: const Text(
               'Join ACM',
@@ -30,26 +33,19 @@ class AboutPage extends StatelessWidget {
 
             // about us
             const SubPage(
-                pageBackgroundColor: Colors.blue,
+                pageBackgroundColor: Colors.white,
                 pageTitle: 'About US',
-                pageDescription: 'Short Description...',
+                pageDescription:
+                    "We are the Cal State LA chapter of the Association for Computing Machinery (ACM), the world's largest computing society dedicated to advancing computing as a science and profession. As the campus's largest computer science student organization, we bring together students with a shared passion for computing.",
                 height: 220),
 
             // our purpose
             const SubPage(
                 pageBackgroundColor: Colors.white,
                 pageTitle: 'Our Purpose',
-                pageDescription: 'Short Description',
+                pageDescription:
+                    'Is to provide computer science knowledge and resources to students at Cal State LA, host programming workshops on projects and emerging technologies, and offer mentorship guidance. We also prepare members for the workforce with professional development workshops featuring guest speakers and alumni.',
                 height: 200),
-
-            // why join acm?
-            const SubPage(
-                pageBackgroundColor: Colors.blue,
-                pageTitle: 'Why Join ACM?',
-                pageDescription: 'Short Description',
-                height: 200)
-
-            // join acm
           ],
         ),
       ),
