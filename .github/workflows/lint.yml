@@ -1,0 +1,7 @@
+include: package:lints/recommended
+
+linter:
+  rules:
+    - prefer_const_constructors
+    - avoid_print
+    - always_specify_types
