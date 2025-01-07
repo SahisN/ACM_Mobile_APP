@@ -2,6 +2,7 @@
 import 'dart:convert';
 //import 'dart:html';
 import 'dart:io';
+import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -78,12 +79,14 @@ class Database {
       if (item["kind"] != "calendar#event") continue;
 
       final eventItem = EventItem.parseJson_googleCal(item);
+      final dateOnly = DateUtils.dateOnly(eventItem.dateTime);
+      
       //map a list to a date key if not existed
-      if (!Database.eventMap.containsKey(eventItem.dateTime)) {
-        Database.eventMap.addAll({eventItem.dateTime: <EventItem>[]});
+      if (!Database.eventMap.containsKey( dateOnly )) {
+        Database.eventMap.addAll({dateOnly: <EventItem>[]});
       }
 
-      Database.eventMap[eventItem.dateTime]!.add(eventItem);
+      Database.eventMap[dateOnly]!.add(eventItem);
     }
 
     return Future(() => null);
@@ -103,7 +106,7 @@ class Database {
   }
 
   static Future<void> _onMsgReceived(RemoteMessage msg) {
-    if (msg.from != "/topics/" + UPDATE_TOPIC) {
+    if (msg.from != "/topics/$UPDATE_TOPIC") {
       //print(msg.from);
       return Future.error(Exception("Wrong Topic!"));
     }
