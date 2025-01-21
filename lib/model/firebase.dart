@@ -2,6 +2,7 @@
 import 'dart:convert';
 //import 'dart:html';
 import 'dart:io';
+import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -29,29 +30,6 @@ class Database {
   static Map<DateTime, List<EventItem>> eventMap = {};
 
   static Future<void> init() async {
-    /*
-    final dir = await getApplicationDocumentsDirectory();
-    final file = File('${dir.path}$SAVE_PATH');
-
-    //read save file
-    Map<String, dynamic> json = jsonDecode( file.readAsStringSync() );
-    lastRead = (json['last_read'] ?? lastRead) as Timestamp;
-    final eventList = (json['events'] ?? []) as List< Map<String, dynamic> >;
-
-    //parse read json events into eventMap
-    for (Map<String, dynamic> eventJson in eventList) {
-      EventItem item = EventItem.parseJson(eventJson);
-
-      //add current date as a new DateTime(key)-List<EventTiem>(value) pair
-      if (!eventMap.containsKey(item.dateTime)) {
-        eventMap.addAll({ item.dateTime: [item] });
-      }
-      //add to existing list
-      else {
-        eventMap[item.dateTime]?.add(item);
-      }
-    }
-    */
     Database.subscribeToEventUpdates();
 
     return Future(() => null);
@@ -59,10 +37,9 @@ class Database {
 
   //===== Google Calendar API =============================
 
-  static Future<void> fetchByRange_googleCal(
-      DateTime minDate, DateTime maxDate) async {
+  static Future<void> fetchCalendarEvents(DateTime minDate, DateTime maxDate) async {
     Uri url = Uri.https("www.googleapis.com",
-        "/calendar/v3/calendars/acm.calstatela@gmail.com/events", {
+      "/calendar/v3/calendars/acm.calstatela@gmail.com/events", {
       "key": KEY,
       "singleEvents": "true",
       "maxResults": "2000",
@@ -72,18 +49,26 @@ class Database {
 
     var res = await http.get(url);
     Map<String, dynamic> resJson = jsonDecode(res.body);
-    //List<EventItem> eventList = [];
+    
+    //empty return
+    if (resJson.isEmpty || resJson['items'] == null) {
+      return;
+    }
+    eventMap.clear();
+
 
     for (Map<String, dynamic> item in resJson["items"]) {
       if (item["kind"] != "calendar#event") continue;
 
       final eventItem = EventItem.parseJson_googleCal(item);
+      final dateOnly = DateUtils.dateOnly(eventItem.dateTime);
+      
       //map a list to a date key if not existed
-      if (!Database.eventMap.containsKey(eventItem.dateTime)) {
-        Database.eventMap.addAll({eventItem.dateTime: <EventItem>[]});
+      if (!Database.eventMap.containsKey( dateOnly )) {
+        Database.eventMap.addAll({dateOnly: <EventItem>[]});
       }
 
-      Database.eventMap[eventItem.dateTime]!.add(eventItem);
+      Database.eventMap[dateOnly]!.add(eventItem);
     }
 
     return Future(() => null);
@@ -103,7 +88,7 @@ class Database {
   }
 
   static Future<void> _onMsgReceived(RemoteMessage msg) {
-    if (msg.from != "/topics/" + UPDATE_TOPIC) {
+    if (msg.from != "/topics/$UPDATE_TOPIC") {
       //print(msg.from);
       return Future.error(Exception("Wrong Topic!"));
     }
@@ -142,97 +127,4 @@ class Database {
 
     return Future(() => null);
   }
-
-  //===== test =====
-  static Future<List<EventItem>> testFetch() async {
-    final db = FirebaseFirestore.instance;
-
-    final res = await db.collection("semesterEvents").get();
-
-    List<EventItem> eventList = [];
-    for (final doc in res.docs) {
-      eventList.add(EventItem.parseJson(doc.data()));
-    }
-
-    return eventList;
-  }
-
-  static void testTimeStamp() async {
-    final db = FirebaseFirestore.instance;
-
-    final res =
-        await db.collection("pastEvents").doc("86qBaCqngKs8GuM8Hqff").get();
-    print("================ TEST =====================");
-    print(res.data()?['datetime'].toDate());
-  }
 }
-
-/*
-  static Future<List<EventItem>> fetchByDay(DateTime? day) async {
-    final db = FirebaseFirestore.instance;
-
-    _fetchLatest();
-
-    //DateTime(day!.year, day.month, day.day,);
-
-    //offline query
-    final offRes = await db.collection(collectionName).where(
-      "datetime",
-      isGreaterThanOrEqualTo: DateTime(day!.year, day.month, day.day,),
-      isLessThan: DateTime(day!.year, day.month, day.day+1,) 
-    ).get(const GetOptions(source: Source.cache));
-
-    print( "[OFFLINE] : " + offRes.docs.length.toString() + " items" );
-
-    return _toEventItems(offRes);
-  }
-
-  static Future<List<EventItem>> fetchByRange(DateTime? minDate, DateTime? maxDate) async {
-    final db = FirebaseFirestore.instance;
-    
-    _fetchLatest();
-    
-    //offline querry
-    final offlineRes = await db.collection(collectionName).where(
-      "datetime", 
-      isGreaterThanOrEqualTo: Timestamp.fromDate(minDate as DateTime),
-      isLessThanOrEqualTo: Timestamp.fromDate(maxDate as DateTime)
-    ).get(const GetOptions(source: Source.cache));
-
-    print( "[OFFLINE] : " + offlineRes.docs.length.toString() + " items" );
-
-    return _toEventItems(offlineRes);
-  }
-
-  static List<EventItem> _toEventItems(QuerySnapshot<Map<String, dynamic>> res) {
-    List<EventItem> eventList = [];
-    for (final doc in res.docs) {
-      eventList.add( EventItem.parseJson(doc.data()) );
-    }
-
-    return eventList;
-  }
-
-
-  static void _fetchLatest() async {
-    final db = FirebaseFirestore.instance;
-    /*
-    List<String> localIds = ["dummy"];
-    final idQuerry = await db.collection(collectionName).get(const GetOptions(source: Source.cache));
-    for (final doc in idQuerry.docs) {
-      localIds.add( doc.data()["id"] );
-    }*/
-
-    //online querry
-    //will hopefully store in local cache
-    final onlineRes = await db.collection(collectionName).where(
-      "lastupdated",
-      isGreaterThan: Timestamp.fromDate(lastRead)
-    ).get(const GetOptions(source: Source.server));
-
-    if (onlineRes.docs.isNotEmpty) {
-      lastRead = DateTime.now();
-      print("[ONLINE] : " + onlineRes.docs.length.toString() + " items");
-    }
-  }
-  */

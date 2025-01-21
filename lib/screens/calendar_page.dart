@@ -54,36 +54,14 @@ class _CalendarPageState extends State<CalendarPage> {
     );
   }
 
-  //initially fetch all events and load to Database.eventMap
-  void _iniFetch() async {
-    /*
-    List<EventItem> events = await Database.fetchByRange_googleCal(firstDate, lastDay);
-    //List<EventItem> events = await Database.fetchByRange(firstDate, lastDay);
 
-    for (EventItem eve in events) {
-      DateTime date = DateTime(eve.dateTime.year, eve.dateTime.month, eve.dateTime.day);
-
-      //map a list to a date key if not existed
-      if (!Database.eventMap.containsKey(date)) {
-        Database.eventMap.addAll({date: <EventItem>[]});
-      }
-
-      Database.eventMap[date]!.add(eve);
-    }
-    */
-    /*
-    await Database.fetchByRange_googleCal(firstDate, lastDay);
-
-    isInitialized = true;
-    setState(() {});
-    */
-  }
 
   @override
   void initState() {
     super.initState();
+    //initially fetch all events and load to Database.eventMap
     if (isInitialized) return;
-    Database.fetchByRange_googleCal(firstDate, lastDay).then((value) {
+    Database.fetchCalendarEvents(firstDate, lastDay).then((value) {
       if (mounted) {
         isInitialized = true;
         setState(() {});
@@ -101,6 +79,13 @@ class _CalendarPageState extends State<CalendarPage> {
           //backgroundColor: Theme.of(context).colorScheme.background,
           title: const Text('Calendar'),
           actions: [
+            IconButton(
+              onPressed: () {
+                Database.fetchCalendarEvents(firstDate, lastDay)
+                  .then((val) => setState(() {}));
+              },
+              icon: Icon(Icons.refresh)
+            ),
             IconButton(
                 onPressed: _onExpand,
                 icon: Icon(

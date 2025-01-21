@@ -123,8 +123,13 @@ class DetailPage extends ConsumerWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            DateFormat('MMMM dd, h:mm a')
-                                .format(event.dateTime),
+                            // display time if the it is NOT 12:00am
+                            event.dateTime.hour == 0 ?
+                              DateFormat('MMMM dd')
+                                .format(event.dateTime.toLocal()) 
+                              :
+                              DateFormat('MMMM dd, h:mm a')
+                                  .format(event.dateTime.toLocal()),
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 20,

@@ -64,9 +64,9 @@ class EventItem {
     final DateTime dateTime =
         DateTime.parse(json["start"]["date"] ?? json["start"]["dateTime"]);
 
-    final _id = json['id'];
+    final id = json['id'];
 
-    return EventItem(name, dateTime, description, location, imageURL, _id);
+    return EventItem(name, dateTime, description, location, imageURL, id);
   }
 
   @override
