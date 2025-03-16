@@ -38,6 +38,8 @@ class NotificationController {
     final NotificationLayout notificationLayout = NotificationLayout.Default,
     final NotificationCategory? category,
     final Map<String, String>? payload,
+    required final int year,
+    required final int month,
     required final int days, // 21
     required final int hours, // 16
     required final int minutes, // 24
@@ -51,6 +53,8 @@ class NotificationController {
           payload: payload),
       schedule: NotificationCalendar(
         allowWhileIdle: true,
+        year: year,
+        month: month,
         day: days,
         hour: hours,
         minute: minutes,

@@ -1,4 +1,5 @@
 import 'package:acm_app/provider/favorite_event_provider.dart';
+import 'package:acm_app/util/set_reminder.dart';
 import "package:flutter/material.dart";
 import 'package:acm_app/model/event_item.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -37,6 +38,12 @@ class DetailPage extends ConsumerWidget {
       // return Future.value(true);
       final wasAdded =
           ref.read(favoriteEventProvider.notifier).toggleFavoriteStatus(event);
+
+      if (wasAdded) {
+        setNotification(event);
+      } else {
+        cancelNotification(event);
+      }
 
       // ignore: prefer_const_constructors
       ScaffoldMessenger.of(context).clearSnackBars();
@@ -124,12 +131,11 @@ class DetailPage extends ConsumerWidget {
                         children: [
                           Text(
                             // display time if the it is NOT 12:00am
-                            event.dateTime.hour == 0 ?
-                              DateFormat('MMMM dd')
-                                .format(event.dateTime.toLocal()) 
-                              :
-                              DateFormat('MMMM dd, h:mm a')
-                                  .format(event.dateTime.toLocal()),
+                            event.dateTime.hour == 0
+                                ? DateFormat('MMMM dd')
+                                    .format(event.dateTime.toLocal())
+                                : DateFormat('MMMM dd, h:mm a')
+                                    .format(event.dateTime.toLocal()),
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 20,
