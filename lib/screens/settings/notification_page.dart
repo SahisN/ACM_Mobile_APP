@@ -1,6 +1,6 @@
 import 'package:acm_app/provider/state_provider.dart';
 import 'package:acm_app/user_preferences.dart';
-import 'package:acm_app/widget/title_check_box.dart';
+import 'package:acm_app/util/set_reminder.dart';
 import 'package:acm_app/widget/notification_wheel_picker.dart';
 import 'package:acm_app/widget/settings_switch.dart';
 import 'package:flutter/material.dart';
@@ -24,8 +24,6 @@ class _NotificationPageState extends State<NotificationPage> {
     // print(notificationState);
 
     UserPreferences.setTime(timeState);
-    UserPreferences.setFavoriteOnly(favoriteOnlyState);
-
     super.dispose();
   }
 
@@ -71,6 +69,8 @@ class _NotificationPageState extends State<NotificationPage> {
                   // Code that will control what will the theme
                   Provider.of<StateProvider>(context, listen: false)
                       .toggleNofication();
+
+                  enableNotification(notificationState, context);
                 },
               ),
 
@@ -147,13 +147,6 @@ class _NotificationPageState extends State<NotificationPage> {
                     },
                   ),
                 ],
-              ),
-              TitleCheckBox(
-                checked: favoriteOnlyState,
-                isCheckedIcon: Icons.check,
-                isUncheckedIcon: Icons.close,
-                isChecked: (bool? selected) {},
-                title: 'Favorites Only',
               ),
             ],
           ),

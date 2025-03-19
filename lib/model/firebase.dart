@@ -12,7 +12,7 @@ import 'package:acm_app/model/event_item.dart';
 
 String collectionName = "InnoTestEvents";
 const String UPDATE_TOPIC = "event_update";
-const KEY = "AIzaSyDWd_ CvG8RYdp- wiwIWB2jM0qn3mn1F0zU";
+const KEY = "";
 const SAVE_PATH = "/acm-app-save.json";
 
 ///===== FireStore Docs ==============================
@@ -37,9 +37,10 @@ class Database {
 
   //===== Google Calendar API =============================
 
-  static Future<void> fetchCalendarEvents(DateTime minDate, DateTime maxDate) async {
+  static Future<void> fetchCalendarEvents(
+      DateTime minDate, DateTime maxDate) async {
     Uri url = Uri.https("www.googleapis.com",
-      "/calendar/v3/calendars/acm.calstatela@gmail.com/events", {
+        "/calendar/v3/calendars/acm.calstatela@gmail.com/events", {
       "key": KEY,
       "singleEvents": "true",
       "maxResults": "2000",
@@ -49,22 +50,21 @@ class Database {
 
     var res = await http.get(url);
     Map<String, dynamic> resJson = jsonDecode(res.body);
-    
+
     //empty return
     if (resJson.isEmpty || resJson['items'] == null) {
       return;
     }
     eventMap.clear();
 
-
     for (Map<String, dynamic> item in resJson["items"]) {
       if (item["kind"] != "calendar#event") continue;
 
       final eventItem = EventItem.parseJson_googleCal(item);
       final dateOnly = DateUtils.dateOnly(eventItem.dateTime);
-      
+
       //map a list to a date key if not existed
-      if (!Database.eventMap.containsKey( dateOnly )) {
+      if (!Database.eventMap.containsKey(dateOnly)) {
         Database.eventMap.addAll({dateOnly: <EventItem>[]});
       }
 

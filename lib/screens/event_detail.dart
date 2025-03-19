@@ -40,7 +40,7 @@ class DetailPage extends ConsumerWidget {
           ref.read(favoriteEventProvider.notifier).toggleFavoriteStatus(event);
 
       if (wasAdded) {
-        setNotification(event);
+        setNotification(event, context);
       } else {
         cancelNotification(event);
       }

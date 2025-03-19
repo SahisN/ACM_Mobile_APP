@@ -51,7 +51,7 @@ class UserPreferences {
   static List<int> getTime() {
     return [
       _preferences.getInt(_daysKey) ?? 0,
-      _preferences.getInt(_hoursKey) ?? 0,
+      _preferences.getInt(_hoursKey) ?? 1,
       _preferences.getInt(_minutesKey) ?? 0,
     ];
   }
